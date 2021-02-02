@@ -1,6 +1,0 @@
----
-title: "Untitled"
-output: utilitr::build_website
----
-
-Modèle de document
