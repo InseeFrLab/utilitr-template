@@ -45,8 +45,8 @@ utilitr_dependencies <- function() {
   default_dep <- list(htmltools::htmlDependency(
     'utilitr-default', utils::packageVersion('utilitr'),
     src = pkg_resource('css'), stylesheet = c(
-      pkg_resource("/rmarkdown/resources/css/default.css"),
-      pkg_resource("/rmarkdown/resources/css/style.css")
+      file.path("default.css"),
+      file.path("style.css")
     )
   ))
 
