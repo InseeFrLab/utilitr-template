@@ -1,4 +1,4 @@
-bookdown::gitbook:
+utilitr::gitbook_utilitr:
   css:
 # - css/default-fonts.css
   - css/default.css
