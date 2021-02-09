@@ -28,3 +28,5 @@ Imports:
     pagedown,
     htmltools,
     bookdown
+Suggests: 
+    testthat
