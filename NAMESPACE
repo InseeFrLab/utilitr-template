@@ -2,8 +2,8 @@
 
 export(gitbook_utilitr)
 export(html_document)
+export(html_paged)
 export(pdf_document)
-export(pdf_utilitr)
+importFrom(bookdown,render_book)
 importFrom(htmltools,htmlDependency)
 importFrom(pagedown,chrome_print)
-importFrom(pagedown,html_paged)

@@ -1,8 +1,4 @@
 utilitr::gitbook_utilitr:
-  css:
-# - css/default-fonts.css
-  - css/default.css
-  - css/style.css
   new_session: yes
   config:
     toc_depth: 2
@@ -12,12 +8,7 @@ utilitr::gitbook_utilitr:
       after: |
         <li><a href="https://github.com/InseeFrLab/utilitR.git" target="blank">Code source</a></li>
 #     download: ["pdf", "epub"]
-pagedown::html_paged:
-  css:
-  - css/default-fonts.css
-  - css/default-page.css
-  - css/default.css
-  - css/style.css
+utilitr::html_paged:
   new_session: yes
   toc: true
   toc_depth: 2
