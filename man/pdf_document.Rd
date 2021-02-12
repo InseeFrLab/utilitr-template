@@ -5,21 +5,12 @@
 \title{Front-user function to build PDF}
 \usage{
 pdf_document(
-  ...,
   extra_args = c("--disable-gpu", "--no-sandbox"),
   timeout = 600,
   verbose = 1
 )
 }
 \arguments{
-\item{...}{Arguments to be passed to
-\code{rmarkdown::\link{render}()}. For \code{preview_chapter()}, \code{...}
-is passed to \code{render_book()}. See \code{rmarkdown::\link{render}()}
-and \href{https://bookdown.org/yihui/bookdown/build-the-book.html}{the
-bookdown reference book} for details on how output formatting options are
-set from YAML or parameters supplied by the user when calling
-\code{render_book()}.}
-
 \item{extra_args}{Extra command-line arguments to be passed to Chrome.}
 
 \item{timeout}{The number of seconds before canceling the document

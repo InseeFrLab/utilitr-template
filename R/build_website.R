@@ -3,12 +3,14 @@
 #' @importFrom htmltools htmlDependency
 #' @param type Which format should we handle ?
 
-utilitr_dependencies <- function(type = c("html","pdf")){
+utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
 
   type <- match.arg(type)
   files <- c("default.css", "style.css")
   if (type == "pdf") files <- c(files, "default-fonts.css",
                                 "default-page.css")
+
+  if (to_list) return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
 
   # default CSS stylesheet
   default_dep <- list(htmltools::htmlDependency(

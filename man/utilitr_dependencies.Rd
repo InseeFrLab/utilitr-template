@@ -4,7 +4,7 @@
 \alias{utilitr_dependencies}
 \title{Import dependencies for utilitR template}
 \usage{
-utilitr_dependencies(type = c("html", "pdf"))
+utilitr_dependencies(type = c("html", "pdf"), to_list = FALSE)
 }
 \arguments{
 \item{type}{Which format should we handle ?}
