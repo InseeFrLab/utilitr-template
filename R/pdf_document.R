@@ -27,7 +27,7 @@ html_paged <- function(..., extra_dependencies = NULL){
 #' @inheritParams bookdown::render_book
 #' @inheritParams pagedown::chrome_print
 #' @importFrom bookdown render_book
-#' @importFrom pagedown chrome_print
+#' @importFrom pagedown chrome_print html_paged
 #' @export
 
 pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
