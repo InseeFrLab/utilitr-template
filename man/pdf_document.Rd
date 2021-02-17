@@ -22,5 +22,6 @@ screenshots); \code{2} (or \code{TRUE}) means all messages, including those
 from the Chrome processes and WebSocket connections.}
 }
 \description{
-Front-user function to build PDF
+This function must be used in the `R` console. This will generate
+ the documentation in a `_pagedown_output` directory
 }

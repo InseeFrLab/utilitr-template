@@ -7,7 +7,10 @@
 utilitr_dependencies(type = c("html", "pdf"), to_list = FALSE)
 }
 \arguments{
-\item{type}{Which format should we handle ?}
+\item{type}{Which output format should we handle ?}
+
+\item{to_list}{Logical indicating whether we want to return result as
+htmltools dependency or simple filepaths list}
 }
 \description{
 Import dependencies for utilitR template

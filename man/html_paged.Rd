@@ -2,7 +2,7 @@
 % Please edit documentation in R/pdf_document.R
 \name{html_paged}
 \alias{html_paged}
-\title{`html_paged` version for utilitR}
+\title{HTML paged version for utilitR document}
 \usage{
 html_paged(..., extra_dependencies = NULL)
 }
@@ -13,5 +13,12 @@ html_paged(..., extra_dependencies = NULL)
 \item{extra_dependencies}{Additional HTML dependencies}
 }
 \description{
-`html_paged` version for utilitR
+This function presents an output format necessary
+ to build a PDF version of the documentation. This
+ is a paged HTML document which means an HTML with
+ usueal features for PDFs (page number, A4 formatting, etc.)
+}
+\seealso{
+[pagedown](html_paged) which is used as a customized
+ basis to render R Markdown documents
 }

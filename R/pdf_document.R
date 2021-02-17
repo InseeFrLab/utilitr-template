@@ -1,5 +1,12 @@
-#' `html_paged` version for utilitR
+#' HTML paged version for utilitR document
 #'
+#' This function presents an output format necessary
+#'  to build a PDF version of the documentation. This
+#'  is a paged HTML document which means an HTML with
+#'  usueal features for PDFs (page number, A4 formatting, etc.)
+#'
+#' @seealso [pagedown](html_paged) which is used as a customized
+#'  basis to render R Markdown documents
 #' @param extra_dependencies Additional HTML dependencies
 #' @inheritParams pagedown::html_paged
 #' @export
@@ -14,16 +21,20 @@ html_paged <- function(..., extra_dependencies = NULL){
 
   pagedown::html_paged(
     ..., #extra_dependencies = extra_dependencies,
-                       css =  utilitr_dependencies(type = "pdf", to_list = TRUE),
-                       # toc = TRUE,
-                       # toc_depth = 2,
-                       # copy_resources = TRUE,
-                       pandoc_args = c("--lua-filter",
-                                         pkg_resource("rmarkdown/resources/scripts/nbsp.lua")))
+    css =  utilitr_dependencies(type = "pdf", to_list = TRUE),
+    toc = TRUE,
+    toc_depth = 2,
+    copy_resources = TRUE,
+    # self_contained = FALSE,
+    pandoc_args = c("--lua-filter",
+                    pkg_resource("rmarkdown/resources/scripts/nbsp.lua")))
 
 }
 
 #' Front-user function to build PDF
+#'
+#' This function must be used in the `R` console. This will generate
+#'  the documentation in a `_pagedown_output` directory
 #' @inheritParams bookdown::render_book
 #' @inheritParams pagedown::chrome_print
 #' @importFrom bookdown render_book
@@ -54,23 +65,24 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
   callr::r(function(){
 
 
-  bookdown::render_book('index.Rmd',
-                        # envir = new.env(),
-                        config_file = "_bookdown.yml",
-                        # self_contained = FALSE,
-                        output_format = 'utilitr::html_paged',
-                        output_file = '_pagedown_output/index.html')
+    bookdown::render_book('index.Rmd',
+                          # envir = new.env(),
+                          config_file = "_bookdown.yml",
+                          # self_contained = FALSE,
+                          output_format = 'utilitr::html_paged',
+                          output_file = '_pagedown_output/index.html')
 
   }, timeout = timeout)
 
   message("--------------------------------------------------------")
   message("Converting into PDF. This may also take some time")
 
-  # pagedown::chrome_print('_pagedown_output/index.html', '_pagedown_output/DocumentationR.pdf',
-  #                        extra_args = c('--disable-gpu', '--no-sandbox'),
-  #                        timeout = timeout,
-  #                        options = list(transferMode = 'ReturnAsStream'),
-  #                        verbose = verbose)
+  pagedown::chrome_print('_pagedown_output/index.html',
+                         '_pagedown_output/DocumentationR.pdf',
+                         extra_args = c('--disable-gpu', '--no-sandbox'),
+                         timeout = timeout,
+                         options = list(transferMode = 'ReturnAsStream'),
+                         verbose = verbose)
 
 
 }
