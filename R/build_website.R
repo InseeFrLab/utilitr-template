@@ -1,7 +1,9 @@
 #' Import dependencies for utilitR template
 #'
 #' @importFrom htmltools htmlDependency
-#' @param type Which format should we handle ?
+#' @param type Which output format should we handle ?
+#' @param to_list Logical indicating whether we want to return result as
+#' htmltools dependency or simple filepaths list
 
 utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
 

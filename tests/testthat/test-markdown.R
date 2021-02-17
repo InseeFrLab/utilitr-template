@@ -18,5 +18,5 @@ expect_render <- function(template){
 }
 
 testthat::test_that("utilitr_html_document", {
-  expect_render("html_document")
+  expect_render("utilitr")
 })

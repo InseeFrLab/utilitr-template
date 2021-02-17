@@ -7,7 +7,7 @@
 html_paged <- function(..., extra_dependencies = NULL){
 
   extra_dependencies <- c(
-    utilitr_dependencies(type = "pdf", to_list = TRUE),
+    utilitr_dependencies(type = "pdf", to_list = FALSE),
     # rmarkdown::html_dependency_font_awesome(),
     extra_dependencies
   )
@@ -28,10 +28,11 @@ html_paged <- function(..., extra_dependencies = NULL){
 #' @inheritParams pagedown::chrome_print
 #' @importFrom bookdown render_book
 #' @importFrom pagedown chrome_print html_paged
+#' @import callr
 #' @export
 
 pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
-                         timeout = 600,
+                         timeout = 660,
                          verbose = 1){
 
   # css_default <- c(
@@ -47,12 +48,23 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
   #                       output_format = 'pagedown::html_paged',
   #                       output_file = '_pagedown_output/index.html')
 
+  message("--------------------------------------------------------")
+  message("Knitting document in background. This may take some time")
+
+  callr::r(function(){
+
 
   bookdown::render_book('index.Rmd',
+                        # envir = new.env(),
+                        config_file = "_bookdown.yml",
                         # self_contained = FALSE,
-                        # new_session = TRUE,
-                        output_format = 'pagedown::html_paged',
+                        output_format = 'utilitr::html_paged',
                         output_file = '_pagedown_output/index.html')
+
+  }, timeout = timeout)
+
+  message("--------------------------------------------------------")
+  message("Converting into PDF. This may also take some time")
 
   # pagedown::chrome_print('_pagedown_output/index.html', '_pagedown_output/DocumentationR.pdf',
   #                        extra_args = c('--disable-gpu', '--no-sandbox'),

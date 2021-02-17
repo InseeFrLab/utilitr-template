@@ -6,7 +6,7 @@
 \usage{
 pdf_document(
   extra_args = c("--disable-gpu", "--no-sandbox"),
-  timeout = 600,
+  timeout = 660,
   verbose = 1
 )
 }

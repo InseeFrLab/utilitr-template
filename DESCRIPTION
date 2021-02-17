@@ -27,6 +27,7 @@ Imports:
     rmarkdown,
     pagedown,
     htmltools,
-    bookdown
+    bookdown,
+    callr
 Suggests: 
     testthat
