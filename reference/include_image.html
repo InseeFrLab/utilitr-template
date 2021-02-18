@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • utilitr</title>
+<title>Include a compressed image from filepath — include_image • utilitr</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Include a compressed image from filepath — include_image" />
+<meta property="og:description" content="Include a compressed image from filepath" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -100,78 +101,36 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Include a compressed image from filepath</h1>
+    
+    <div class="hidden name"><code>include_image.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Include a compressed image from filepath</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>include_image</span><span class='op'>(</span><span class='va'>x</span>, compression <span class='op'>=</span> <span class='cn'>TRUE</span>, ratio_compression <span class='op'>=</span> <span class='fl'>2</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="gitbook_utilitr.html">gitbook_utilitr()</a></code> <code><a href="gitbook_utilitr.html">html_document()</a></code> </p>
-        </td>
-        <td><p>The utilitR GitBook output format</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="html_paged.html">html_paged()</a></code> </p>
-        </td>
-        <td><p>HTML paged version for utilitR document</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="include_image.html">include_image()</a></code> </p>
-        </td>
-        <td><p>Include a compressed image from filepath</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="pdf_document.html">pdf_document()</a></code> </p>
-        </td>
-        <td><p>Front-user function to build PDF</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="render_rmd.html">render_rmd()</a></code> </p>
-        </td>
-        <td><p>Render an Rmd file asis</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="utilitr.html">utilitr</a></code> </p>
-        </td>
-        <td><p>utilitr: A package to locally build our reproducible documentation</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="utilitr_dependencies.html">utilitr_dependencies()</a></code> </p>
-        </td>
-        <td><p>Import dependencies for utilitR template</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>Filepath</p></td>
+    </tr>
+    <tr>
+      <th>compress</th>
+      <td><p>Logical including whether we want to compress image
+(default) or not (in that case, standard
+[include_graphics](knitr::include_graphics) is used</p></td>
+    </tr>
     </table>
-  </div>
 
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
