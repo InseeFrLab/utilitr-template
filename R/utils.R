@@ -1,3 +1,7 @@
+#' Render an Rmd file asis
+#'
+#' @param x Filepath
+#' @return The Rmd formatted into a unique string
 #' @export
 
 render_rmd <- function(x) return(cat(htmltools::includeText(x)))
@@ -12,6 +16,9 @@ compresser_image <-
     # quality <- 0.7  # passed on to jpeg::writeJPEG()
     # cutoff <- 100000  # files smaller than this will not be touched
     # file_out <- "test.jpg"
+    dossier_images <- './pics' # This folder must exist in the repo
+    dossier_images_compressees <- './pics_resized'
+
     if (is.na(file_out)) {
       file_out <- sub(dossier_images, dossier_images_compressees, file_in)
     }
@@ -44,13 +51,22 @@ compresser_image <-
     }
   }
 
+#' Include a compressed image from filepath
+#' @param x Filepath
+#' @param compress Logical including whether we want to compress image
+#'  (default) or not (in that case, standard
+#'  [include_graphics](knitr::include_graphics) is used
 #' @export
 
 include_image <- function(x, compression = TRUE, ratio_compression = 2, ...) {
+  dossier_images <- './pics' # This folder must exist in the repo
+  dossier_images_compressees <- './pics_resized'
+
   # Fonction qui 1/ compresse  l'image si nécessaire; 2/ l'inclut dans le Rmd
   if (compression) {
     compresser_image(file_in = x, ...)
   }
   knitr::include_graphics(sub(dossier_images, dossier_images_compressees, x), ...)
 }
+
 
