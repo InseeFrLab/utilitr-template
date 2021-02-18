@@ -33,6 +33,7 @@ html_paged <- function(..., extra_dependencies = NULL){
   # do not show code
   of$knitr$opts_chunk <- list(out.width='75%', fig.align='center')
 
+
   of
 }
 
