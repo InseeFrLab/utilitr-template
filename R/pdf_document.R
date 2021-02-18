@@ -19,7 +19,7 @@ html_paged <- function(..., extra_dependencies = NULL){
     extra_dependencies
   )
 
-  pagedown::html_paged(
+  of <- pagedown::html_paged(
     ..., #extra_dependencies = extra_dependencies,
     css =  utilitr_dependencies(type = "pdf", to_list = TRUE),
     toc = TRUE,
@@ -29,6 +29,11 @@ html_paged <- function(..., extra_dependencies = NULL){
     pandoc_args = c("--lua-filter",
                     pkg_resource("rmarkdown/resources/scripts/nbsp.lua")))
 
+
+  # do not show code
+  of$knitr$opts_chunk <- list(out.width='75%', fig.align='center')
+
+  of
 }
 
 #' Front-user function to build PDF
