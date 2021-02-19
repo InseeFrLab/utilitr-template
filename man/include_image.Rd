@@ -9,9 +9,11 @@ include_image(x, compression = TRUE, ratio_compression = 2, ...)
 \arguments{
 \item{x}{Filepath}
 
-\item{compress}{Logical including whether we want to compress image
+\item{compression}{Logical including whether we want to compress image
 (default) or not (in that case, standard
 [include_graphics](knitr::include_graphics) is used}
+
+\item{ratio_compression}{Compression ratio that should be applied}
 }
 \description{
 Include a compressed image from filepath

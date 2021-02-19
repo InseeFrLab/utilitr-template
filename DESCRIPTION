@@ -28,6 +28,8 @@ Imports:
     pagedown,
     htmltools,
     bookdown,
-    callr
+    callr,
+    knitr,
+    magick
 Suggests: 
     testthat

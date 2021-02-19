@@ -53,9 +53,10 @@ compresser_image <-
 
 #' Include a compressed image from filepath
 #' @param x Filepath
-#' @param compress Logical including whether we want to compress image
+#' @param compression Logical including whether we want to compress image
 #'  (default) or not (in that case, standard
 #'  [include_graphics](knitr::include_graphics) is used
+#' @param ratio_compression Compression ratio that should be applied
 #' @export
 
 include_image <- function(x, compression = TRUE, ratio_compression = 2, ...) {
@@ -64,7 +65,8 @@ include_image <- function(x, compression = TRUE, ratio_compression = 2, ...) {
 
   # Fonction qui 1/ compresse  l'image si nécessaire; 2/ l'inclut dans le Rmd
   if (compression) {
-    compresser_image(file_in = x, ...)
+    compresser_image(file_in = x, ratio_compression = ratio_compression,
+                     ...)
   }
   knitr::include_graphics(sub(dossier_images, dossier_images_compressees, x), ...)
 }
