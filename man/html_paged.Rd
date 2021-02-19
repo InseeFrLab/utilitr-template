@@ -19,6 +19,7 @@ This function presents an output format necessary
  usueal features for PDFs (page number, A4 formatting, etc.)
 }
 \seealso{
-[pagedown](html_paged) which is used as a customized
+[html_paged](pagedown::html_paged)
+ which is used as a customizable
  basis to render R Markdown documents
 }

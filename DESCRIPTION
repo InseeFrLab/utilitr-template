@@ -1,6 +1,6 @@
 Package: utilitr
 Type: Package
-Title: Templates for the utilitR project
+Title: Templates for the utilitR Project
 Version: 0.1.0
 Authors@R: 
     c(person(given = "Lino",

@@ -11,9 +11,12 @@ include_image(x, compression = TRUE, ratio_compression = 2, ...)
 
 \item{compression}{Logical including whether we want to compress image
 (default) or not (in that case, standard
-[include_graphics](knitr::include_graphics) is used}
+\code{knitr::\link{include_graphics}()}
+is used)}
 
 \item{ratio_compression}{Compression ratio that should be applied}
+
+\item{...}{Arguments to pass to \code{magick::\link{image_scale}()}}
 }
 \description{
 Include a compressed image from filepath
