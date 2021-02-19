@@ -44,7 +44,7 @@ gitbook_utilitr <- function(extra_dependencies = list(),
     extra_dependencies
   )
 
-  bookdown::gitbook(extra_dependencies = extra_dependencies, ,
+  bookdown::gitbook(extra_dependencies = extra_dependencies,
                     new_session = TRUE,
                     ...)
 
