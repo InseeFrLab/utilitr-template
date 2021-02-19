@@ -20,6 +20,9 @@ html_paged <- function(..., extra_dependencies = NULL){
     extra_dependencies
   )
 
+  extra_dependencies <- c(extra_dependencies,
+                          rmarkdown::html_dependency_font_awesome())
+
   of <- pagedown::html_paged(
     ..., #extra_dependencies = extra_dependencies,
     css =  utilitr_dependencies(type = "pdf", to_list = TRUE),
