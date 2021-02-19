@@ -125,11 +125,16 @@
       <th>compression</th>
       <td><p>Logical including whether we want to compress image
 (default) or not (in that case, standard
-[include_graphics](knitr::include_graphics) is used</p></td>
+<code><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>knitr::include_graphics()</a></code>
+is used)</p></td>
     </tr>
     <tr>
       <th>ratio_compression</th>
       <td><p>Compression ratio that should be applied</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Arguments to pass to <code><a href='https://docs.ropensci.org/magick/reference/transform.html'>magick::image_scale()</a></code></p></td>
     </tr>
     </table>
 
