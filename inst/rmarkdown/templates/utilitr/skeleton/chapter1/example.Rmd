@@ -1,0 +1,4 @@
+# Chapter 1: once upon a time
+
+One day maybe this chapter will be filled by us. But right now, we would
+like you to write some content with R Markdown 
