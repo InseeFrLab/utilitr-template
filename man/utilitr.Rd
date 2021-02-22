@@ -3,9 +3,9 @@
 \docType{package}
 \name{utilitr}
 \alias{utilitr}
-\title{utilitr: A package to locally build our reproducible documentation}
+\title{utilitr: A package to build our documentation locally}
 \description{
-This package is useful if you want to build locally our documentation.
+This package is useful if you want to build our documentation locally.
  If you expect a series of functions from the documentation, this
  is not the right place
 }

@@ -2,14 +2,24 @@
 title: "Minimal working example from utilitr template"
 author: "Bugs Bunny"
 date: "Someday"
-output: utilitr::html_document
+site: bookdown::bookdown_site
+documentclass: book
+classoption: dvipsnames
+# bibliography: [book.bib, packages.bib]
+# biblio-style: apalike
+link-citations: yes
+subparagraph: true
+#cover-image: "resources/logo-utilitr.png"
+#description: "UtilitR : Une documentation utile à R"
+favicon: resources/logo-utilitr.png
+links-to-footnotes: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Adding an RMarkdown Template
+# Adding an RMarkdown Template
 
 This file is a minimal working example to test a few rendering properties
 of our package.

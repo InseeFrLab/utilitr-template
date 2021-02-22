@@ -56,6 +56,7 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
                          timeout = 660,
                          verbose = 1){
 
+
   # css_default <- c(
   #   pkg_resource("/rmarkdown/resources/css/default.css"),
   #   pkg_resource("/rmarkdown/resources/css/style.css"),
@@ -68,6 +69,16 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
   # bookdown::render_book("index.Rmd", ..., css = css,
   #                       output_format = 'pagedown::html_paged',
   #                       output_file = '_pagedown_output/index.html')
+
+  if (!dir.exists("_pagedown_output")) dir.create("_pagedown_output")
+  if (!file.exists("index.Rmd") && (file.exists("skeleton.Rmd"))){
+    message("Renaming skeleton.Rmd into index.Rmd to match bookdown rules")
+    file.rename("skeleton.Rmd", "index.Rmd")
+  }
+  if (!file.exists("index.Rmd") && (file.exists("Untitled.Rmd"))){
+    message("Renaming Untitled.Rmd into index.Rmd to match bookdown rules")
+    file.rename("Untitled.Rmd", "index.Rmd")
+  }
 
   message("--------------------------------------------------------")
   message("Knitting document in background. This may take some time")
