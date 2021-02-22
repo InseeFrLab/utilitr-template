@@ -30,6 +30,12 @@
     font-weight: 400;
     src: url('https://fonts.cdnfonts.com/s/282/LinLibertineC_Re-4.0_.1_.woff') format('woff');
 }
+@font-face {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: 900;
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff');
+}
 
 /* Télécharger  les polices pour le code */
 @import 'https://fonts.googleapis.com/css?family=Courier+Prime';
