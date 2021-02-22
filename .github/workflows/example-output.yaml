@@ -56,8 +56,8 @@ jobs:
           Rscript -e "remotes::install_deps(dependencies = TRUE)"
       - name: Render Book
         run: |
-          rmarkdown::draft('index.Rmd', template="utilitr", package="utilitr", edit = FALSE)
-          bookdown::render_book("index.Rmd", output_dir = "_public", output_format = "utilitr::html_document")
+          Rscript -e "rmarkdown::draft('index.Rmd', template='utilitr', package='utilitr', edit = FALSE)"
+          Rscript -e "bookdown::render_book('index.Rmd', output_dir = '_public', output_format = 'utilitr::html_document')"
       - uses: actions/upload-artifact@v2
         with:
           name: _public
