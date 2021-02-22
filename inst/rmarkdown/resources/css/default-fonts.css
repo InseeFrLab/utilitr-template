@@ -31,11 +31,8 @@
     src: url('https://fonts.cdnfonts.com/s/282/LinLibertineC_Re-4.0_.1_.woff') format('woff');
 }
 
-@import 'https://fonts.googleapis.com/css?family=EB+Garamond';
 /* Télécharger  les polices pour le code */
 @import 'https://fonts.googleapis.com/css?family=Courier+Prime';
-@import 'https://fonts.googleapis.com/css?family=Inconsolata';
-@import 'https://fonts.googleapis.com/css?family=Source+Code+Pro';
 
 /* Définir les polices */
 body {
