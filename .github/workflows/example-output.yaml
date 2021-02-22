@@ -54,6 +54,10 @@ jobs:
         run: |
           Rscript -e "install.packages(c('remotes'))"
           Rscript -e "remotes::install_deps(dependencies = TRUE)"
+      - name: Install package
+        run: |
+          Rscript -e "devtools::document(roclets = c('rd', 'collate', 'namespace'))"
+          Rscript -e "devtools::install()"
       - name: Render Book
         run: |
           Rscript -e "rmarkdown::draft('index.Rmd', template='utilitr', package='utilitr', edit = FALSE)"
@@ -78,6 +82,10 @@ jobs:
           Rscript -e "install.packages(c('remotes'))"
           Rscript -e "remotes::install_github('rstudio/pagedown')"
           Rscript -e "remotes::install_deps(dependencies = TRUE)"
+      - name: Install package
+        run: |
+          Rscript -e "devtools::document(roclets = c('rd', 'collate', 'namespace'))"
+          Rscript -e "devtools::install()"
       - name: Render Book
         run: |
           mkdir _pagedown_output -p
