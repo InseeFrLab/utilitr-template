@@ -92,11 +92,7 @@ kbd {
 .auteurs:after {
   display: flex;
   position: absolute;
-  content: "\f007";
   justify-content: center;
-  font-family: "FontAwesome", "Font Awesome 5 Free", "Font Awesome 5 Brands";
-  font-weight: 400;
-  font-size: 200%;  
   color: #555555;
   align-items: center;
   left: -50px;
@@ -148,11 +144,7 @@ kbd {
 .recommandation:after {
   display: flex;
   position: absolute;
-  content: "\f0a4";
   justify-content: center;
-  font-family: "FontAwesome", "Font Awesome 5 Free", "Font Awesome 5 Brands";
-  font-weight: 900;
-  font-size: 200%;  
   color: rgba(220, 53, 69, 1);
   align-items: center;
   left: -50px;
@@ -183,11 +175,7 @@ kbd {
 .conseil:after {
   display: flex;
   position: absolute;
-  content: "\f0eb";
   justify-content: center;
-  font-family: "FontAwesome", "Font Awesome 5 Free", "Font Awesome 5 Brands";
-  font-weight: 900;
-  font-size: 200%;  
   color: rgba(255, 193, 7, 1);
   align-items: center;
   left: -50px;
@@ -218,11 +206,7 @@ kbd {
 .remarque:after {
   display: flex;
   position: absolute;
-  content: "\f05a";
   justify-content: center;
-  font-family: "FontAwesome", "Font Awesome 5 Free", "Font Awesome 5 Brands";
-  font-weight: 900;
-  font-size: 200%;
   color: rgba(0, 123, 255, 1);
   align-items: center;
   left: -50px;
