@@ -10,9 +10,7 @@ on:
 jobs:
   bookdown-prod:
     if: "!contains(github.event.commits[0].message, '[skip ci]')"
-    needs: docker
     runs-on: ubuntu-latest
-    container: inseefrlab/utilitr:latest
     steps:
       - name: Checkout Repository
         env:
@@ -38,8 +36,6 @@ jobs:
   pagedown:
     if: "!contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
-    needs: docker
-    container: inseefrlab/utilitr:latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@master
