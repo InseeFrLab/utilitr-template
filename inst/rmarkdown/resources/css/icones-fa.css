@@ -40,7 +40,7 @@ CSS minimal qui définit les icônes Font Awesome
 
 
 .specificite:after {
-  content: "\f05a";
+  content: "\f015";
   font-family: "FontAwesome", "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 200%;
