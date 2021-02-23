@@ -23,24 +23,24 @@ testthat::test_that("utilitr_html_document", {
 
 
 # outputdir <- paste0(tempdir(), "/test_rmd")
-outputdir <- getwd()
-if (!dir.exists(outputdir)) dir.create(outputdir)
-rmarkdown::draft(sprintf("%s/index.Rmd", outputdir),
-                 template="utilitr", package="utilitr",
-                 edit = FALSE)
-testthat::test_that("We create skeleton", {
-  testthat::expect_equal(
-    list.files(outputdir, recursive = TRUE),
-    c("_bookdown.yml", "_output.yml", "chapter1/example.Rmd",
-      "index.Rmd")
-  )
-  testthat::expect_output(
-    testthat::expect_message(
-      bookdown::render_book(sprintf("%s/index.Rmd", outputdir), output_dir = "_public", output_format = "utilitr::html_document"),
-      "Output created"),
-    "pandoc")
-
-  # utilitr::pdf_document()
-
-})
-
+# outputdir <- getwd()
+# if (!dir.exists(outputdir)) dir.create(outputdir)
+# rmarkdown::draft(sprintf("%s/index.Rmd", outputdir),
+#                  template="utilitr", package="utilitr",
+#                  edit = FALSE)
+# testthat::test_that("We create skeleton", {
+#   testthat::expect_equal(
+#     list.files(outputdir, recursive = TRUE),
+#     c("_bookdown.yml", "_output.yml", "chapter1/example.Rmd",
+#       "index.Rmd")
+#   )
+#   testthat::expect_output(
+#     testthat::expect_message(
+#       bookdown::render_book(sprintf("%s/index.Rmd", outputdir), output_dir = "_public", output_format = "utilitr::html_document"),
+#       "Output created"),
+#     "pandoc")
+#
+#   # utilitr::pdf_document()
+#
+# })
+#
