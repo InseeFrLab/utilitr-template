@@ -67,6 +67,22 @@
 </h1></div>
 <!-- badges: start -->
 
+<p>This package aims to simplify the formatting of <a href="www.book.utilitr.org">utilitR</a> documentation. A series of function to customize <code>rmarkdown</code> output is proposed in this package.</p>
+<p>You can use</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://rmarkdown.rstudio.com/docs//reference/draft.html">draft</a></span><span class="op">(</span><span class="st">'index.Rmd'</span>, template<span class="op">=</span><span class="st">"utilitr"</span>, package<span class="op">=</span><span class="st">"utilitr"</span>, edit <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
+<p>or <code>File &gt; new File &gt; R Markdown &gt; FromTemplate &gt; Modèle documentation utilitR</code> (in that case make sure to change the <code>.Rmd</code> filename into <code>index.Rmd</code>) to create a MWE of the output format.</p>
+<p>You can either generate a static website or a PDF book using our package:</p>
+<ul>
+<li>Static website can be generated using <code>bookdown</code> with the following command:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/bookdown/man/render_book.html">render_book</a></span><span class="op">(</span><span class="st">"index.Rmd"</span>, output_dir <span class="op">=</span> <span class="st">"_public"</span>, output_format <span class="op">=</span> <span class="st">"utilitr::html_document"</span><span class="op">)</span></code></pre></div>
+<ul>
+<li>PDF book can be generated using our <code>pdf_document</code> function that uses <code>pagedown</code> package under the hood:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">utilitr</span><span class="fu">::</span><span class="fu"><a href="reference/pdf_document.html">pdf_document</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
   </div>
 
