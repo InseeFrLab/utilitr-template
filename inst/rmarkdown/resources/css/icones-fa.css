@@ -11,14 +11,14 @@ CSS minimal qui définit les icônes Font Awesome
 
 .recommandation:after {
   content: "\f0a4";
-  font-family: "FontAwesome", "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-family: "FontAwesome", "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 200%;
 }
 
 .conseil:after {
   content: "\f0eb";
-  font-family: "FontAwesome", "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-family: "FontAwesome", "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 200%;
 
@@ -26,7 +26,14 @@ CSS minimal qui définit les icônes Font Awesome
 
 .remarque:after {
   content: "\f05a";
-  font-family: "FontAwesome", "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-family: "FontAwesome", "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 200%;
+}
+
+.specificite:after {
+  content: "\f015";
+  font-family: "FontAwesome", "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 300%;
 }
