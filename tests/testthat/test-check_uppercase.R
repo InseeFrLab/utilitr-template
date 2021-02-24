@@ -17,3 +17,15 @@ testthat::expect_error(
   upper_extension("PNG"),
   "Les fichiers suivants ont une majuscule:\n f2.PNG"
 )
+
+
+convert_extension("PNG")
+
+testthat::expect_message(
+  upper_extension("PNG"),
+  "Pas de probleme d'extension"
+)
+
+testthat::expect_true(
+  file.exists("f2.png")
+)
