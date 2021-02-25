@@ -1,0 +1,10 @@
+abbr {
+    font-style: italic;
+    font-weight: 100;
+}
+
+@media print {
+  abbr[title]:after {
+      content: " (" attr(title) ")";
+  }
+}
