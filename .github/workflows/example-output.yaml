@@ -92,5 +92,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: DocumentationR_pagedown
-          path: _pagedown_output/DocumentationR.pdf
+          path: _pagedown_output/
           retention-days: 5
