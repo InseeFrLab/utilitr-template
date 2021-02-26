@@ -47,6 +47,9 @@ html_paged <- function(..., extra_dependencies = NULL){
 #'  the documentation in a `_pagedown_output` directory
 #' @inheritParams bookdown::render_book
 #' @inheritParams pagedown::chrome_print
+#' @param asHTML Logical indicating wether we prefer a HTML or a PDF (default)
+#'  file
+#'
 #' @importFrom bookdown render_book
 #' @importFrom pagedown chrome_print html_paged
 #' @import callr
@@ -54,7 +57,8 @@ html_paged <- function(..., extra_dependencies = NULL){
 
 pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
                          timeout = 660,
-                         verbose = 1){
+                         verbose = 1,
+                         asHTML = FALSE){
 
 
   # css_default <- c(
@@ -94,6 +98,11 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
                           output_file = '_pagedown_output/index.html')
 
   }, timeout = timeout)
+
+  if (isTRUE(asHTML)){
+    message("Only compiling in HTML since asHTML is TRUE")
+    return(NULL)
+  }
 
   message("--------------------------------------------------------")
   message("Converting into PDF. This may also take some time")
