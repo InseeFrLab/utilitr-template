@@ -30,6 +30,7 @@ ul {
     }
     abbr[title]:after {
 /*      content: " (" attr(title) ")";*/
+    text-decoration: underline dotted;
     content: "";
   }
 }
