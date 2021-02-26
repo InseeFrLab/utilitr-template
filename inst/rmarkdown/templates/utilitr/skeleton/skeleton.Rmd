@@ -41,6 +41,5 @@ You can also embed some remarks here
 :::
 
 Definitions embedded in
-<abbr title=\"A CSS class for definitions\"><b>abbr</b></abbr>
+<abbr title="A CSS class for definitions"><b>abbr</b></abbr>
 class will render differently in HTML and PDF format
-
