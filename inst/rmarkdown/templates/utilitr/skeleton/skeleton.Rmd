@@ -21,21 +21,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{js, echo=FALSE}
-Paged.registerHandlers(class extends Paged.Handler {
-    constructor(chunker, polisher, caller) {
-      super(chunker, polisher, caller);
-    }
-
-    beforeParsed(content) {
-      // get the table of contents
-      const toc = content.querySelector('#TOC');
-      // move it at the end of the front matter
-      content.querySelector('.front-matter-container')
-             .appendChild(toc);
-    }
-});
-```
 
 # Adding an RMarkdown Template
 
