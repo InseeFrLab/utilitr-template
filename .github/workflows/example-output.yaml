@@ -63,7 +63,7 @@ jobs:
           Rscript -e "utilitr::pdf_document()"
       - uses: actions/upload-artifact@v2
         with:
-          name: DocumentationR_pagedown
+          name: example_pdf
           path: _pagedown_output/DocumentationR.pdf
           retention-days: 5
   HTMLpaged:
@@ -91,6 +91,6 @@ jobs:
           Rscript -e "utilitr::pdf_document(asHTML = TRUE)"
       - uses: actions/upload-artifact@v2
         with:
-          name: DocumentationR_pagedown
+          name: example_pagedHTML
           path: _pagedown_output/
           retention-days: 5
