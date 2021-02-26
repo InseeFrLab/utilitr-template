@@ -13,6 +13,7 @@ subparagraph: true
 #description: "UtilitR : Une documentation utile à R"
 favicon: resources/logo-utilitr.png
 links-to-footnotes: true
+loa-title: "Liste des définitions"
 ---
 
 ```{r setup, include=FALSE}
