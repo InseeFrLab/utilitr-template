@@ -206,6 +206,7 @@ pre.sourceCode > code {
   Attention: elle fait planter la compilation si un chunk est très long
   */
   break-inside: avoid;
+  padding: 0;
 }
 pre > code {
   background-color:   var(--background-color-chunk-output);
