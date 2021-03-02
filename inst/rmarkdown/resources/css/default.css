@@ -121,7 +121,7 @@ abbr {
 pre.numberSource a.sourceLine {
   left: 0 !important;
   text-indent: -5em;
-  
+
 }
 pre.numberSource {
   margin-left: 0 !important;
@@ -137,7 +137,7 @@ table {
   border-bottom: 1px solid #666;
   margin-top: 10px;
   margin-bottom: 20px;
-  /* Cette option évite la coupure des tableaux sur deux tables 
+  /* Cette option évite la coupure des tableaux sur deux tables
   Attention: elle fait planter la compilation si un tableau est très long
   */
   break-inside: avoid;
@@ -184,19 +184,27 @@ code {
   hyphens: none;
   text-align: left;
   background-color: var(--background-color-inline);
+  padding: 0.3em;
 }
-pre.sourceCode > code { 
+code:after {
+  content: none;
+}
+code:before {
+  content: none;
+}
+
+pre.sourceCode > code {
   background-color: var(--background-color-chunk);
-  /* Cette option évite la coupure des chunks sur deux tables 
+  /* Cette option évite la coupure des chunks sur deux tables
   Attention: elle fait planter la compilation si un chunk est très long
   */
   break-inside: avoid;
 }
-pre > code { 
+pre > code {
   background-color:   var(--background-color-chunk-output);
 }
 
-table code { 
+table code {
   background-color:   transparent;
 }
 
