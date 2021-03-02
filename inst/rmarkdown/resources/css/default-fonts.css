@@ -66,5 +66,5 @@ code {
   font-family: "Courier Prime", Inconsolata, "Source Code Pro", monospace;
 }
 pre, code {
-  font-size: 14px !important;
+  font-size: 0.9em !important;
 }
