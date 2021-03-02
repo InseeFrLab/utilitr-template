@@ -7,7 +7,6 @@
   --screen-pages-spacing: 5mm;
   --background-color-chunk: #EAEAEA;
   --background-color-chunk-output: #F0FFE3;
-  --background-color-chunk-output: #F0FFE3;
   --background-color-inline: #E2E2E2;
 }
 
@@ -110,7 +109,7 @@ pre {
   */
 }
 pre[class] {
-  background: var(--background-color-chunk);
+  background: var(--background-color-chunk) !important;
 }
 abbr {
   text-decoration: none;
@@ -191,7 +190,7 @@ body {
 code {
   hyphens: none;
   text-align: left;
-  background-color: var(--background-color-inline);
+  background-color: var(--background-color-inline) !important;
   padding: 0.2em;
 }
 code:after {
