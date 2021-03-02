@@ -8,15 +8,12 @@
 utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
 
   type <- match.arg(type)
-  files <- c("default-fonts.css", "default.css", "style-utilitr.css", "icones-fa.css")
   if (type == "pdf") {
     files <-
-      c(files,
-        "default-page.css")
+      c("default-page.css")
   }
   if (type == "html") {
-    files <-
-      c(files)
+    files <- NULL
   }
 
   if (to_list) return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
@@ -53,6 +50,10 @@ gitbook_utilitr <- function(extra_dependencies = list(),
 
   bookdown::gitbook(extra_dependencies = extra_dependencies,
                     new_session = TRUE,
+                    css = c("inst/rmarkdown/resources/css/default-fonts.css",
+                            "inst/rmarkdown/resources/css/default.css",
+                            "inst/rmarkdown/resources/css/style-utilitr.css",
+                            "inst/rmarkdown/resources/css/icones-fa.css"),
                     ...)
 
 }
