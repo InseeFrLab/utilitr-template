@@ -10,7 +10,11 @@ utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
   type <- match.arg(type)
   if (type == "pdf") {
     files <-
-      c("default-page.css")
+      c("default-fonts.css",
+        "default.css",
+        "style-utilitr.css",
+        "icones-fa.css",
+        "default-page.css")
   }
   if (type == "html") {
     files <- NULL
