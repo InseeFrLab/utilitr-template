@@ -190,7 +190,7 @@ body {
 code {
   hyphens: none;
   text-align: left;
-  background-color: var(--background-color-inline) !important;
+  background-color: var(--background-color-inline);
   padding: 0.2em;
 }
 code:after {
