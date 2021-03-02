@@ -187,10 +187,10 @@ code {
   padding: 0.3em;
 }
 code:after {
-  content: none;
+  content: none !important;
 }
 code:before {
-  content: none;
+  content: none !important;
 }
 
 pre.sourceCode > code {
