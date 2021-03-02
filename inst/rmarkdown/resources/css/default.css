@@ -96,8 +96,7 @@ ul {
 img {
   max-width: 100%;
   display: block;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin: 10px auto 10px;
 }
 /* Layout of chunks */
 pre {
