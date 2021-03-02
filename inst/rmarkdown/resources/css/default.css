@@ -191,7 +191,15 @@ code {
   hyphens: none;
   text-align: left;
   background-color: var(--background-color-inline);
+  padding: 0.3em;
 }
+code:after {
+  content: none !important;
+}
+code:before {
+  content: none !important;
+}
+
 pre.sourceCode > code {
   background-color: var(--background-color-chunk);
   /* Cette option évite la coupure des chunks sur deux tables
