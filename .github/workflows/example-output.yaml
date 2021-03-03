@@ -60,7 +60,7 @@ jobs:
           Rscript -e "utilitr::pdf_document()"
       - name: Trigger a build in utilitr doc
         run: |
-          curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/inseefrlab/utilitr/dispatches --data '{"event_type": "update-template"}'
+          curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/InseeFrLab/utilitR/actions/workflows/automatic-test-template.yaml/dispatches --data '{"event_type": "update-template"}'
       - uses: actions/upload-artifact@v2
         with:
           name: DocumentationR_pagedown
