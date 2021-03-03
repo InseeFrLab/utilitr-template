@@ -6,7 +6,8 @@
 <!-- badges: end -->
 
 This package aims to simplify the formatting of [utilitR](www.book.utilitr.org)
-documentation. A series of function to customize `rmarkdown` output is proposed
+documentation. A series of function to customize `rmarkdown` and handle
+multiple output format are proposed
 in this package. 
 
 You can use 
