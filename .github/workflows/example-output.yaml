@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - master
+      - dispatch
 
 jobs:
   bookdown-prod:
@@ -57,8 +58,13 @@ jobs:
           Rscript -e "rmarkdown::draft('index.Rmd', template='utilitr', package='utilitr', edit = FALSE)"
           mkdir _pagedown_output -p
           Rscript -e "utilitr::pdf_document()"
+      - name: Trigger a build in utilitr doc
+        run: |
+          curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/inseefrlab/utilitr/dispatches --data '{"event_type": "update-template"}'
       - uses: actions/upload-artifact@v2
         with:
           name: DocumentationR_pagedown
           path: _pagedown_output/DocumentationR.pdf
           retention-days: 5
+
+
