@@ -1,11 +1,7 @@
 name: Example output
 
 
-on:
-  push:
-    branches:
-      - main
-      - master
+on: push
 
 jobs:
   bookdown-prod:
