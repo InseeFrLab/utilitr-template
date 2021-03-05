@@ -30,6 +30,7 @@ Imports:
     bookdown,
     callr,
     knitr,
-    magick
+    magick,
+    xfun
 Suggests: 
     testthat
