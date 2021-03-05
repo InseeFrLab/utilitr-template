@@ -1,4 +1,4 @@
-utilitr::gitbook_utilitr:
+utilitr::html_document:
   new_session: yes
   config:
     toc_depth: 2
@@ -8,6 +8,8 @@ utilitr::gitbook_utilitr:
       after: |
         <li><a href="https://github.com/InseeFrLab/utilitr-template.git" target="blank">Code source</a></li>
 #     download: ["pdf", "epub"]
+# includes:
+#   in_header: assets/header.html
 utilitr::html_paged:
   new_session: yes
   self_contained: false
