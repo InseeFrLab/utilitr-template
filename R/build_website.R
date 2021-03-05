@@ -53,8 +53,10 @@ gitbook_utilitr <- function(extra_dependencies = list(),
 
   bookdown::gitbook(extra_dependencies = extra_dependencies,
                     new_session = TRUE,
-                    template = pkg_resource("templates/gitbook.html"),
-                    in_header = pkg_resource("rmarkdown/resources/header.html"),
+                    # template = pkg_resource("templates/gitbook.html"),
+                    # in_header = pkg_resource("rmarkdown/resources/header.html"),
+                    pandoc_args = c("--lua-filter",
+                                    pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
                     ...)
 
 }
@@ -94,3 +96,7 @@ check_structure <- function(){
   })
 
 }
+
+
+
+
