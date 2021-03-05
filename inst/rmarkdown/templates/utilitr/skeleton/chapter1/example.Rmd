@@ -4,3 +4,10 @@
 
 One day maybe this chapter will be filled by us. But right now, we would
 like you to write some content with R Markdown 
+
+
+You should see a button to easily copy a code chunk:
+
+```{r, eval = FALSE}
+plot(1:10)
+```
