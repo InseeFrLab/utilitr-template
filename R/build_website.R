@@ -53,6 +53,7 @@ gitbook_utilitr <- function(extra_dependencies = list(),
 
   bookdown::gitbook(extra_dependencies = extra_dependencies,
                     new_session = TRUE,
+                    template = pkg_resource("templates/gitbook.html"),
                     ...)
 
 }
