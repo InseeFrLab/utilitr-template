@@ -16,7 +16,7 @@ utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
   }
   if (type == "html") {
     files <-
-      c(files, "customize-bookdown.css")
+      c(files, "customize.css")
   }
 
   if (to_list) return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
@@ -54,6 +54,7 @@ gitbook_utilitr <- function(extra_dependencies = list(),
   bookdown::gitbook(extra_dependencies = extra_dependencies,
                     new_session = TRUE,
                     template = pkg_resource("templates/gitbook.html"),
+                    in_header = pkg_resource("rmarkdown/resources/header.html"),
                     ...)
 
 }
