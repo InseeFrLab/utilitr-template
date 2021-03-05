@@ -16,7 +16,7 @@ utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
   }
   if (type == "html") {
     files <-
-      c(files)
+      c(files, "customize-bookdown.css")
   }
 
   if (to_list) return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
