@@ -3,7 +3,7 @@
 .book .book-summary {
   background: white !important;
   background-color: white !important;
-  border-right: none;
+  /*border-right: none;*/
 }
 
  /* all TOC list items, basically */
