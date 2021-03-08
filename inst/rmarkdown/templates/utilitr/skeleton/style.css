@@ -14,17 +14,17 @@
   padding-bottom: 8px;
   padding-left: 15px;
   padding-right: 15px;
-  color: #2f5175;
+  color: #00274c;
 }
 
 .summary a:hover {
-  color: #778ca5 !important;
+  color: #ffcb05 !important;
 }
 
 .book .book-summary ul.summary li.active>a { /*active TOC links*/
-  color: #778ca5 !important;
+  color: #d86018 !important;
   border-left: solid 4px;
-  border-color: #5699cc;
+  border-color: #d86018;
   padding-left: 11px !important;
 }
 
