@@ -158,6 +158,24 @@ thead {
   text-align-last: center;
 }
 
+td[style*="text-align:center;"] {
+  text-align:center;
+  text-align-last:center;
+}
+td[style*="text-align:left;"] {
+  text-align:left;
+  text-align-last:left;
+}
+
+td[style*="text-align:right;"] {
+  text-align:right;
+  text-align-last:right;
+}
+td[style*="text-align:justify;"] {
+  text-align:justify;
+  text-align-last:justify;
+}
+
 table td, table th {
   padding: 3px 5px 3px 5px;
 }
