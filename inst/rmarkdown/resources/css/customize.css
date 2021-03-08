@@ -30,11 +30,24 @@
 
 
 /* -----------Section anchors -------------*/
+/* Force anchor section not to be # */
+
+a.anchor-section {margin-left: 10px; visibility: hidden; color: inherit;}
+
+a.anchor-section::before {
+   content: '\01F517\00FE0E'; !important
+   /*content: '#';*/
+ }
+
+.hasAnchor:hover a.anchor-section {visibility: visible;}
+ul > li > .anchor-section {display: none;}
+
 
 .book .book-body .page-wrapper .page-inner section.normal {
   overflow: visible !important; /*so anchor link doesnt get cut off */
 }
 
+/*
 a.anchor {
   margin-left: -30px;
   padding-right: 3px;
@@ -47,6 +60,7 @@ a.anchor {
   background-position: center bottom !important;
   opacity: 0;
 }
+*/
 
 
 .hasAnchor:hover a.anchor, a.anchor:hover {
@@ -58,18 +72,6 @@ a.anchor {
 visibility: hidden;
   }
 
-
-
-/* --------- copy button ---------------*/
-.copy {
-  width: inherit;
-  background-color: #e2e2e2 ;
-  border: none;
-  border-radius: 2px;
-  float: right;
-  font-size: 60%;
-  padding: 4px 4px 4px 4px;
-}
 
 
 /*------------ TOC --------------*/
