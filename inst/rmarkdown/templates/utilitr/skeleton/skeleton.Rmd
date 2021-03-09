@@ -61,7 +61,7 @@ usethis::use_git()
 
 This is some new text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
 ```{r, out.width= "90%", echo=FALSE}
-utilitr::include_image("./onglet_git1.png", compression = FALSE)
+utilitr::include_image("images/Rlogo.png", compression = FALSE)
 ```
 
 
