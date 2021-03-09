@@ -16,16 +16,23 @@ utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
   }
   if (type == "html") {
     files <-
-      c(files)
+      c(files, "customize.css")
   }
 
   if (to_list) return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
 
   # default CSS stylesheet
+  # default_dep <- list(htmltools::htmlDependency(
+  #   'utilitr-default', utils::packageVersion('utilitr'),
+  #   src = pkg_resource('rmarkdown/resources/css'), stylesheet = files
+  # ))
   default_dep <- list(htmltools::htmlDependency(
     'utilitr-default', utils::packageVersion('utilitr'),
-    src = pkg_resource('rmarkdown/resources/css'), stylesheet = files
+    src = pkg_resource('rmarkdown/resources'),
+    stylesheet = paste0("css/", files),
+    script = "js/book.js"
   ))
+
 
   return(default_dep)
 }
@@ -44,7 +51,7 @@ pkg_resource <- function(...) {
 #' @return An R Markdown output format object to be passed to
 #'   \code{rmarkdown::\link{render}()}.
 #' @export
-gitbook_utilitr <- function(extra_dependencies = list(),
+html_document <- function(extra_dependencies = list(),
                          ...) {
   extra_dependencies <- c(
     utilitr_dependencies(),
@@ -53,14 +60,15 @@ gitbook_utilitr <- function(extra_dependencies = list(),
 
   bookdown::gitbook(extra_dependencies = extra_dependencies,
                     new_session = TRUE,
+                    template = pkg_resource("templates/gitbook.html"),
+                    anchor_sections = FALSE,
+                    # css = pkg_resource('rmarkdown/templates/utilitr/skeleton/style.css'),
+                    # in_header = pkg_resource("rmarkdown/resources/header.html"),
+                    pandoc_args = c("--lua-filter",
+                                    pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
                     ...)
 
 }
-
-#' @rdname gitbook_utilitr
-#' @export
-html_document <- gitbook_utilitr
-
 
 
 
@@ -92,3 +100,7 @@ check_structure <- function(){
   })
 
 }
+
+
+
+

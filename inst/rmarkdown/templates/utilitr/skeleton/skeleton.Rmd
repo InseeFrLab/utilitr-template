@@ -11,7 +11,7 @@ link-citations: yes
 subparagraph: true
 #cover-image: "resources/logo-utilitr.png"
 #description: "UtilitR : Une documentation utile à R"
-favicon: resources/logo-utilitr.png
+favicon: images/Rlogo.png
 links-to-footnotes: true
 ---
 
