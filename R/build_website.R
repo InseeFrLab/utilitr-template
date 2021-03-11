@@ -30,7 +30,7 @@ utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
     'utilitr-default', utils::packageVersion('utilitr'),
     src = pkg_resource('rmarkdown/resources'),
     stylesheet = paste0("css/", files),
-    script = "js/book.js"
+    script = c("js/book.js", "js/plugin-bookdown-utilitr.js")
   ))
 
 
@@ -52,21 +52,32 @@ pkg_resource <- function(...) {
 #'   \code{rmarkdown::\link{render}()}.
 #' @export
 html_document <- function(extra_dependencies = list(),
-                         ...) {
-  extra_dependencies <- c(
-    utilitr_dependencies(),
-    extra_dependencies
-  )
+                          ...) {
 
-  bookdown::gitbook(extra_dependencies = extra_dependencies,
-                    new_session = TRUE,
-                    template = pkg_resource("templates/gitbook.html"),
-                    anchor_sections = FALSE,
-                    # css = pkg_resource('rmarkdown/templates/utilitr/skeleton/style.css'),
-                    # in_header = pkg_resource("rmarkdown/resources/header.html"),
-                    pandoc_args = c("--lua-filter",
-                                    pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
-                    ...)
+
+  gitbook2(new_session = TRUE,
+           template = pkg_resource("templates/gitbook.html"),
+           anchor_sections = FALSE,
+           # css = pkg_resource('rmarkdown/templates/utilitr/skeleton/style.css'),
+           # in_header = pkg_resource("rmarkdown/resources/header.html"),
+           pandoc_args = c("--lua-filter",
+                           pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
+           ...)
+
+
+}
+html_document2 <- function(extra_dependencies = list(),
+                          ...) {
+
+
+  bs4_book2(new_session = TRUE,
+            # template = pkg_resource("templates/gitbook.html"),
+            # anchor_sections = FALSE,
+            # css = pkg_resource('rmarkdown/templates/utilitr/skeleton/style.css'),
+            # in_header = pkg_resource("rmarkdown/resources/header.html"),
+            pandoc_args = c("--lua-filter",
+                            pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
+            ...)
 
 }
 

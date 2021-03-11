@@ -9,6 +9,6 @@ language:
   ui:
     chapter_name: "Chapitre "
 # before_chapter_script: [".Rprofile"]
-# view: ${YOUR_GITHUB_REPO}/blame/master/%s
-# edit: ${YOUR_GITHUB_REPO}/edit/master/%s
-# history: ${YOUR_GITHUB_REPO}/commits/master/%s
+view: ${YOUR_GITHUB_REPO}/blame/master/%s
+edit: ${YOUR_GITHUB_REPO}/edit/master/%s
+history: ${YOUR_GITHUB_REPO}/commits/master/%s
