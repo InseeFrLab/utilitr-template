@@ -9,6 +9,11 @@
 }
 
 
+.summary::after {
+    content: "View book source \f09b";
+}
+
+
 /*--- LOGO ---*/
 
 .toc-logo {
@@ -26,7 +31,6 @@
 .summary > li:first-child {
   height: auto !important;
 }
-
 
 
 /* -----------Section anchors -------------*/

@@ -37,3 +37,23 @@ CSS minimal qui définit les icônes Font Awesome
   font-weight: 900;
   font-size: 200%;
 }
+
+
+.fa-github-mod:before {
+    content: "View source \f09b";
+    text-transform: capitalize;
+}
+
+.fa-history-mod::before {
+    content: "View history \f1da";
+    text-transform: capitalize;
+}
+
+.fa-edit-mod::before {
+    content: "Edit this page \f09b";
+    text-transform: capitalize;
+}
+
+.fa-info-mod::before {
+    content: "Shortcuts \f129";
+}

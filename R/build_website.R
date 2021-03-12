@@ -30,7 +30,9 @@ utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
     'utilitr-default', utils::packageVersion('utilitr'),
     src = pkg_resource('rmarkdown/resources'),
     stylesheet = paste0("css/", files),
-    script = c("js/book.js", "js/plugin-bookdown-utilitr.js")
+    script = c("js/app.js",
+               "js/book.js", "js/gitbook-plugin-utilitr.js"
+               )
   ))
 
 
