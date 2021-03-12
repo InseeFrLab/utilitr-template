@@ -1,5 +1,5 @@
-Package: utilitr
 Type: Package
+Package: utilitr
 Title: Templates for the utilitR Project
 Version: 0.1.0
 Authors@R: 
@@ -9,34 +9,32 @@ Authors@R:
              email = "lino.galiana@insee.fr"),
       person(given = "Olivier",
              family = "Meslin",
-             role = c("aut"),
-             email = "olivier.meslin@insee.fr"),         
+             role = "aut",
+             email = "olivier.meslin@insee.fr"),
       person(given = "Romain",
              family = "Lesur",
              role = "aut",
              email = "romain.lesur@insee.fr",
              comment = c(ORCID = "0000-0002-0721-5595")))
-Description: A package to handle utilitR documentation.
-    It provides entry-points for both bookdown and pagedown
-    outputs.
+Description: A package to handle utilitR documentation.  It provides
+    entry-points for both bookdown and pagedown outputs.
 License: file LICENCE
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.1.1
 Imports: 
-    rmarkdown,
-    pagedown (>= 0.13.11),
-    htmltools,
     bookdown,
     callr,
+    fontawesome,
+    htmltools,
     knitr,
     magick,
-    xfun,
-    fontawesome
+    pagedown (>= 0.13.11),
+    rmarkdown,
+    xfun
 Suggests: 
     kableExtra,
     testthat
 Remotes:
     rstudio/fontawesome@2b64e3148c9c5c70e415cdeb3e33ac3200edadbf,
     rstudio/pagedown
-
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
