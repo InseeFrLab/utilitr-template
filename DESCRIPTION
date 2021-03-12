@@ -18,7 +18,7 @@ Authors@R:
              comment = c(ORCID = "0000-0002-0721-5595")))
 Description: A package to handle utilitR documentation.
     It provides entry-points for both bookdown and pagedown
-    outputs
+    outputs.
 License: file LICENCE
 Encoding: UTF-8
 LazyData: true
