@@ -7,7 +7,7 @@ gitbook.require(["gitbook", "lodash", "jQuery"], function(gitbook, _, $) {
     // add the Edit button (edit on Github)
     var edit = config.edit;
     if (edit && edit.link) gitbook.toolbar.createButton({
-      icon: 'fa fa-edit',
+      icon: 'fa fa-edit-mod',
       label: edit.text || 'Edit',
       position: 'left',
       onClick: function(e) {
@@ -19,7 +19,7 @@ gitbook.require(["gitbook", "lodash", "jQuery"], function(gitbook, _, $) {
     // add the History button (file history on Github)
     var history = config.history;
     if (history && history.link) gitbook.toolbar.createButton({
-      icon: 'fa fa-history',
+      icon: 'fa fa-history-mod',
       label: history.text || 'History',
       position: 'left',
       onClick: function(e) {
@@ -30,8 +30,8 @@ gitbook.require(["gitbook", "lodash", "jQuery"], function(gitbook, _, $) {
 
     // add the View button (file view on Github)
     var view = config.view;
-    if (view && view.link) gitbook.toolbar.createButton({
-      icon: 'fa fa-github',
+    if (view && view.link) var btn_view = gitbook.toolbar.createButton({
+      icon: 'fa fa-github-mod',
       label: view.text || 'View Source',
       position: 'left',
       onClick: function(e) {
@@ -39,6 +39,7 @@ gitbook.require(["gitbook", "lodash", "jQuery"], function(gitbook, _, $) {
         window.open(view.link);
       }
     });
+
 
     // add the Download button
     var down = config.download;
@@ -85,7 +86,7 @@ gitbook.require(["gitbook", "lodash", "jQuery"], function(gitbook, _, $) {
       '(use <up>/<down>/Enter in the search input to navigate through search matches; ' +
       'press Esc to cancel search)');
     if (config.info !== false) gitbook.toolbar.createButton({
-      icon: 'fa fa-info',
+      icon: 'fa fa-info-mod',
       label: 'Information about the toolbar',
       position: 'left',
       onClick: function(e) {
