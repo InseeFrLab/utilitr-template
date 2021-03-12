@@ -25,7 +25,7 @@ LazyData: true
 RoxygenNote: 7.1.1
 Imports: 
     rmarkdown,
-    pagedown,
+    pagedown (>= 0.13.11),
     htmltools,
     bookdown,
     callr,
@@ -37,4 +37,6 @@ Suggests:
     kableExtra,
     testthat
 Remotes:
-    rstudio/fontawesome@2b64e3148c9c5c70e415cdeb3e33ac3200edadbf
+    rstudio/fontawesome@2b64e3148c9c5c70e415cdeb3e33ac3200edadbf,
+    rstudio/pagedown
+
