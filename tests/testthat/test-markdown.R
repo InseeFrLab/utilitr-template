@@ -5,9 +5,10 @@ expect_render <- function(template){
 
   outputdir <- tempfile()
   dir.create(outputdir)
-  dir.create(file.path(outputdir,'www'))
-  file.copy(system.file("rmarkdown", "templates", template, "skeleton", "skeleton.Rmd", package = "utilitr"),outputdir)
-  file <- file.path(outputdir,"skeleton.Rmd")
+  file.copy(system.file("rmarkdown", "templates", template, "skeleton", package = "utilitr"),
+            outputdir,
+            recursive = TRUE)
+  file <- file.path(outputdir, "skeleton", "skeleton.Rmd")
   testthat::expect_output(
     testthat::expect_message(
       rmarkdown::render(

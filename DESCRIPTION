@@ -34,4 +34,5 @@ Imports:
     xfun,
     fontawesome
 Suggests: 
+    kableExtra,
     testthat
