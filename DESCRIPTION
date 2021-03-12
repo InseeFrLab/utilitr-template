@@ -19,7 +19,7 @@ Authors@R:
 Description: A package to handle utilitR documentation.
     It provides entry-points for both bookdown and pagedown
     outputs
-License: Licence Ouverte 2.0
+License: file LICENCE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
