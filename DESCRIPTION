@@ -37,4 +37,4 @@ Suggests:
     kableExtra,
     testthat
 Remotes:
-    rstudio/fontawesome
+    rstudio/fontawesome@2b64e3148c9c5c70e415cdeb3e33ac3200edadbf
