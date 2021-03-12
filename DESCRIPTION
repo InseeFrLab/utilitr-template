@@ -32,7 +32,9 @@ Imports:
     knitr,
     magick,
     xfun,
-    fontawesome
+    fontawesome (>= 0.1.0.9000)
 Suggests: 
     kableExtra,
     testthat
+Remotes:
+    rstudio/fontawesome
