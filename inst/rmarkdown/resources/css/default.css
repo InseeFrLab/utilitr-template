@@ -54,6 +54,11 @@ ul {
 .toc li li {
   padding-left: 1em;
 }
+.toc li[class="part"] {
+  font-size: 500%;
+  color: red;
+  border-top: 30px solid green;
+}
 .toc a, .lot a, .lof a {
   text-decoration: none;
   background: white;
