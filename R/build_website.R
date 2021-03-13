@@ -12,7 +12,7 @@ utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
   if (type == "pdf") {
     files <-
       c(files,
-        "default-fonts.css", "default-page.css", "toc.css")
+        "default-fonts.css", "default-page.css")
   }
   if (type == "html") {
     files <-
