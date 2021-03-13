@@ -6,6 +6,11 @@
   padding: 0;
   position: relative;
 }
+#TOC li[class=part] {
+  font-size: 500%;
+  color: red;
+  border-top: 30px solid green;
+}
 #TOC {
   line-height: 1;
   border-radius: 5px 5px 0 0;
