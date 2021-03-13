@@ -18,7 +18,7 @@
 }
 
 .summary a:hover {
-  color: #ffcb05 !important;
+  color: #ff0505 !important;
 }
 
 .book .book-summary ul.summary li.active>a { /*active TOC links*/
