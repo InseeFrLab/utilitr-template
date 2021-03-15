@@ -51,6 +51,10 @@ ul {
   margin-top: 0;
   overflow-x: hidden;
 }
+.toc li[class="part"] {
+  font-size: 200%;
+  margin-top: 20px;
+}
 .toc li li {
   padding-left: 1em;
 }
