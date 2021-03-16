@@ -95,10 +95,8 @@ jobs:
           GITHUB_PAT: ${{ secrets.PAT }}
         uses: actions/checkout@master
       - name: Install npm
-        if: ${{ github.repository == 'inseefrlab/utilitr' }}
         uses: actions/setup-node@v1
       - name: Deploy to Netlify
-        if: ${{ github.repository == 'inseefrlab/utilitr' }}
         # NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID added in the repo's secrets
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -117,10 +115,8 @@ jobs:
           GITHUB_PAT: ${{ secrets.PAT }}
         uses: actions/checkout@master
       - name: Install npm
-        if: ${{ github.repository == 'inseefrlab/utilitr' }}
         uses: actions/setup-node@v1
       - name: Deploy to Netlify
-        if: ${{ github.repository == 'inseefrlab/utilitr' }}
         # NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID added in the repo's secrets
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
