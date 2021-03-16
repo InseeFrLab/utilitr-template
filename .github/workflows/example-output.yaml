@@ -88,6 +88,7 @@ jobs:
   netlify-prod:
     if: "!contains(github.event.commits[0].message, '[skip ci]') && (github.ref == 'refs/heads/master')"
     needs: bookdown-prod
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         env:
@@ -107,6 +108,7 @@ jobs:
   netlify-dev:
     if: "!contains(github.event.commits[0].message, '[skip ci]') && !(github.ref == 'refs/heads/master')"
     needs: bookdown-prod
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         env:
