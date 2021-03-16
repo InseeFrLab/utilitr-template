@@ -57,7 +57,6 @@ jobs:
           name: example_pdf
           path: _pagedown_output/DocumentationR.pdf
           retention-days: 5
-<<<<<<< HEAD
   HTMLpaged:
     if: "!contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
@@ -86,7 +85,6 @@ jobs:
           name: example_pagedHTML
           path: _pagedown_output/
           retention-days: 5
-=======
   netlify-prod:
     if: "!contains(github.event.commits[0].message, '[skip ci]') && (github.ref == 'refs/heads/master')"
     needs: bookdown-prod
@@ -132,4 +130,3 @@ jobs:
           npm install --unsafe-perm=true netlify-cli -g
           netlify init
           netlify deploy --alias=${BRANCHE_REF} --dir="_public" --message "Preview deploy from ${BRANCHE_REF}"
->>>>>>> master
