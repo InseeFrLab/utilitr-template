@@ -5,6 +5,8 @@ delete_merged_file: true
 rmd_files:
   - index.Rmd
   - chapter1/example.Rmd
+  - chapter1/Fiche_donnees_textuelles.Rmd
+  - chapter1/Fiche_utiliser_utilitR.Rmd
 language:
   ui:
     chapter_name: "Chapitre "

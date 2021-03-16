@@ -51,6 +51,10 @@ ul {
   margin-top: 0;
   overflow-x: hidden;
 }
+.toc li[class="part"] {
+  font-size: 200%;
+  margin-top: 20px;
+}
 .toc li li {
   padding-left: 1em;
 }
@@ -151,6 +155,24 @@ thead {
   text-align-last: center;
 }
 
+td[style*="text-align:center;"] {
+  text-align:center;
+  text-align-last:center;
+}
+td[style*="text-align:left;"] {
+  text-align:left;
+  text-align-last:left;
+}
+
+td[style*="text-align:right;"] {
+  text-align:right;
+  text-align-last:right;
+}
+td[style*="text-align:justify;"] {
+  text-align:justify;
+  text-align-last:justify;
+}
+
 table td, table th {
   padding: 3px 5px 3px 5px;
 }
@@ -184,7 +206,7 @@ code {
   hyphens: none;
   text-align: left;
   background-color: var(--background-color-inline);
-  padding: 0.3em;
+  padding: 0.1em 0.1em 0em 0.1em
 }
 code:after {
   content: none !important;
