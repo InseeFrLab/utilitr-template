@@ -106,7 +106,7 @@ jobs:
           netlify init
           netlify deploy --prod --dir="_public" --message "Deploy master"
   netlify-dev:
-    if: "!contains(github.event.commits[0].message, '[skip ci]') & !(github.ref == 'refs/heads/master')"
+    if: "!contains(github.event.commits[0].message, '[skip ci]') && !(github.ref == 'refs/heads/master')"
     needs: bookdown-prod
     runs-on: ubuntu-latest
     steps:
