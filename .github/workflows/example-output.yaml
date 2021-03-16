@@ -94,6 +94,18 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.PAT }}
         uses: actions/checkout@master
+      - name: Install Dependencies
+        run: |
+          Rscript -e "install.packages(c('remotes'))"
+          Rscript -e "remotes::install_deps(dependencies = TRUE)"
+      - name: Install package
+        run: |
+          Rscript -e "devtools::document(roclets = c('rd', 'collate', 'namespace'))"
+          Rscript -e "devtools::install()"
+      - name: Render Book
+        run: |
+          Rscript -e "rmarkdown::draft('index.Rmd', template='utilitr', package='utilitr', edit = FALSE)"
+          Rscript -e "bookdown::render_book('index.Rmd', output_dir = '_public', output_format = 'utilitr::html_document')"
       - name: Install npm
         uses: actions/setup-node@v1
       - name: Deploy to Netlify
@@ -114,6 +126,18 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.PAT }}
         uses: actions/checkout@master
+      - name: Install Dependencies
+        run: |
+          Rscript -e "install.packages(c('remotes'))"
+          Rscript -e "remotes::install_deps(dependencies = TRUE)"
+      - name: Install package
+        run: |
+          Rscript -e "devtools::document(roclets = c('rd', 'collate', 'namespace'))"
+          Rscript -e "devtools::install()"
+      - name: Render Book
+        run: |
+          Rscript -e "rmarkdown::draft('index.Rmd', template='utilitr', package='utilitr', edit = FALSE)"
+          Rscript -e "bookdown::render_book('index.Rmd', output_dir = '_public', output_format = 'utilitr::html_document')"
       - name: Install npm
         uses: actions/setup-node@v1
       - name: Deploy to Netlify
