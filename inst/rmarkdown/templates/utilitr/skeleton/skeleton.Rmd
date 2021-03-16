@@ -13,11 +13,14 @@ subparagraph: true
 #description: "UtilitR : Une documentation utile à R"
 favicon: images/Rlogo.png
 links-to-footnotes: true
+loa-title: "Liste des définitions"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
 
 # Adding an RMarkdown Template
 
@@ -40,12 +43,19 @@ This box gives some advices
 You can also embed some remarks here
 :::
 
+
 ::: remarque2
 You can also embed some remarks2 here
 :::
+
 ::: specificite
 Work at Insee is awesome
 :::
+
+Definitions embedded in
+<abbr title="A CSS class for definitions"><b>abbr</b></abbr>
+class will render differently in HTML and PDF format
+
 
 # Time to test the code layout
 

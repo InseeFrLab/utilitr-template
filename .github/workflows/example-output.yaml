@@ -1,6 +1,5 @@
 name: Example output
 
-
 on: push
 
 jobs:
@@ -55,23 +54,62 @@ jobs:
           Rscript -e "utilitr::pdf_document()"
       - uses: actions/upload-artifact@v2
         with:
-          name: DocumentationR_pagedown
+          name: example_pdf
           path: _pagedown_output/DocumentationR.pdf
+          retention-days: 5
+  HTMLpaged:
+    if: "!contains(github.event.commits[0].message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    container: inseefrlab/utilitr:latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        env:
+          GITHUB_PAT: ${{ secrets.PAT }}
+        run: |
+          Rscript -e "install.packages(c('remotes'))"
+          Rscript -e "remotes::install_github('rstudio/pagedown')"
+          Rscript -e "remotes::install_deps(dependencies = TRUE)"
+      - name: Install package
+        run: |
+          Rscript -e "devtools::document(roclets = c('rd', 'collate', 'namespace'))"
+          Rscript -e "devtools::install()"
+      - name: Render Book
+        run: |
+          Rscript -e "rmarkdown::draft('index.Rmd', template='utilitr', package='utilitr', edit = FALSE)"
+          mkdir _pagedown_output -p
+          Rscript -e "utilitr::pdf_document(asHTML = TRUE)"
+      - uses: actions/upload-artifact@v2
+        with:
+          name: example_pagedHTML
+          path: _pagedown_output/
           retention-days: 5
   netlify-prod:
     if: "!contains(github.event.commits[0].message, '[skip ci]') && (github.ref == 'refs/heads/master')"
     needs: bookdown-prod
     runs-on: ubuntu-latest
+    container: inseefrlab/utilitr:latest
     steps:
       - name: Checkout Repository
         env:
           GITHUB_PAT: ${{ secrets.PAT }}
         uses: actions/checkout@master
+      - name: Install Dependencies
+        run: |
+          Rscript -e "install.packages(c('remotes'))"
+          Rscript -e "remotes::install_deps(dependencies = TRUE)"
+      - name: Install package
+        run: |
+          Rscript -e "devtools::document(roclets = c('rd', 'collate', 'namespace'))"
+          Rscript -e "devtools::install()"
+      - name: Render Book
+        run: |
+          Rscript -e "rmarkdown::draft('index.Rmd', template='utilitr', package='utilitr', edit = FALSE)"
+          Rscript -e "bookdown::render_book('index.Rmd', output_dir = '_public', output_format = 'utilitr::html_document')"
       - name: Install npm
-        if: ${{ github.repository == 'inseefrlab/utilitr' }}
         uses: actions/setup-node@v1
       - name: Deploy to Netlify
-        if: ${{ github.repository == 'inseefrlab/utilitr' }}
         # NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID added in the repo's secrets
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -84,21 +122,32 @@ jobs:
     if: "!contains(github.event.commits[0].message, '[skip ci]') && !(github.ref == 'refs/heads/master')"
     needs: bookdown-prod
     runs-on: ubuntu-latest
+    container: inseefrlab/utilitr:latest
     steps:
       - name: Checkout Repository
         env:
           GITHUB_PAT: ${{ secrets.PAT }}
         uses: actions/checkout@master
+      - name: Install Dependencies
+        run: |
+          Rscript -e "install.packages(c('remotes'))"
+          Rscript -e "remotes::install_deps(dependencies = TRUE)"
+      - name: Install package
+        run: |
+          Rscript -e "devtools::document(roclets = c('rd', 'collate', 'namespace'))"
+          Rscript -e "devtools::install()"
+      - name: Render Book
+        run: |
+          Rscript -e "rmarkdown::draft('index.Rmd', template='utilitr', package='utilitr', edit = FALSE)"
+          Rscript -e "bookdown::render_book('index.Rmd', output_dir = '_public', output_format = 'utilitr::html_document')"
       - name: Install npm
-        if: ${{ github.repository == 'inseefrlab/utilitr' }}
         uses: actions/setup-node@v1
       - name: Deploy to Netlify
-        if: ${{ github.repository == 'inseefrlab/utilitr' }}
         # NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID added in the repo's secrets
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          BRANCHE_REF: ${{ github.event.pull_request.head.ref }}
+          # BRANCHE_REF: ${{ github.event.pull_request.head.ref }}
         run: |
           npm install --unsafe-perm=true netlify-cli -g
           netlify init

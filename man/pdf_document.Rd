@@ -7,7 +7,8 @@
 pdf_document(
   extra_args = c("--disable-gpu", "--no-sandbox"),
   timeout = 660,
-  verbose = 1
+  verbose = 1,
+  asHTML = FALSE
 )
 }
 \arguments{
@@ -20,6 +21,9 @@ generation. Use a larger value if the document takes longer to build.}
 to print out some auxiliary messages (e.g., parameters for capturing
 screenshots); \code{2} (or \code{TRUE}) means all messages, including those
 from the Chrome processes and WebSocket connections.}
+
+\item{asHTML}{Logical indicating wether we prefer a HTML or a PDF (default)
+file}
 }
 \description{
 This function must be used in the `R` console. This will generate

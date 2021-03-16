@@ -7,7 +7,6 @@
   --screen-pages-spacing: 5mm;
   --background-color-chunk: #EAEAEA;
   --background-color-chunk-output: #F0FFE3;
-  --background-color-chunk-output: #F0FFE3;
   --background-color-inline: #E2E2E2;
 }
 
@@ -28,6 +27,11 @@ ul {
     hyphens: none;
     word-break: break-all;
     }
+    abbr[title]:after {
+/*      content: " (" attr(title) ")";*/
+    text-decoration: underline dotted;
+    content: "";
+  }
 }
 .references a[href^=http]:not([class=uri])::after {
   content: none;
@@ -95,7 +99,8 @@ ul {
 img {
   max-width: 100%;
   display: block;
-  margin: 0 auto;
+  margin: auto;
+  padding: 10px 0 10px;
 }
 /* Layout of chunks */
 pre {
@@ -108,10 +113,12 @@ pre {
   */
 }
 pre[class] {
-  background: var(--background-color-chunk);
+  background: var(--background-color-chunk) !important;
 }
 abbr {
   text-decoration: none;
+  font-style: italic;
+  font-weight: 100;
 }
 
 @media screen {
@@ -221,6 +228,7 @@ pre.sourceCode > code {
   Attention: elle fait planter la compilation si un chunk est très long
   */
   break-inside: avoid;
+  padding: 0;
 }
 pre > code {
   background-color:   var(--background-color-chunk-output);
