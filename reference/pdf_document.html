@@ -117,7 +117,8 @@
     <pre class="usage"><span class='fu'>pdf_document</span><span class='op'>(</span>
   extra_args <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"--disable-gpu"</span>, <span class='st'>"--no-sandbox"</span><span class='op'>)</span>,
   timeout <span class='op'>=</span> <span class='fl'>660</span>,
-  verbose <span class='op'>=</span> <span class='fl'>1</span>
+  verbose <span class='op'>=</span> <span class='fl'>1</span>,
+  asHTML <span class='op'>=</span> <span class='cn'>FALSE</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -138,6 +139,11 @@ generation. Use a larger value if the document takes longer to build.</p></td>
 to print out some auxiliary messages (e.g., parameters for capturing
 screenshots); <code>2</code> (or <code>TRUE</code>) means all messages, including those
 from the Chrome processes and WebSocket connections.</p></td>
+    </tr>
+    <tr>
+      <th>asHTML</th>
+      <td><p>Logical indicating wether we prefer a HTML or a PDF (default)
+file</p></td>
     </tr>
     </table>
 
