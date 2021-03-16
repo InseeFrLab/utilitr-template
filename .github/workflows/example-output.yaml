@@ -89,6 +89,7 @@ jobs:
     if: "!contains(github.event.commits[0].message, '[skip ci]') && (github.ref == 'refs/heads/master')"
     needs: bookdown-prod
     runs-on: ubuntu-latest
+    container: inseefrlab/utilitr:latest
     steps:
       - name: Checkout Repository
         env:
@@ -121,6 +122,7 @@ jobs:
     if: "!contains(github.event.commits[0].message, '[skip ci]') && !(github.ref == 'refs/heads/master')"
     needs: bookdown-prod
     runs-on: ubuntu-latest
+    container: inseefrlab/utilitr:latest
     steps:
       - name: Checkout Repository
         env:
