@@ -59,7 +59,7 @@ jobs:
           path: _pagedown_output/DocumentationR.pdf
           retention-days: 5
   netlify-prod:
-    if: "!contains(github.event.commits[0].message, '[skip ci]') & (github.ref == 'refs/heads/master')"
+    if: "!contains(github.event.commits[0].message, '[skip ci]') && (github.ref == 'refs/heads/master')"
     needs: bookdown-prod
     runs-on: ubuntu-latest
     steps:
