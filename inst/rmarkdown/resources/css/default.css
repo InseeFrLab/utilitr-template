@@ -7,7 +7,6 @@
   --screen-pages-spacing: 5mm;
   --background-color-chunk: #EAEAEA;
   --background-color-chunk-output: #F0FFE3;
-  --background-color-inline: #E2E2E2;
 }
 
 html {
@@ -212,8 +211,6 @@ body {
 code {
   hyphens: none;
   text-align: left;
-  background-color: var(--background-color-inline);
-  padding: 0.1em 0.1em 0em 0.1em
 }
 code:after {
   content: none !important;
