@@ -100,6 +100,7 @@ kbd {
   width: 100%;
   padding: 6px 10px 6px 10px;
   margin-left: -10px;
+  margin-bottom: 0.4em;
   font-family: sans-serif;
   font-weight: 900;
   font-size: 100%;
