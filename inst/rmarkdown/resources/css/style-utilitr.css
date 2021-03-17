@@ -62,50 +62,11 @@ kbd {
 }
 */
 
-.auteurs {
-  margin:30px 0 30px 30px ;
-  padding: 0 10px 0 10px;
-  position: relative;
-  page-break-inside:avoid;
-  box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
-  border-left:.25rem solid rgba(82, 190, 128, 1);
-}
-
-.auteurs:before {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  background-color:   rgba(82, 190, 128, 0.2);
-  border-left: 30px   rgba(82, 190, 128, 0.2);
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-/*font-size: large;
-  font-family: sans-serif;
-  font-weight: bold;*/
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 100%;
-  content: "Contributeurs du projet";
-}
-
-.auteurs:after {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  color: rgb(82, 190, 128, 1);
-  align-items: center;
-  left: -50px;
-  height: 40px;
-  width: 40px;
-  top: 0;
-}
-
 .recommandation,
 .conseil,
 .remarque,
-.specificite {
+.specificite,
+.auteurs {
   margin:30px 0 30px 30px ;
   padding: 0 10px 0 10px;
   position: relative;
@@ -119,9 +80,10 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 .recommandation,
 .conseil,
 .remarque,
-.specificite {
-  border-left:   0.25rem;
-  border-bottom: 0.25rem;
+.specificite,
+.auteurs {
+  border-left:   0.25rem solid;
+  border-bottom: 0.25rem solid;
 }
 .recommandation {
   border-color: rgba(220, 53, 69, 1);
@@ -135,11 +97,16 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 .specificite {
   border-color: rgba(81, 81, 81, 1);
 }
+.auteurs {
+  border-color: rgba(82, 190, 128, 1);
+}
+
 
 .recommandation:before,
 .conseil:before,
 .remarque:before,
-.specificite:before {
+.specificite:before,
+.auteurs:before {
   display: flex;
   align-items: center;
   width: 100%;
@@ -150,13 +117,37 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
   font-family: sans-serif;
   font-weight: 900;
   font-size: 100%;
+  border-left: 30px;
 }
 
 .recommandation:before {
   content: "Recommandation";
   background-color:   rgba(220, 53, 69, 0.2);
   border-color: rgba(220, 53, 69, 0.2);
-  border-left: 30px;
+}
+
+.conseil:before {
+  content: "Conseil";
+  background-color:  rgba(255, 193, 7, 0.2);
+  border-color: rgba(255, 193, 7, 0.2);
+}
+
+.remarque:before {
+  content: "Remarque";
+  background-color:  rgba(0, 123, 255, 0.2);
+  border-color: rgba(0, 123, 255, 0.2);
+}
+
+.specificite:before {
+  content: "Spécificité de l'Insee";
+  background-color:  rgba(81, 81, 81, 0.2);
+  border-color: rgba(81, 81, 81, 0.2);
+}
+
+.auteurs:before {
+  content: "Contributeurs du projet";
+  background-color:   rgba(82, 190, 128, 0.2);
+  border-color:   rgba(82, 190, 128, 0.2);
 }
 
 .recommandation:after {
@@ -171,13 +162,6 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
   top: 0;
 }
 
-.conseil:before {
-  content: "Conseil";
-  background-color:  rgba(255, 193, 7, 0.2);
-  border-color: rgba(255, 193, 7, 0.2);
-  border-left: 30px;
-}
-
 .conseil:after {
   display: flex;
   position: absolute;
@@ -188,14 +172,6 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
   height: 40px;
   width: 40px;
   top: 0;
-}
-
-.remarque:before {
-  content: "Remarque";
-  background-color:  rgba(0, 123, 255, 0.2);
-  border-color: rgba(0, 123, 255, 0.2);
-  border-left: 30px;
-
 }
 
 .remarque:after {
@@ -210,13 +186,6 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
   top: 0;
 }
 
-.specificite:before {
-  content: "Spécificité de l'Insee";
-  background-color:  rgba(81, 81, 81, 0.2);
-  border-color: rgba(81, 81, 81, 0.2);
-  border-left: 30px;
-}
-
 .specificite:after {
   display: flex;
   position: absolute;
@@ -229,32 +198,17 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
   top: 0;
 }
 
-
-/* .auteurs::after {
- content: url(var(--giturl));
+.auteurs:after {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  color: rgb(82, 190, 128, 1);
+  align-items: center;
+  left: -50px;
+  height: 40px;
+  width: 40px;
+  top: 0;
 }
- */
-
-/*.conseil {
-  background: #a3dfff;
-  padding: 12pt;
-  border-radius: 15px;
-  border: 5px solid #00a6ff;
-}
-.conseil::before {
-  font-size: large;
-  font-family: sans-serif;
-  font-weight: bold;
-  content: "Conseil";
-}
-
-.remarque {
-  background: #fffcad;
-  padding: 12pt;
-  border-radius: 15px;
-  border: 5px solid #ffe136;
-}
-*/
 
 
 .exercice {
