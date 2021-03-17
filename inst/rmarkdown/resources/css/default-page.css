@@ -141,10 +141,10 @@ div.front-page h2.date {
 }
 
 @page chapter:left {
-  @top-left {
+  @bottom-left {
     content: counter(page);
   }
-  @top-right {
+  @bottom-right {
     content: element(runningH1Title);
     white-space: nowrap !important;
     text-align-last: right;
@@ -165,11 +165,11 @@ div.front-page h2.date {
   content: string(h2-text);
 }
 @page chapter:right {
-  @top-right {
+  @bottom-right {
     content: counter(page);
     text-align-last: right;
  }
-  @top-left {
+  @bottom-left {
     content: element(runningH2Title);
     white-space: nowrap !important;
   }
@@ -177,13 +177,13 @@ div.front-page h2.date {
 
 /* New chapter page */
 @page chapter:first {
-  @top-left {
-    content: none;
-  }
-  @top-right {
+  @bottom-left {
     content: none;
   }
   @bottom-right {
+    content: none;
+  }
+  @bottom-center {
     content: counter(page);
   }
 }
@@ -285,22 +285,3 @@ caption {
   break-inside: avoid;
   break-after: avoid;
 }
-/* Filigrane draft */
-/*
-.pagedjs_sheet:after {
-  position: absolute;
-  content: "Version provisoire - Ne pas diffuser";
-  top: 50%;
-  left: 50%;
-  margin-left: -40%;
-  margin-top: -50%;
-  font-family: sans-serif;
-  font-size: 80pt;
-  font-weight: bold;
-  color: rgba(255, 0, 0, 0.2);
-  width: 80%;
-  text-align: center;
-  transform: rotate(-45deg);
-  user-select: none;
-}
-*/
