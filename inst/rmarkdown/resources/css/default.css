@@ -140,12 +140,12 @@ pre.numberSource a.sourceLine {
 pre.numberSource {
   margin-left: 0 !important;
 }
-/*
+
 pre.sourceCode{
-  background-color: var(--background-color-chunk);
+  background-color: none;
   border-style: none;
 }
-*/
+
 table {
   margin: auto;
   text-align: left;
