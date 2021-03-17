@@ -68,7 +68,7 @@ kbd {
 .specificite,
 .auteurs {
   margin:30px 0 30px 30px ;
-  padding: 0 10px 0 10px;
+  padding: 0 10px 0.4em 10px;
   position: relative;
   page-break-inside:avoid;
   border-left:   0.25rem solid;
