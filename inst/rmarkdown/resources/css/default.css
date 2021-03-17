@@ -220,7 +220,7 @@ code:before {
 }
 
 pre.sourceCode > code {
-  background-color: var(--background-color-chunk);
+  border-left:   5px solid gray;
   /* Cette option évite la coupure des chunks sur deux tables
   Attention: elle fait planter la compilation si un chunk est très long
   */
@@ -228,7 +228,7 @@ pre.sourceCode > code {
   padding: 0;
 }
 pre > code {
-  background-color:   var(--background-color-chunk-output);
+  border-left:   5px solid green;
 }
 
 table code {
