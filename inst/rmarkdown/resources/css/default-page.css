@@ -94,7 +94,7 @@ div.front-page h2.date {
     /* Disable the selection */
     user-select: none;
   }
-  @bottom-center {
+  @top-center {
     content: "Draft - Ne pas diffuser";
     font-family: sans-serif;
     font-size: 25pt;
