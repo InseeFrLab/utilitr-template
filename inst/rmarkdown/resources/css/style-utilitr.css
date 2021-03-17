@@ -149,7 +149,9 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 .recommandation:before {
   content: "Recommandation";
   background-color:   rgba(220, 53, 69, 0.2);
-  border-left: 30px   rgba(220, 53, 69, 0.2);
+  border-color: rgba(220, 53, 69, 0.2);
+  border-left: 30px;
+  border-bottom: 10px;
 }
 
 .recommandation:after {
@@ -167,7 +169,9 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 .conseil:before {
   content: "Conseil";
   background-color:  rgba(255, 193, 7, 0.2);
-  border-left:30px   rgba(255, 193, 7, 0.2);
+  border-color: rgba(255, 193, 7, 0.2);
+  border-left: 30px;
+  border-bottom: 10px;
 }
 
 .conseil:after {
@@ -185,7 +189,10 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 .remarque:before {
   content: "Remarque";
   background-color:  rgba(0, 123, 255, 0.2);
-  border-left:30px   rgba(0, 123, 255, 0.2);
+  border-color: rgba(0, 123, 255, 0.2);
+  border-left: 30px;
+  border-bottom: 10px;
+
 }
 
 .remarque:after {
@@ -203,7 +210,9 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 .specificite:before {
   content: "Spécificité de l'Insee";
   background-color:  rgba(81, 81, 81, 0.2);
-  border-left:30px   rgba(81, 81, 81, 0.2);
+  border-color: rgba(81, 81, 81, 0.2);
+  border-left: 30px;
+  border-bottom: 10px;
 }
 
 .specificite:after {
