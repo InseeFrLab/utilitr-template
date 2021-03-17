@@ -226,17 +226,17 @@ code:before {
 }
 
 pre.sourceCode > code {
-  border-left:   5px solid gray;
   /* Cette option évite la coupure des chunks sur deux tables
   Attention: elle fait planter la compilation si un chunk est très long
   */
   break-inside: avoid;
   padding: 0;
 }
+/*
 pre > code {
   border-left:   5px solid green;
 }
-
+*/
 table code {
   background-color:   transparent;
 }
