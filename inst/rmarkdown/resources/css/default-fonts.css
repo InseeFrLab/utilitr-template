@@ -1,35 +1,10 @@
 /* Télécharger  les polices pour le corps de texte */
+@import "https://fonts.googleapis.com/css?family=Newsreader";
 
-@font-face {
-    font-family: 'Linux Libertine';
-    font-style: normal;
-    font-weight: 400;
-    src: url('https://fonts.cdnfonts.com/s/282/LinLibertine_Re-4.1_.8_.woff') format('woff');
-}
-@font-face {
-    font-family: 'Linux Libertine';
-    font-style: italic;
-    font-weight: 400;
-    src: url('https://fonts.cdnfonts.com/s/282/LinLibertine_It-4.0_.3_.woff') format('woff');
-}
-@font-face {
-    font-family: 'Linux Libertine';
-    font-style: normal;
-    font-weight: 700;
-    src: url('https://fonts.cdnfonts.com/s/282/LinLibertine_Bd-4.0_.2_.woff') format('woff');
-}
-@font-face {
-    font-family: 'Linux Libertine';
-    font-style: italic;
-    font-weight: 700;
-    src: url('https://fonts.cdnfonts.com/s/282/LinLibertine_BI-4.0_.3_.woff') format('woff');
-}
-@font-face {
-    font-family: 'Linux Libertine C';
-    font-style: normal;
-    font-weight: 400;
-    src: url('https://fonts.cdnfonts.com/s/282/LinLibertineC_Re-4.0_.1_.woff') format('woff');
-}
+/* Télécharger  les polices pour le code */
+@import 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono';
+
+
 @font-face {
     font-family: 'FontAwesome';
     font-style: normal;
@@ -44,26 +19,20 @@
 }
 
 
-
-
-
-/* Télécharger  les polices pour le code */
-@import 'https://fonts.googleapis.com/css?family=Courier+Prime';
-
 /* Définir les polices */
 body {
-  font-family: "Linux Libertine", Palatino, serif;
+  font-family: Newsreader, Palatino, serif;
   font-weight: 400;
   font-size: 16px;
 }
 blockquote {
-  font-family: "Linux Libertine", Palatino, serif;
+  font-family: Newsreader, Palatino, serif;
 }
 h1, h2, h3, h4 {
-  font-family: "Linux Libertine", Palatino, serif;
+  font-family: Newsreader, Palatino, serif;
 }
 code {
-  font-family: "Courier Prime", Inconsolata, "Source Code Pro", monospace;
+  font-family: "IBM Plex Mono", Inconsolata, "Source Code Pro", monospace;
 }
 pre, code {
   font-size: 0.9em !important;
