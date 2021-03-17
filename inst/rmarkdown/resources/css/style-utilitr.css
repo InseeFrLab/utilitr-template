@@ -129,21 +129,27 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
   border-left:.25rem solid rgba(81, 81, 81, 1);
 }
 
-
-.recommandation:before {
+.recommandation:before,
+.conseil:before,
+.remarque:before,
+.specificite:before {
   display: flex;
   align-items: center;
   width: 100%;
   height: 40px;
-  background-color:   rgba(220, 53, 69, 0.2);
-  border-left: 30px   rgba(220, 53, 69, 0.2);
   padding-left: 10px;
   padding-right: 10px;
   margin-left: -10px;
   font-family: sans-serif;
   font-weight: 900;
   font-size: 100%;
+}
+
+
+.recommandation:before {
   content: "Recommandation";
+  background-color:   rgba(220, 53, 69, 0.2);
+  border-left: 30px   rgba(220, 53, 69, 0.2);
 }
 
 .recommandation:after {
@@ -159,19 +165,9 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 }
 
 .conseil:before {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 40px;
+  content: "Conseil";
   background-color:  rgba(255, 193, 7, 0.2);
   border-left:30px   rgba(255, 193, 7, 0.2);
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 100%;
-  content: "Conseil";
 }
 
 .conseil:after {
@@ -187,19 +183,9 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 }
 
 .remarque:before {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 40px;
+  content: "Remarque";
   background-color:  rgba(0, 123, 255, 0.2);
   border-left:30px   rgba(0, 123, 255, 0.2);
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 100%;
-  content: "Remarque";
 }
 
 .remarque:after {
@@ -215,19 +201,9 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 }
 
 .specificite:before {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 40px;
+  content: "Spécificité de l'Insee";
   background-color:  rgba(81, 81, 81, 0.2);
   border-left:30px   rgba(81, 81, 81, 0.2);
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 100%;
-  content: "Spécificité de l'Insee";
 }
 
 .specificite:after {
