@@ -87,37 +87,37 @@ div.front-page h2.date {
     font-size: 25pt;
     font-weight: bold;
     color: rgba(255, 0, 0, 0.8);
-    min-width: 14cm; 
+    min-width: 14cm;
     text-align-last: center;
      /* Rotate the text */
     transform: rotate(-90deg);
     /* Disable the selection */
-    user-select: none;  
-  } 
+    user-select: none;
+  }
   @bottom-center {
     content: "Draft - Ne pas diffuser";
     font-family: sans-serif;
     font-size: 25pt;
     font-weight: bold;
-    min-width: 14cm; 
+    min-width: 14cm;
     color: rgba(255, 0, 0, 0.8);
     width: 80%;
     text-align-last: left;
     /* Disable the selection */
-    user-select: none;  
-  }    
+    user-select: none;
+  }
 }
 @page :blank {
 
 }
 /* Define the margins of both pages */
 @page:left {
-    margin-left: 2cm;
-    margin-right: 3cm;
+    margin-left: 4cm;
+    margin-right: 5cm;
 }
 @page:right {
-    margin-left: 3cm;
-    margin-right: 2cm;
+    margin-left: 5cm;
+    margin-right: 4cm;
 }
 
 /* store some string variables */
