@@ -151,7 +151,7 @@ kbd {
   left: -50px;
   height: 40px;
   width: 40px;
-  top: 0;
+  top: -6px;
 }
 
 .recommandation:after {
