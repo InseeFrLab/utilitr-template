@@ -150,64 +150,39 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
   border-color:   rgba(82, 190, 128, 0.2);
 }
 
-.recommandation:after {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  color: rgba(220, 53, 69, 1);
-  align-items: center;
-  left: -50px;
-  height: 40px;
-  width: 40px;
-  top: 0;
-}
-
-.conseil:after {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  color: rgba(255, 193, 7, 1);
-  align-items: center;
-  left: -50px;
-  height: 40px;
-  width: 40px;
-  top: 0;
-}
-
-.remarque:after {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  color: rgba(0, 123, 255, 1);
-  align-items: center;
-  left: -50px;
-  height: 40px;
-  width: 40px;
-  top: 0;
-}
-
-.specificite:after {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  color: rgba(81, 81, 81, 1);
-  align-items: center;
-  left: -50px;
-  height: 40px;
-  width: 40px;
-  top: 0;
-}
-
+.recommandation:after,
+.conseil:after,
+.remarque:after,
+.specificite:after,
 .auteurs:after {
   display: flex;
   position: absolute;
   justify-content: center;
-  color: rgb(82, 190, 128, 1);
   align-items: center;
   left: -50px;
   height: 40px;
   width: 40px;
   top: 0;
+}
+
+.recommandation:after {
+  color: rgba(220, 53, 69, 1);
+}
+
+.conseil:after {
+  color: rgba(255, 193, 7, 1);
+}
+
+.remarque:after {
+  color: rgba(0, 123, 255, 1);
+}
+
+.specificite:after {
+  color: rgba(81, 81, 81, 1);
+}
+
+.auteurs:after {
+  color: rgb(82, 190, 128, 1);
 }
 
 
