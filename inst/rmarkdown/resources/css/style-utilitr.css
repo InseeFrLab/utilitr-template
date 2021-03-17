@@ -157,7 +157,7 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 .auteurs:after {
   font-family: "FontAwesome", "Font Awesome 5 Free" ;
   font-weight: 400;
-  font-size: 200%;
+  font-size: 300%;
   display: flex;
   position: absolute;
   justify-content: center;
