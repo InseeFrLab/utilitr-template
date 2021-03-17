@@ -71,17 +71,6 @@ kbd {
   padding: 0 10px 0 10px;
   position: relative;
   page-break-inside:avoid;
-/*
-box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
-*/
-}
-
-
-.recommandation,
-.conseil,
-.remarque,
-.specificite,
-.auteurs {
   border-left:   0.25rem solid;
   border-bottom: 0.25rem solid;
 }
@@ -101,7 +90,6 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
   border-color: rgba(82, 190, 128, 1);
 }
 
-
 .recommandation:before,
 .conseil:before,
 .remarque:before,
@@ -110,9 +98,7 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
   display: flex;
   align-items: center;
   width: 100%;
-  height: 40px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 6px 10px 6px 10px;
   margin-left: -10px;
   font-family: sans-serif;
   font-weight: 900;
@@ -157,7 +143,7 @@ box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
 .auteurs:after {
   font-family: "FontAwesome", "Font Awesome 5 Free" ;
   font-weight: 400;
-  font-size: 300%;
+  font-size: 250%;
   display: flex;
   position: absolute;
   justify-content: center;
