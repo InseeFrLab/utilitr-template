@@ -8,7 +8,7 @@
 utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
 
   type <- match.arg(type)
-  files <- c("default.css", "style-utilitr.css", "icones-fa.css")
+  files <- c("reset.css", "default.css", "style-utilitr.css", "icones-fa.css")
   if (type == "pdf") {
     files <-
       c(files,
