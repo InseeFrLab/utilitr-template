@@ -19,8 +19,6 @@ compresser_image <-
     dossier_images <- './pics' # This folder must exist in the repo
     dossier_images_compressees <- './pics_resized'
 
-    dir.create(file.path('./pics_resized'), showWarnings = FALSE)
-
     if (is.na(file_out)) {
       file_out <- sub(dossier_images, dossier_images_compressees, file_in)
     }
