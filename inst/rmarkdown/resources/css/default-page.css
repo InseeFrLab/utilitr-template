@@ -132,9 +132,9 @@ div[id^="part-"] span[class="header-section-number"]:before {
   content: "Partie ";
 }
 div[id^="part-"] span[class="header-section-number"]:after {
-    content:"\a\a";
-    white-space: pre;
-  }
+  content:"\a\a";
+  white-space: pre;
+}
 
 
 /* store some string variables */
