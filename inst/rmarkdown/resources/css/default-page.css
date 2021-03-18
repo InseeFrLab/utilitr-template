@@ -120,6 +120,23 @@ div.front-page h2.date {
     margin-right: 4cm;
 }
 
+/* Titre de partie en pleine page */
+div[id^="part-"] {
+  margin-top: 6cm;
+  font-size: 2em;
+  text-align: center;
+  text-align-last: center;
+  font-weight: 500;
+}
+div[id^="part-"] span[class="header-section-number"]:before {
+  content: "Partie ";
+}
+div[id^="part-"] span[class="header-section-number"]:after {
+    content:"\a\a";
+    white-space: pre;
+  }
+
+
 /* store some string variables */
 .shorttitle1 {
   string-set: h1-text content(text);
