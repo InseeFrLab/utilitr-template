@@ -267,12 +267,18 @@ div.front-page h2.date {
 .section > h1, .section > h2, .section > h3, .section > h4, .section > h5, .section > h6 {
   break-after: avoid;
 }
-.footenotes {
+.footnotes {
   break-before: always;
   break-after: always;
+  color: red;
 }
 .figure {
   break-inside: avoid;
+}
+
+a[class='footnote-ref'] {
+  line-height: 1;
+  font-size: 85%;
 }
 
 /* reset page numbering for main content */
