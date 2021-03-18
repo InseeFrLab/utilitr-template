@@ -40,6 +40,11 @@ body {
   font-variation-settings: 'opsz' 20;
 }
 
+strong {
+  font-weight: 500;
+  font-variation-settings: 'opsz' 40;
+}
+
 blockquote {
   font-family: Newsreader, Palatino, serif;
 }
