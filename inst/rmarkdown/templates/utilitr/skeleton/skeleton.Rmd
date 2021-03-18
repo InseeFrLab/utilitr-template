@@ -14,6 +14,7 @@ subparagraph: true
 favicon: pics/Rlogo.png
 links-to-footnotes: true
 loa-title: "Liste des définitions"
+paged-footnotes: true
 ---
 
 ```{r setup, include=FALSE}
