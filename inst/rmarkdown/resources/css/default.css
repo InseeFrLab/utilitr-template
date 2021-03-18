@@ -5,6 +5,8 @@
   --color-mbox: rgba(0, 0, 0, 0.2);
   --running-title-width: 12cm;
   --screen-pages-spacing: 5mm;
+  --pagedjs-margin-bottom: 4cm;
+  --pagedjs-margin-top: 4cm;
   /*
   --background-color-chunk: #EAEAEA;
   --background-color-chunk-output: #F0FFE3;
