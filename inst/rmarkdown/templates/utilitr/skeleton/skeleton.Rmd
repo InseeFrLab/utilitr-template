@@ -73,7 +73,7 @@ Definitions embedded in
 class will render differently in HTML and PDF format
 
 
-# Time to test the code layout
+## Time to test the code layout
 
 This is some `inline` code with a long sentence. A very very very very very very very very very very very very very very long sentence.
 
