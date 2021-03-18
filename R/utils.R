@@ -65,11 +65,9 @@ include_image <- function(x, compression = TRUE, ratio_compression = 2, ...) {
   dossier_images <- './pics' # This folder must exist in the repo
   dossier_images_compressees <- './pics_resized'
 
-  file.copy(from = x,
-            to = sub(
-              dossier_images,
-              dossier_images_compressees, x),
-            overwrite = TRUE)
+  if (is.na(file.size(x))) {
+    stop(paste0("File ", file_in, " not found."))
+  }
 
   # Fonction qui 1/ compresse  l'image si nécessaire; 2/ l'inclut dans le Rmd
   if (compression) {
