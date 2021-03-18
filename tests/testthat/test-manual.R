@@ -31,8 +31,8 @@ testthat::test_that(
   "PDF version is fine", {
     testthat::skip_on_ci()
     utilitr::pdf_document()
+    rstudioapi::viewer("_pagedown_output/DocumentationR.pdf")
   }
 )
-rstudioapi::viewer("_pagedown_output/DocumentationR.pdf")
 
 
