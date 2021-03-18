@@ -11,13 +11,30 @@ link-citations: yes
 subparagraph: true
 #cover-image: "resources/logo-utilitr.png"
 #description: "UtilitR : Une documentation utile à R"
-favicon: images/Rlogo.png
+favicon: pics/Rlogo.png
 links-to-footnotes: true
 loa-title: "Liste des définitions"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+with_def <- (function() {
+  
+  glossary <- yaml::read_yaml("resources/glossary.yml")
+  glossary <- as.data.frame(do.call(rbind, glossary), stringsAsFactors = FALSE)
+  
+  function(term, def) {
+    if (missing(def)) {
+      def <- unlist(glossary[glossary$name == tolower(term), "desc"])
+      # quick and dirty pour aussi matcher les pluriels
+      if (length(def) == 0) def <- unlist(glossary[paste0(glossary$name, "s") == tolower(term), "desc"])
+      # quick and dirty pour aussi matcher les infinitif
+      if (length(def) == 0) def <- unlist(glossary[paste0(glossary$name, "r") == tolower(term), "desc"])
+    }
+    sprintf('<abbr title="%s"><b>%s</b></abbr>', def, term)
+  }
+  
+})()
 ```
 
 
@@ -71,7 +88,7 @@ usethis::use_git()
 
 This is some new text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
 ```{r, out.width= "90%", echo=FALSE}
-utilitr::include_image("images/Rlogo.png", compression = FALSE)
+utilitr::include_image("pics/Rlogo.png", compression = FALSE)
 ```
 
 
