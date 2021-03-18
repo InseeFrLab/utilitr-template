@@ -18,6 +18,7 @@ loa-title: "Liste des définitions"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+print(getwd())
 with_def <- (function() {
   
   glossary <- yaml::read_yaml("resources/glossary.yml")
