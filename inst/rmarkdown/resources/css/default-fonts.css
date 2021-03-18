@@ -1,7 +1,19 @@
-/* Télécharger  les polices pour le corps de texte */
-@import "https://fonts.googleapis.com/css?family=Newsreader";
+/* Charger les typographies pour le corps de texte */
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/Newsreader.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+}
 
-/* Télécharger  les polices pour le code */
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/Newsreader-Italic.woff2") format("truetype");
+  font-weight: 200 800;
+  font-style: italic;
+}
+
+/* Télécharger les polices pour le code */
 @import 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono';
 
 
@@ -27,6 +39,7 @@ body {
   font-style: normal ;
   font-variation-settings: 'wght' 300, 'opsz' 18;
 }
+
 blockquote {
   font-family: Newsreader, Palatino, serif;
 }
