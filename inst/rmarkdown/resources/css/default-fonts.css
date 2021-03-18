@@ -35,9 +35,9 @@
 body {
   font-family: Newsreader, Monospace;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal ;
-  font-variation-settings: 'opsz' 18;
+  font-variation-settings: 'opsz' 20;
 }
 
 blockquote {
