@@ -28,7 +28,8 @@ Imports:
     magick,
     pagedown (>= 0.13.11),
     rmarkdown,
-    xfun
+    xfun,
+    R.utils
 Suggests: 
     kableExtra,
     testthat,
