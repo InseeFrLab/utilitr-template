@@ -21,6 +21,7 @@ compresser_image <-
 
     if (is.na(file_out)) {
       file_out <- sub(dossier_images, dossier_images_compressees, file_in)
+      print(paste0("Répertoire de sortie: ", file_out))
     }
     if (is.na(file.size(file_in))) {
       stop(paste0("File ", file_in, " not found."))
