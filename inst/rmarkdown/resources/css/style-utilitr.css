@@ -71,8 +71,10 @@ kbd {
   padding: 0 10px 0.4em 10px;
   position: relative;
   page-break-inside:avoid;
-  border-left:   0.25rem solid;
-  border-bottom: 0.25rem solid;
+  border-left:   0.25em solid;
+/*
+  border-bottom: 0.25em solid;
+*/
 }
 .recommandation {
   border-color: rgba(220, 53, 69, 1);
