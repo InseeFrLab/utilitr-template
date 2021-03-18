@@ -20,6 +20,9 @@ paged-footnotes: true
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,
                       message = FALSE)
+R.utils::copyDirectory("./pics",
+              "./pics_resized",
+              private = FALSE, recursive=TRUE)
 with_def <- (function() {
   
   glossary <- yaml::read_yaml("resources/glossary.yml")
