@@ -10,6 +10,7 @@ classoption: dvipsnames
 link-citations: yes
 subparagraph: true
 #cover-image: "resources/logo-utilitr.png"
+cover-image: "pics/Rlogo.png"
 #description: "UtilitR : Une documentation utile à R"
 favicon: pics/Rlogo.png
 links-to-footnotes: true
