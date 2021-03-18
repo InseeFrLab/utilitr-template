@@ -105,7 +105,7 @@ img {
 }
 /* Layout of chunks */
 pre {
-  padding: 1em;
+  padding: 0 1em;
   /* La couleur de la bordure à gauche des outputs de chunks */
   /*
    background-color:   var(--background-color-chunk-output);
