@@ -21,14 +21,15 @@
     font-family: 'FontAwesome';
     font-style: normal;
     font-weight: 900;
-    src: url("../fonts/fontawesome-webfont.woff") format('woff');
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff');
 }
 @font-face {
     font-family: 'Font Awesome 5 Free';
     font-style: normal;
     font-weight: 900;
-    src: url("../fonts/fa-solid-900.woff") format('woff');
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff') format('woff');
 }
+
 
 /* Définir les polices */
 body {
