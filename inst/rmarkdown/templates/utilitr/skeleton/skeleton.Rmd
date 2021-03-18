@@ -60,11 +60,6 @@ This box gives some advices
 You can also embed some remarks here
 :::
 
-
-::: remarque2
-You can also embed some remarks2 here
-:::
-
 ::: specificite
 Work at Insee is awesome
 :::
