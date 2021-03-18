@@ -1,14 +1,14 @@
 /* Charger les typographies pour le corps de texte */
 @font-face {
   font-family: "Newsreader";
-  src: url("../fonts/Newsreader.woff2") format("woff2");
+  src: url("../fonts/Newsreader-VariableFont.ttf") format("ttf");
   font-weight: 200 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Newsreader";
-  src: url("../fonts/Newsreader-Italic.woff2") format("truetype");
+  src: url("../fonts/Newsreader-Italic-VariableFont.ttf") format("ttf");
   font-weight: 200 800;
   font-style: italic;
 }
