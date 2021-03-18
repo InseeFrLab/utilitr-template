@@ -11,8 +11,10 @@ setwd(sprintf("%s/test-utilitr", destdir))
 
 rmarkdown::draft("index.Rmd", template='utilitr', package='utilitr', edit = FALSE)
 
-dir.create("./pics_resized")
-file.copy("./pics","./pics_resized",recursive=TRUE)
+R.utils::copyDirectory("./pics",
+              "./pics_resized",
+              private = FALSE, recursive=TRUE)
+
 
 # TEST HTML --------------------
 
