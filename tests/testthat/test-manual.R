@@ -12,20 +12,7 @@ setwd(sprintf("%s/test-utilitr", destdir))
 rmarkdown::draft("index.Rmd", template='utilitr', package='utilitr', edit = FALSE)
 
 dir.create("./pics_resized")
-copier_images <-
-  function(x) {
-    file.copy(from = x,
-              to = sub(
-                "/pics",
-                "/pics_resized", x),
-              overwrite = TRUE)
-      }
-
-lapply(
-  list.files("./pics", full.names = TRUE, recursive = TRUE),
-  copier_images)
-
-
+file.copy("./pics","./pics_resized",recursive=TRUE)
 
 # TEST HTML --------------------
 
@@ -46,7 +33,7 @@ testthat::test_that(
   "PDF version is fine", {
     testthat::skip_on_ci()
     utilitr::pdf_document()
-    rstudioapi::viewer("_pagedown_output/DocumentationR.pdf")
+    #rstudioapi::viewer("_pagedown_output/DocumentationR.pdf")
   }
 )
 
