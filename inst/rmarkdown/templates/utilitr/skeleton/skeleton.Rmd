@@ -37,8 +37,6 @@ with_def <- (function() {
 })()
 ```
 
-
-
 # Adding an RMarkdown Template
 
 This file is a minimal working example to test a few rendering properties
