@@ -11,6 +11,20 @@ setwd(sprintf("%s/test-utilitr", destdir))
 
 rmarkdown::draft("index.Rmd", template='utilitr', package='utilitr', edit = FALSE)
 
+copier_images <-
+  function(x) {
+    file.copy(from = x,
+              to = sub(
+                "/pics",
+                "/pics_resized", x),
+              overwrite = TRUE)
+      }
+
+lapply(
+  list.files("./pics", full.names = TRUE, recursive = TRUE),
+  copier_images)
+
+
 
 # TEST HTML --------------------
 
