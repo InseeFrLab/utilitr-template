@@ -21,9 +21,11 @@
 
 /* Définir les polices */
 body {
-  font-family: Newsreader, Palatino, serif;
-  font-weight: 400;
+  font-family: Newsreader, Monospace;
   font-size: 12px;
+  font-weight: normal;
+  font-style: normal ;
+  font-variation-settings: 'wght' 300, 'opsz' 18;
 }
 blockquote {
   font-family: Newsreader, Palatino, serif;
