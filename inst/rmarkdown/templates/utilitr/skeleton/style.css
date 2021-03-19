@@ -1,11 +1,8 @@
+/*------------ Bouton pdf --------------*/
 
 i[class="fa fa-file-pdf"]:before {
-  color: red;
-  content:"\f00e";
-}
-.fa-search-plus:before{
-  color: blue;
-  content:"\f011";
+  color: #ccc;
+  content:"\f1c1";
 }
 
 /*------------ TOC --------------*/
