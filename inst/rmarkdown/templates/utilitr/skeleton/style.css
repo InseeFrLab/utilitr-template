@@ -86,7 +86,7 @@ position: fixed;
 z-index: 20000;
 background: 0 0;
 padding: .7em;
-right: 480px;
+left: 480px;
 top: 8px;
 border: none;
 z-index: 90000000;
