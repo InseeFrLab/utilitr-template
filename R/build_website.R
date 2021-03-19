@@ -63,7 +63,7 @@ html_document <- function(extra_dependencies = list(),
                     template = pkg_resource("templates/gitbook.html"),
                     anchor_sections = FALSE,
                     # css = pkg_resource('rmarkdown/templates/utilitr/skeleton/style.css'),
-                    # in_header = pkg_resource("rmarkdown/resources/header.html"),
+                    in_header = pkg_resource("rmarkdown/resources/header.html"),
                     pandoc_args = c("--lua-filter",
                                     pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
                     ...)
