@@ -168,11 +168,15 @@ h2,h3,h4 {margin-top: 1.3em, margin-bottom: .8em}
 @page chapter:left {
   @bottom-left {
     content: counter(page);
+    vertical-align: top;
+    padding-top: 10px;
   }
   @bottom-right {
     content: element(runningH1Title);
     white-space: nowrap !important;
     text-align-last: right;
+    vertical-align: top;
+    padding-top: 10px;
   }
 }
 
@@ -193,10 +197,14 @@ h2,h3,h4 {margin-top: 1.3em, margin-bottom: .8em}
   @bottom-right {
     content: counter(page);
     text-align-last: right;
+    vertical-align: top;
+    padding-top: 10px;
  }
   @bottom-left {
     content: element(runningH2Title);
     white-space: nowrap !important;
+    vertical-align: top;
+    padding-top: 10px;
   }
 }
 
@@ -204,12 +212,18 @@ h2,h3,h4 {margin-top: 1.3em, margin-bottom: .8em}
 @page chapter:first {
   @bottom-left {
     content: none;
+    vertical-align: top;
+    padding-top: 10px;
   }
   @bottom-right {
     content: none;
-  }
+    vertical-align: top;
+    padding-top: 10px;
+ }
   @bottom-center {
     content: counter(page);
+    vertical-align: top;
+    padding-top: 10px;
   }
 }
 /*
