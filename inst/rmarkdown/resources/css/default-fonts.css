@@ -1,25 +1,12 @@
-
 @media print{
 
-  /* Charger les typographies pour le corps de texte */
-  @font-face {
-    font-family: "Newsreader";
-    src: url("../fonts/Newsreader-VariableFont.ttf") format("ttf");
-    font-weight: 200 800;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Newsreader";
-    src: url("../fonts/Newsreader-Italic-VariableFont.ttf") format("ttf");
-    font-weight: 200 800;
-    font-style: italic;
-  }
+  /* Télécharger les typographies pour le corps de texte */
+  @import "https://fonts.googleapis.com/css?family=Newsreader";
 
   /* Télécharger les polices pour le code */
   @import 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono';
 
-
+  /* Télécharger les typographies pour le corps de texte */
   @font-face {
       font-family: 'FontAwesome';
       font-style: normal;
@@ -60,5 +47,4 @@
   pre, code {
     font-size: 0.9em !important;
   }
-
 }
