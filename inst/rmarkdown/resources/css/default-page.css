@@ -37,6 +37,8 @@
   }
 }
 
+@media print {
+
 /* ------------------------ Front Cover --------------------- */
 @page:first{
   text-align-last: center;
@@ -333,4 +335,6 @@ a[class='footnote-ref'] {
 caption {
   break-inside: avoid;
   break-after: avoid;
+}
+
 }
