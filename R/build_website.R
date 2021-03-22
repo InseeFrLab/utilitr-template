@@ -80,6 +80,8 @@ bs4_utilitr <- function(extra_dependencies = list(),
 
   bookdown::bs4_book(extra_dependencies = extra_dependencies,
                     new_session = TRUE,
+                    theme = bookdown::bs4_book_theme(secondary = "#93bcbc",
+                                                     primary = "#cf581b"),
                     # template = pkg_resource("templates/gitbook.html"),
                     # anchor_sections = FALSE,
                     # css = pkg_resource('rmarkdown/templates/utilitr/skeleton/style.css'),
