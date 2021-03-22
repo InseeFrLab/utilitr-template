@@ -5,6 +5,10 @@ i[class="fa fa-print"]:before {
   content:"\f1c1";
 }
 
+i[class="fa fa-print"] {
+  border: 2px solid red;
+}
+
 /*------------ TOC --------------*/
 
 .book .book-summary {
