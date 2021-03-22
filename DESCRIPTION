@@ -28,7 +28,7 @@ Imports:
     magick,
     pagedown (>= 0.13.11),
     rmarkdown,
-    xfun,
+    xfun (>= 0.19),
     R.utils
 Suggests: 
     kableExtra,
