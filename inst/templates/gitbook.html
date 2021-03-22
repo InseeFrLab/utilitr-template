@@ -63,8 +63,7 @@ $endfor$
 
 <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
 
-<button class="btn btn-info btn-sm btn-print" type="submit" onclick="window.PagedPolyfill.preview().then(window.print)"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print</button>
-
+<button id="print"><i class="fa fa-print" type="submit" onclick="window.PagedPolyfill.preview().then(window.print)">TEST1</i><span class="glyphicon glyphicon-print" style= "padding-right: 10px;" aria-hidden="true">TEST2</span>Imprimer en A4</button>
 
 $if(highlightjs)$
 <style type="text/css">code{white-space: pre;}</style>
