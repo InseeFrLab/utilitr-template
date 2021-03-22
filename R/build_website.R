@@ -78,7 +78,7 @@ bs4_utilitr <- function(extra_dependencies = list(),
   )
 
   bookdown::bs4_book(
-    #extra_dependencies = extra_dependencies,
+    extra_dependencies = extra_dependencies,
     in_header = pkg_resource("rmarkdown/resources/header.html"),
     new_session = TRUE,
     theme = bookdown::bs4_book_theme(primary = "#93bcbc",
