@@ -23,17 +23,15 @@
 
   /* Définir les polices */
   body {
-    font-family: Newsreader, Monospace !important;
-    font-size: 12px !important;
+    font-family: Newsreader, Monospace;
+    font-size: 12px;
     font-weight: 400;
     font-style: normal ;
     font-variation-settings: 'opsz' 20;
   }
 
   strong {
-    font-family: Newsreader, Monospace !important;
-    font-size: 12px !important;
-    font-weight: 500 !important;
+    font-weight: 500;
     font-variation-settings: 'opsz' 40;
   }
 
@@ -41,7 +39,7 @@
     font-family: Newsreader, Palatino, serif;
   }
   h1, h2, h3, h4 {
-    font-family: Newsreader, Palatino, serif !important;
+    font-family: Newsreader, Palatino, serif;
   }
   code {
     font-family: "IBM Plex Mono", Inconsolata, "Source Code Pro", monospace;
