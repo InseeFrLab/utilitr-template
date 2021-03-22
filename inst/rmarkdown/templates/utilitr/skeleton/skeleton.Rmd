@@ -18,6 +18,12 @@ loa-title: "Liste des définitions"
 paged-footnotes: true
 ---
 
+<script>
+  PagedConfig = {auto: false};
+</script>
+  
+  <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,
                       message = FALSE)
