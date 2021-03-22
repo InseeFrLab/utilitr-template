@@ -1,10 +1,10 @@
-/*------------ Bouton pdf --------------*/
-
+/*------------ Bouton Imprimer en A4 --------------*/
+/*
 i[class="fa fa-file-pdf"]:before {
   color: #ccc;
   content:"\f1c1";
 }
-
+*/
 /*------------ TOC --------------*/
 
 .book .book-summary {
