@@ -56,6 +56,7 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
+
 <style>
   @media print {
     .btn-print {
@@ -64,13 +65,17 @@ $endfor$
   }
 </style>
 
+
+
+
+
 <script>
   PagedConfig = {auto: false};
 </script>
 
   <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
 
-<button class="btn btn-info btn-sm btn-print" type="submit" onclick="window.PagedPolyfill.preview().then(window.print)"><span class="glyphicon glyphicon-print" style= "padding-right: 10px;" aria-hidden="true"></span> Print</button>
+<button class="btn btn-info btn-sm btn-print" type="submit" onclick="window.PagedPolyfill.preview().then(window.print)"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print</button>
 
 
 $if(highlightjs)$
