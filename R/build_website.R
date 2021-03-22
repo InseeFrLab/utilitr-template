@@ -52,7 +52,7 @@ pkg_resource <- function(...) {
 #'   \code{rmarkdown::\link{render}()}.
 #' @export
 html_document <- function(extra_dependencies = list(),
-                         ...) {
+                          ...) {
   extra_dependencies <- c(
     utilitr_dependencies(),
     extra_dependencies
@@ -72,23 +72,24 @@ html_document <- function(extra_dependencies = list(),
 
 #' @export
 bs4_utilitr <- function(extra_dependencies = list(),
-                          ...) {
+                        ...) {
   extra_dependencies <- c(
     utilitr_dependencies(),
     extra_dependencies
   )
 
-  bookdown::bs4_book(extra_dependencies = extra_dependencies,
-                    new_session = TRUE,
-                    theme = bookdown::bs4_book_theme(secondary = "#93bcbc",
-                                                     primary = "#cf581b"),
-                    # template = pkg_resource("templates/gitbook.html"),
-                    # anchor_sections = FALSE,
-                    # css = pkg_resource('rmarkdown/templates/utilitr/skeleton/style.css'),
-                    in_header = pkg_resource("rmarkdown/resources/header.html"),
-                    pandoc_args = c("--lua-filter",
-                                    pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
-                    ...)
+  bookdown::bs4_book(
+    #extra_dependencies = extra_dependencies,
+    in_header = pkg_resource("rmarkdown/resources/header.html"),
+    new_session = TRUE,
+    theme = bookdown::bs4_book_theme(secondary = "#93bcbc",
+                                     primary = "#cf581b"),
+    # template = pkg_resource("templates/gitbook.html"),
+    # anchor_sections = FALSE,
+    # css = pkg_resource('rmarkdown/templates/utilitr/skeleton/style.css'),
+    pandoc_args = c("--lua-filter",
+                    pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
+    ...)
 
 }
 
