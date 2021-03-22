@@ -1,8 +1,12 @@
 /*------------ Bouton pdf --------------*/
 
-i[class="fa fa-file-pdf"]:before {
+i[class="fa fa-print"]:before {
   color: #ccc;
   content:"\f1c1";
+}
+
+i[class="fa fa-print"] {
+  border: 2px solid red;
 }
 
 /*------------ TOC --------------*/
