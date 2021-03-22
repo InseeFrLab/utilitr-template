@@ -35,9 +35,9 @@ Suggests:
     testthat,
     rstudioapi
 Remotes:
+    rstudio/bookdown#1027,
     rstudio/fontawesome@2b64e3148c9c5c70e415cdeb3e33ac3200edadbf,
     rstudio/pagedown
-    rstudio/bookdown#1027
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
