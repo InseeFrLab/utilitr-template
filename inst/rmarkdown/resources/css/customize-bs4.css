@@ -1,14 +1,3 @@
-:root {
-  --pagedjs-width: 21cm;
-  --pagedjs-height: 29.7cm;
-  --color-paper: white;
-  --color-mbox: rgba(0, 0, 0, 0.2);
-  --running-title-width: 10cm;
-  --screen-pages-spacing: 5mm;
-  --pagedjs-margin-bottom: 0cm;
-  --pagedjs-margin-top: 4cm;
-}
-
 html {
   line-height: 1.3 !important;
 }
@@ -26,13 +15,12 @@ html {
 /* Ecraser les réglages de bs4 */
 @media print {
   /* Masquer des choses */
-  /*
   button[id="print"],
   div[data-id="main-nav"],
   button[aria-label="Copy to clipboard"] {
     display: none !important;
   }
-*/
+
 .col-md-9 {
   flex: 0 0 100%;
   -webkit-flex: 0 0 100%;
@@ -54,12 +42,11 @@ html {
     counter-reset: page 1;
   }
   /* Enlever les deux premières pages */
-  /*
   .pagedjs_page[data-page-number="1"],
   .pagedjs_page[data-page-number="2"],
   nav,
   div[class="chapter-nav"] {
     display: none !important;
   }
-  */
+
 }
