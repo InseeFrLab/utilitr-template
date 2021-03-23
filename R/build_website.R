@@ -99,7 +99,8 @@ bs4_utilitr <- function(extra_dependencies = list(),
     pandoc_args = c("--lua-filter",
                     pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
     ...)
-
+  print(paste0("extra_dependencies: ", extra_dependencies))
+  #js/print-css-toggle.js
 }
 
 
