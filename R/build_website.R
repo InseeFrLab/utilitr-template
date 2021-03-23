@@ -5,17 +5,25 @@
 #' @param to_list Logical indicating whether we want to return result as
 #' htmltools dependency or simple filepaths list
 
-utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
+utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs4"),
+                                 to_list = FALSE){
 
   type <- match.arg(type)
+  model <- match.arg(model)
+
   files <- c("reset.css", "default.css", "style-utilitr.css", "icones-fa.css",
              "default-fonts.css", "default-page.css")
-  if (type == "pdf") {
-    files <- files
-  }
+
   if (type == "html") {
     files <-
       c(files, "customize.css")
+  }
+
+  if (model == "bs4"){
+    files <- "customize-bs4.css"
+    script <- NULL
+  } else{
+    script <- "js/book.js"
   }
 
   if (to_list) return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
@@ -29,7 +37,7 @@ utilitr_dependencies <- function(type = c("html","pdf"), to_list = FALSE){
     'utilitr-default', utils::packageVersion('utilitr'),
     src = pkg_resource('rmarkdown/resources'),
     stylesheet = paste0("css/", files),
-    script = "js/book.js"
+    script = script
   ))
 
 
@@ -73,7 +81,7 @@ html_document <- function(extra_dependencies = list(),
 bs4_utilitr <- function(extra_dependencies = list(),
                         ...) {
   extra_dependencies <- c(
-    #utilitr_dependencies(),
+    utilitr_dependencies(model = "bs4"),
     extra_dependencies
   )
 
