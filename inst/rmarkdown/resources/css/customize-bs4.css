@@ -24,4 +24,9 @@
     padding-left: none;
     padding-right: none;
   }
+  pre, code {
+    background-color: none;
+    background-image: none;
+    border-color: none;
+  }
 }
