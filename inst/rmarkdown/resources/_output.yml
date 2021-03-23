@@ -11,7 +11,6 @@ utilitr::gitbook_utilitr:
 utilitr::html_paged:
   new_session: yes
   self_contained: false
-  repo: "https://github.com/InseeFrLab/utilitr-template"
 utilitr::bs4_utilitr:
   new_session: yes
   config:
@@ -21,3 +20,4 @@ utilitr::bs4_utilitr:
         <li><a href="./">Template from utilitR project</a></li>
       after: |
         <li><a href="https://github.com/InseeFrLab/utilitr-template" target="blank">Code source</a></li>
+  repo: "https://github.com/InseeFrLab/utilitr-template"
