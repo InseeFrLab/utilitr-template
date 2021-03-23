@@ -23,7 +23,8 @@ utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs
   }
   if (model == "bs4"){
     files <- c(files, "customize-bs4.css")
-    script <- "js/print-css-toggle.js"
+    script <- NULL
+    #js/print-css-toggle.js
   } else{
     script <- "js/book.js"
   }
@@ -87,6 +88,8 @@ bs4_utilitr <- function(extra_dependencies = list(),
     extra_dependencies
   )
 
+  print(paste0("extra_dependencies: ", extra_dependencies))
+
   bookdown::bs4_book(
     extra_dependencies = extra_dependencies,
     includes = rmarkdown::includes(
@@ -99,8 +102,6 @@ bs4_utilitr <- function(extra_dependencies = list(),
     pandoc_args = c("--lua-filter",
                     pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
     ...)
-  print(paste0("extra_dependencies: ", extra_dependencies))
-  #js/print-css-toggle.js
 }
 
 
