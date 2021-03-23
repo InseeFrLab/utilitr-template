@@ -109,9 +109,17 @@ div.front-page h2.date {
 }
 /* Cadre noir autour de la zone de texte */
 .pagedjs_page_content {
-  padding: 5px;
+  padding: 1px;
   border: 1px solid black;
 }
+/* Cadre rouge autour de la page A4 */
+.pagedjs_sheet {
+  border-left: 1px solid blue;
+  border-right: 1px solid red;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
 
 @page :blank {
 
