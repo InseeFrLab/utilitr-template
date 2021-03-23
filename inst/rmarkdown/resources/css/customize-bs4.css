@@ -7,3 +7,15 @@
 .li a {
   color: #cf581b;
 }
+
+/* Ecraser les réglages de bs4 */
+@media print {
+.col-md-9 {
+  flex: 0 0 100%;
+  -webkit-flex: 0 0 100%;
+  max-width: 100%;
+  }
+  button[id="print"], div[data-id="main-nav"] {
+    display: none !important;
+  }
+}
