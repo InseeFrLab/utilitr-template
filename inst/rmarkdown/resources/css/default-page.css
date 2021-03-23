@@ -5,6 +5,9 @@
   -webkit-flex: 0 0 100%;
   max-width: 100%;
   }
+  button[id="print"] {
+    display: none;
+  }
 }
 
 /* two pages in a row if possible on screen */
