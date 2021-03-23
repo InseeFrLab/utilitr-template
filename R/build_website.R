@@ -22,7 +22,7 @@ utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs
     files <- c("reset.css", files)
   }
   if (model == "bs4"){
-    files <- "customize-bs4.css"
+    files <- c(files, "customize-bs4.css")
     script <- NULL
   } else{
     script <- "js/book.js"
