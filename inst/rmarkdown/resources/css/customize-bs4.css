@@ -1,3 +1,35 @@
+:root {
+  --pagedjs-width: 21cm;
+  --pagedjs-height: 29.7cm;
+  --color-paper: white;
+  --color-mbox: rgba(0, 0, 0, 0.2);
+  --running-title-width: 10cm;
+  --screen-pages-spacing: 5mm;
+  --pagedjs-margin-bottom: 0cm;
+  --pagedjs-margin-top: 0cm;
+  --pagedjs-margin-right: 0cm;
+  --pagedjs-margin-left: 0cm;
+  /*
+  --background-color-chunk: #EAEAEA;
+  --background-color-chunk-output: #F0FFE3;
+  */
+}
+
+html {
+  line-height: 1.3 !important;
+}
+
+/* Define the margins of both pages */
+@page:left {
+    margin-left: 0cm;
+    margin-right: 1cm;
+}
+@page:right {
+    margin-left: 1cm;
+    margin-right: 0cm;
+}
+
+
 .book-part{
   color: #93bcbc;
     font-weight: bold;
