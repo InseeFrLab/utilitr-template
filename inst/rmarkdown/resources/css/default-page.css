@@ -114,10 +114,10 @@ div.front-page h2.date {
 }
 /* Cadre rouge autour de la page A4 */
 .pagedjs_sheet {
-  border-left: 1px solid blue;
-  border-right: 1px solid red;
-  border-top: 1px solid blue;
-  border-bottom: 1px solid blue;
+  border-left: 3px solid blue;
+  border-right: 3px solid red;
+  border-top: 3px solid blue;
+  border-bottom: 3px solid blue;
 }
 
 
