@@ -1,6 +1,14 @@
+:root {
+  --pagedjs-margin-bottom: 0;
+}
+
+html {
+  line-height: 1.3 !important;
+}
+
 .book-part{
   color: #93bcbc;
-    font-weight: bold;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -11,13 +19,11 @@
 /* Ecraser les réglages de bs4 */
 @media print {
   /* Masquer des choses */
-  /*
   button[id="print"],
   div[data-id="main-nav"],
   button[aria-label="Copy to clipboard"] {
     display: none !important;
   }
-  */
 
 .col-md-9 {
   flex: 0 0 100%;
