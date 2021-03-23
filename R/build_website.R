@@ -79,8 +79,9 @@ bs4_utilitr <- function(extra_dependencies = list(),
 
   bookdown::bs4_book(
     extra_dependencies = extra_dependencies,
-    includes(
+    includes = rmarkdown::includes(
       in_header = c(
+        # pkg_resource("rmarkdown/resources/header.html"),
         pkg_resource("rmarkdown/resources/html/print_button.html")
       )
     ),
