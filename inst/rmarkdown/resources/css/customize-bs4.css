@@ -28,11 +28,16 @@
     padding-left: none;
     padding-right: none;
   }
+  /* Enlever la couleur de fond du code */
   pre, code {
     background-color: white ;
     background-image: white;
     border-color: white ;
     margin-left: 0 !important;
     margin: 1em 0;
+  }
+  /* Enlever la couleur de fond du code */
+  h1 {
+    counter-reset: page 1;
   }
 }
