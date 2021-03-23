@@ -5,7 +5,7 @@
   -webkit-flex: 0 0 100%;
   max-width: 100%;
   }
-  button[id="print"], div[id="main-nav"] {
+  button[id="print"], div[data-id="main-nav"] {
     display: none;
   }
 }
