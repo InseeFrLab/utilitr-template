@@ -11,14 +11,16 @@ utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs
   type <- match.arg(type)
   model <- match.arg(model)
 
-  files <- c("reset.css", "default.css", "style-utilitr.css", "icones-fa.css",
+  files <- c("default.css", "style-utilitr.css", "icones-fa.css",
              "default-fonts.css", "default-page.css")
 
   if (type == "html") {
     files <-
       c(files, "customize.css")
   }
-
+  if (model == "gitbook"){
+    files <- c("reset.css", files)
+  }
   if (model == "bs4"){
     files <- "customize-bs4.css"
     script <- NULL
