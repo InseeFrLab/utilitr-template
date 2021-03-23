@@ -30,14 +30,10 @@
   }
   /* Enlever la couleur de fond du code */
   pre, code {
-    background-color: white ;
-    background-image: white;
-    border-color: white ;
+    background-color: white !important;
+    border-color: white !important;
     margin-left: 0 !important;
     margin: 1em 0;
-  }
-  pre {
-    background-color: white !important ;
   }
   /* Renuméroter les pages */
   h1 {
@@ -45,7 +41,10 @@
   }
   /* Enlever les deux premières pages */
   .pagedjs_page[data-page-number="1"],
-  .pagedjs_page[data-page-number="2"] {
+  .pagedjs_page[data-page-number="2"],
+  nav,
+  div[class="chapter-nav"] {
     display: none !important;
   }
+
 }
