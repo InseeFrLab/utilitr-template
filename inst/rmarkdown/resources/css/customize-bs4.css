@@ -36,6 +36,9 @@
     margin-left: 0 !important;
     margin: 1em 0;
   }
+  pre {
+    background-color: white !important ;
+  }
   /* Renuméroter les pages */
   h1 {
     counter-reset: page 1;
