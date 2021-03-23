@@ -1,7 +1,11 @@
 html {
   line-height: 1.3 !important;
 }
-
+@media print {
+  @page {
+    size: 210mm 297mm;
+  }
+}
 .book-part{
   color: #93bcbc;
   font-weight: bold;
