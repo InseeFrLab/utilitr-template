@@ -9,7 +9,7 @@
   --pagedjs-margin-top: 0cm;
   --pagedjs-margin-right: 0cm;
   --pagedjs-margin-left: 0cm;
-  /*
+ /*
   --background-color-chunk: #EAEAEA;
   --background-color-chunk-output: #F0FFE3;
   */
@@ -21,12 +21,12 @@ html {
 
 /* Define the margins of both pages */
 @page:left {
-    margin-left: 0cm;
-    margin-right: 1cm;
+    margin-left: 4cm;
+    margin-right: 5cm;
 }
 @page:right {
-    margin-left: 1cm;
-    margin-right: 0cm;
+    margin-left: 5cm;
+    margin-right: 4cm;
 }
 
 
