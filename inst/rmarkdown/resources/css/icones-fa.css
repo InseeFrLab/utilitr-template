@@ -2,6 +2,11 @@
 CSS minimal qui définit les icônes Font Awesome
 */
 
+.glyphicon-print:before {
+  position: relative;
+  top: 2px;
+}
+
 .auteurs:after {
   content: "\f007";
 }
