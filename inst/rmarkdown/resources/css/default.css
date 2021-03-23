@@ -141,6 +141,7 @@ pre.numberSource a.sourceLine {
 }
 pre.numberSource {
   margin-left: 0 !important;
+  margin: 1em 0;
 }
 
 pre.sourceCode{
