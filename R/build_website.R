@@ -73,7 +73,7 @@ html_document <- function(extra_dependencies = list(),
 bs4_utilitr <- function(extra_dependencies = list(),
                         ...) {
   extra_dependencies <- c(
-    #utilitr_dependencies(),
+    utilitr_dependencies(),
     extra_dependencies
   )
 
