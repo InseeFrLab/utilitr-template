@@ -88,9 +88,8 @@ bs4_utilitr <- function(extra_dependencies = list(),
   bookdown::bs4_book(
     extra_dependencies = extra_dependencies,
     includes = rmarkdown::includes(
-      in_header = c(
-        pkg_resource("rmarkdown/resources/html/print_button.html")
-      )
+      in_header = pkg_resource("rmarkdown/resources/html/header_polyfill.html"),
+      before_body = pkg_resource("rmarkdown/resources/html/print_button.html"),
     ),
     new_session = TRUE,
     theme = bookdown::bs4_book_theme(primary = "#93bcbc",
