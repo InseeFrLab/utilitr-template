@@ -13,6 +13,8 @@ utilitr_dependencies(
 \arguments{
 \item{type}{Which output format should we handle ?}
 
+\item{model}{What is the output format model? Choice between "gitbook" and "bs4"}
+
 \item{to_list}{Logical indicating whether we want to return result as
 htmltools dependency or simple filepaths list}
 }
