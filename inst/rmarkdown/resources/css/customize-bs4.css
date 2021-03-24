@@ -36,24 +36,21 @@ html {
     display: none !important;
   }
   /* Mise en forme du titre de première page */
-  h1 {
-    margin-top: 2cm;
-  }
 
   @page:nth(3) {
     @top-left{
-      background-image: url(https://www.utilitr.org/images/logo-utilitr-right.png);
+      background-image: url(https://www.utilitr.org/images/logo-utilitr.png);
       background-size: 4cm;
       background-position: center;
       background-repeat: no-repeat;
     }
     @top-center{
-      color: #93bcbc;
+      color: black;
       font-size: 200%;
       font-weight: 500;
       content: var(--date-fiche);
       padding-top: 2cm;
-      justify-content: center;
+      justify-content: left;
       display: block;
     }
   }
