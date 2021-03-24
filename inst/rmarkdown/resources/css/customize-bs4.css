@@ -5,10 +5,6 @@ html {
   @page {
     size: 210mm 297mm;
   }
-  h1:before {
-    color: #93bcbc;
-    content: var(--date-fiche);
-  }
 }
 @media screen {
   .container-fluid {
@@ -44,14 +40,17 @@ html {
     margin-top: 6cm;
   }
   h1:before {
-    content: "Fiche téléchargée le";
+    color: #93bcbc;
+    content: var(--date-fiche);
     justify-content: center;
+    color: green;
     display: block;
     background-image: url(https://www.utilitr.org/images/logo-utilitr-right.png);
     background-size: 7cm;
     background-position: center 0;
     background-repeat: no-repeat;
   }
+
 
 .col-md-9 {
   flex: 0 0 100%;
