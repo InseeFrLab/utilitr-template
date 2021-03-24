@@ -5,8 +5,8 @@ html {
   @page {
     size: 210mm 297mm;
   }
-  .datefiche {
-    color: yellow;
+  h1:before {
+    color: #93bcbc;
   }
 }
 @media screen {
@@ -14,7 +14,7 @@ html {
     padding-right: 0;
     padding-left: 0;
   }
-  .datefiche {
+  h1:before {
     display: none !important;
   }
 }
