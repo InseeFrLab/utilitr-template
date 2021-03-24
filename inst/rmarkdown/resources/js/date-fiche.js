@@ -8,5 +8,4 @@ today = `${dd}/${mm}/${yyyy}`;
 
 message = 'Fiche téléchargée le ' + today;
 
-
 document.documentElement.style.setProperty('--date-fiche', `'${message}'`);
