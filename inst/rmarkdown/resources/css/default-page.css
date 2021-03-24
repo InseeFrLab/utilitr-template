@@ -1,3 +1,23 @@
+/* Quelques réglages spécifiques pour le print */
+
+@media print {
+  .recommandation:after,
+  .conseil:after,
+  .remarque:after,
+  .specificite:after,
+  .auteurs:after {
+    left: -40px;
+    top: -6px;
+  }
+  .recommandation:before,
+  .conseil:before,
+  .remarque:before,
+  .specificite:before,
+  .auteurs:before {
+    width: calc(100% + 10px);
+  }
+}
+
 /* two pages in a row if possible on screen */
 @media screen {
   body {

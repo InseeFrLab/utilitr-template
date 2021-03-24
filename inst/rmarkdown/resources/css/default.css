@@ -26,7 +26,7 @@ ul {
 @media print{
   a[href^="http"]:not([class="uri"])::after {
     content: " (" attr(href) ")";
-    font-size: 90%;
+    font-size: 100%;
     hyphens: none;
     word-break: break-all;
     }
