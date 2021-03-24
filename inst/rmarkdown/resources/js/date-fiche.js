@@ -6,6 +6,6 @@ let yyyy = today.getFullYear();
 
 today = `${dd}/${mm}/${yyyy}`;
 
-message = 'Fiche téléchargée le ' + today;
+message = 'Source: www.utilitr.org, date: ' + today;
 
 document.documentElement.style.setProperty('--date-fiche', `'${message}'`);

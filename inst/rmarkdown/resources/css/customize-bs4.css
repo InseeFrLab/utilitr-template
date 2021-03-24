@@ -12,7 +12,7 @@ html {
     padding-left: 0;
   }
   h1:before {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -35,22 +35,28 @@ html {
   button[aria-label="Copy to clipboard"] {
     display: none !important;
   }
-  /* */
-  h1:first {
-    margin-top: 6cm;
-  }
-  h1:before {
-    color: #93bcbc;
-    content: var(--date-fiche);
-    justify-content: center;
-    color: green;
-    display: block;
-    background-image: url(https://www.utilitr.org/images/logo-utilitr-right.png);
-    background-size: 7cm;
-    background-position: center 0;
-    background-repeat: no-repeat;
+  /* Mise en forme du titre de première page */
+  h1 {
+    margin-top: 2cm;
   }
 
+  @page:nth(3) {
+    @top-left{
+      background-image: url(https://www.utilitr.org/images/logo-utilitr-right.png);
+      background-size: 4cm;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    @top-center{
+      color: #93bcbc;
+      font-size: 200%;
+      font-weight: 500;
+      content: var(--date-fiche);
+      padding-top: 2cm;
+      justify-content: center;
+      display: block;
+    }
+  }
 
 .col-md-9 {
   flex: 0 0 100%;
@@ -81,6 +87,3 @@ html {
   }
 
 }
-
-
-
