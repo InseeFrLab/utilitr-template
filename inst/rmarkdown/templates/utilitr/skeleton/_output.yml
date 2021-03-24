@@ -17,3 +17,6 @@ utilitr::html_paged:
 #  front_cover: "resources/logo-utilitR.svg"
 #  knit:
 #    pagedown::chrome_print
+utilitr::bs4_utilitr:
+  new_session: yes
+  repo: https://github.com/InseeFrLab/utilitr-template
