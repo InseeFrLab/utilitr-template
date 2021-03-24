@@ -23,8 +23,7 @@ utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs
   }
   if (model == "bs4"){
     files <- c(files, "customize-bs4.css")
-    script <- NULL
-    #"js/css-print-toggle.js"
+    script <- "js/date-fiche.js"
   } else{
     script <- "js/book.js"
   }
