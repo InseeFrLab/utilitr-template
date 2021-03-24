@@ -13,6 +13,7 @@ html {
   }
 }
 
+
 .book-part{
   color: #93bcbc;
   font-weight: bold;
@@ -30,6 +31,15 @@ html {
   div[data-id="main-nav"],
   button[aria-label="Copy to clipboard"] {
     display: none !important;
+  }
+  /* */
+  h1:first {
+    margin-top: 6cm;
+  }
+  h1:before {
+    content:"Kikou lol";
+    font-size: 300%;
+    color: red;
   }
 
 .col-md-9 {
