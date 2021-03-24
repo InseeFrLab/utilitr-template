@@ -1,11 +1,3 @@
-html {
-  line-height: 1.3 !important;
-}
-@media print {
-  @page {
-    size: 210mm 297mm;
-  }
-}
 @media screen {
   .container-fluid {
     padding-right: 0;
@@ -29,6 +21,18 @@ html {
 
 /* Ecraser les réglages de bs4 */
 @media print {
+  @page {
+    size: 210mm 297mm;
+  }
+  html, body {
+    line-height: 1.3;
+    widows: 2;
+    orphans: 2;
+  }
+  pre {
+    background-image: none;
+    border: none;
+  }
   /* Masquer des choses */
   button[id="print"],
   div[data-id="main-nav"],
@@ -39,18 +43,21 @@ html {
 
   @page:nth(3) {
     @top-left{
+      visibility: visible !important;
       background-image: url(https://www.utilitr.org/images/logo-utilitr.png);
-      background-size: 4cm;
-      background-position: center;
+      background-size: 2.5cm;
+      background-position: 0cm 1cm;
       background-repeat: no-repeat;
     }
-    @top-center{
+    @top-right{
+      width: 6cm;
       color: black;
-      font-size: 200%;
+      font-size: 150%;
       font-weight: 500;
       content: var(--date-fiche);
-      padding-top: 2cm;
-      justify-content: left;
+      padding-top: 1cm;
+      text-align: left;
+      text-align-last: left;
       display: block;
     }
   }

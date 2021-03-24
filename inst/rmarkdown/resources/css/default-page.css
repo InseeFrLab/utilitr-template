@@ -114,32 +114,23 @@ div.front-page h2.date {
     /* Disable the selection */
     user-select: none;
   }
-  @top-center {
-    content: "Draft - Ne pas diffuser";
-    font-family: sans-serif;
-    font-size: 25pt;
-    font-weight: bold;
-    min-width: 14cm;
-    color: rgba(255, 0, 0, 0.8);
-    width: 80%;
-    text-align-last: left;
-    /* Disable the selection */
-    user-select: none;
-  }
 }
 /* Cadre noir autour de la zone de texte */
+/*
 .pagedjs_page_content {
   padding: 1px;
   border: 1px solid black;
 }
+*/
 /* Cadre rouge autour de la page A4 */
+/*
 .pagedjs_sheet {
   border-left: 3px solid blue;
   border-right: 3px solid red;
   border-top: 3px solid blue;
   border-bottom: 3px solid blue;
 }
-
+*/
 
 @page :blank {
 
