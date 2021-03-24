@@ -2,6 +2,7 @@
 #'
 #' @importFrom htmltools htmlDependency
 #' @param type Which output format should we handle ?
+#' @param model What is the output format model? Choice between "gitbook" and "bs4"
 #' @param to_list Logical indicating whether we want to return result as
 #' htmltools dependency or simple filepaths list
 
