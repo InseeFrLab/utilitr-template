@@ -50,16 +50,19 @@
       background-repeat: no-repeat;
     }
     @top-right{
-      width: 6cm;
+      width: 8cm;
       color: black;
-      font-size: 150%;
-      font-weight: 500;
+      font-size: 120%;
+      font-weight: 700;
       content: var(--date-fiche);
-      padding-top: 1cm;
+      padding-top: 2cm;
       text-align: left;
       text-align-last: left;
       display: block;
     }
+  }
+  footer[class="bg-primary text-light mt-5"] {
+    display: none !important;
   }
 
 .col-md-9 {
