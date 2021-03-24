@@ -248,12 +248,13 @@ h2, h3, h4 {
     padding-top: 10px;
   }
   @bottom-right {
-    content: none;
+    content: counter(page);
     vertical-align: top;
     padding-top: 10px;
  }
   @bottom-center {
-    content: counter(page);
+    content: none;
+    text-align-last: right;
     vertical-align: top;
     padding-top: 10px;
   }
