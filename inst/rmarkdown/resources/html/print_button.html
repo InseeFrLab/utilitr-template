@@ -1,12 +1,7 @@
 <button id="print" style="left:36%;position:relative;background-color: #92bcbc94;">
-  <i class="glyphicon glyphicon-print" type="submit" onclick="window.PagedPolyfill.preview().then(window.print)" style= "padding-left: 5px; color: #cf581b;">
+  <i class="glyphicon glyphicon-print" type="submit" onclick="window.PagedPolyfill.preview().then(() => {document.body.style.cssText='min-width: unset !important'; window.print();})" style= "padding-left: 5px; color: #cf581b;">
   <b style = "color: #cf581b; padding-left: 5px;">Imprimer en A4</b>
   </i>
 </button>
 
 
-<button id="print2" style="left:36%;position:relative;background-color: #92bcbc94;">
-  <i class="glyphicon glyphicon-print" type="submit" onclick="simulatePrintMedia()" style= "padding-left: 5px; color: blue;">
-  <b style = "color: red; padding-left: 5px;">Passer en print</b>
-  </i>
-</button>
