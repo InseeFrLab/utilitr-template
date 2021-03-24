@@ -5,11 +5,17 @@ html {
   @page {
     size: 210mm 297mm;
   }
+  .datefiche {
+    color: yellow;
+  }
 }
 @media screen {
   .container-fluid {
     padding-right: 0;
     padding-left: 0;
+  }
+  .datefiche {
+    display: none !important;
   }
 }
 
@@ -37,9 +43,13 @@ html {
     margin-top: 6cm;
   }
   h1:before {
-    content:"Kikou lol";
-    font-size: 300%;
-    color: red;
+    content: "Fiche téléchargée le";
+    justify-content: center;
+    display: block;
+    background-image: url(https://www.utilitr.org/images/logo-utilitr-right.png);
+    background-size: 7cm;
+    background-position: center 0;
+    background-repeat: no-repeat;
   }
 
 .col-md-9 {
