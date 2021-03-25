@@ -95,7 +95,7 @@
   .pagedjs_page[data-page-number="1"],
   .pagedjs_page[data-page-number="2"],
   nav,
-  div[class="chapter-nav"] {
+  div.chapter-nav {
     display: none !important;
   }
 
