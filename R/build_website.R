@@ -24,9 +24,9 @@ utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs
   }
   if (model == "bs4"){
     files <- c(files, "customize-bs4.css")
-    script <- "js/date-fiche.js"
+    script <- "date-fiche.js"
   } else{
-    script <- "js/book.js"
+    script <- "book.js"
   }
 
   if (to_list) return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
@@ -40,7 +40,7 @@ utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs
     'utilitr-default', utils::packageVersion('utilitr'),
     src = pkg_resource('rmarkdown/resources'),
     stylesheet = paste0("css/", files),
-    script = script
+    script = paste0("js/", script)
   ))
   return(default_dep)
 }
