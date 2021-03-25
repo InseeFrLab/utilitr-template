@@ -221,11 +221,7 @@ pre.sourceCode > code {
   break-inside: avoid;
   padding: 0;
 }
-/*
-pre > code {
-  border-left:   5px solid green;
-}
-*/
+
 table code {
   background-color:   transparent;
 }
