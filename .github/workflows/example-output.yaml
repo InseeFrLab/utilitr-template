@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: |
+          Rscript -e "install.packages('xfun')"
           Rscript -e "install.packages(c('remotes'))"
           Rscript -e "remotes::install_deps(dependencies = TRUE)"
-          Rscript -e "install.packages('xfun')"
       - name: Install package
         run: |
           Rscript -e "devtools::document(roclets = c('rd', 'collate', 'namespace'))"
