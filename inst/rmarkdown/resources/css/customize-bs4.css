@@ -87,7 +87,7 @@
     margin-left: 0 !important;
     margin: 1em 0;
   }
-  /* Renuméroter les pages */
+  /* Reset page numbers */
   h1 {
     counter-reset: page 1;
   }
