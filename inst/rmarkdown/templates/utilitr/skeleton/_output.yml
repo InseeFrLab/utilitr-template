@@ -14,6 +14,7 @@ utilitr::html_document:
 utilitr::html_paged:
   new_session: yes
   self_contained: false
+# Test absurde
 #  front_cover: "resources/logo-utilitR.svg"
 #  knit:
 #    pagedown::chrome_print
