@@ -39,7 +39,7 @@
     background-image: none;
     border: none;
   }
-  /* Masquer des choses */
+  /* Hide some elements */
   #print,
   div[data-id="main-nav"],
   button[aria-label="Copy to clipboard"] {
