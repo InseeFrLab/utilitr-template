@@ -25,7 +25,7 @@
   color: #cf581b;
 }
 
-/* Ecraser les réglages de bs4 */
+/* Tweak Bootstrap 4 theme */
 @media print {
   @page {
     size: 210mm 297mm;
