@@ -24,7 +24,7 @@ utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs
   }
   if (model == "bs4"){
     files <- c(files, "customize-bs4.css")
-    script <- "date-fiche.js"
+    script <- "date-header.js"
   } else{
     script <- "book.js"
   }

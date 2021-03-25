@@ -60,7 +60,7 @@
       color: black;
       font-size: 120%;
       font-weight: 700;
-      content: var(--date-fiche);
+      content: var(--date-header);
       padding-top: 2cm;
       text-align: left;
       text-align-last: left;
