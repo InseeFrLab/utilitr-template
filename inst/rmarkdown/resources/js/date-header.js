@@ -5,5 +5,5 @@
   let today = `${dd}/${mm}/${yyyy}`;
   let message = 'Source: www.utilitr.org, date : ' + today;
 
-  document.documentElement.style.setProperty('--date-fiche', `'${message}'`);
+  document.documentElement.style.setProperty('--date-header', `'${message}'`);
 }

@@ -24,7 +24,7 @@ utilitr_dependencies <- function(
 
   if (model == "bs4"){
     files <- c(files, "customize-bs4.css")
-    script <- "date-fiche.js"
+    script <- "date-header.js"
   } else{
     files <- c("reset.css", files)
     script <- "book.js"
