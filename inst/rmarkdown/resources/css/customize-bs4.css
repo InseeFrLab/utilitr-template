@@ -45,7 +45,7 @@
   button[aria-label="Copy to clipboard"] {
     display: none !important;
   }
-  /* Mise en forme du titre de première page */
+  /* First page styling */
 
   @page:nth(3) {
     @top-left{
