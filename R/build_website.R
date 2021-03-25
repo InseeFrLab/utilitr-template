@@ -6,8 +6,10 @@
 #' @param to_list Logical indicating whether we want to return result as
 #' htmltools dependency or simple filepaths list
 
-utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs4"),
-                                 to_list = FALSE){
+utilitr_dependencies <- function(
+  type = c("html","pdf"),
+  model = c("gitbook","bs4")
+){
 
   type <- match.arg(type)
   model <- match.arg(model)
@@ -19,29 +21,22 @@ utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs
     files <-
       c(files, "customize.css")
   }
-  if (model == "gitbook"){
-    files <- c("reset.css", files)
-  }
+
   if (model == "bs4"){
     files <- c(files, "customize-bs4.css")
     script <- "date-header.js"
   } else{
+    files <- c("reset.css", files)
     script <- "book.js"
   }
 
-  if (to_list) return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
-
-  # default CSS stylesheet
-  # default_dep <- list(htmltools::htmlDependency(
-  #   'utilitr-default', utils::packageVersion('utilitr'),
-  #   src = pkg_resource('rmarkdown/resources/css'), stylesheet = files
-  # ))
   default_dep <- list(htmltools::htmlDependency(
     'utilitr-default', utils::packageVersion('utilitr'),
     src = pkg_resource('rmarkdown/resources'),
     stylesheet = paste0("css/", files),
     script = paste0("js/", script)
   ))
+
   return(default_dep)
 }
 
