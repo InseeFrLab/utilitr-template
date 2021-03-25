@@ -303,7 +303,7 @@ h2, h3, h4 {
   break-inside: avoid;
 }
 
-a[class='footnote-ref'] {
+.footnote-ref {
   line-height: 1;
   font-size: 85%;
 }
