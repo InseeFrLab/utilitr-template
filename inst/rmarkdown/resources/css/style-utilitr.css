@@ -97,10 +97,10 @@ kbd {
 .remarque:before,
 .specificite:before,
 .auteurs:before {
+  width: 100%;
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 6px 10px 6px 10px;
+  padding: 6px 0 6px 10px;
   margin-left: -10px;
   margin-bottom: 0.4em;
   font-weight: 700;
@@ -154,6 +154,18 @@ kbd {
   height: 40px;
   width: 40px;
   top: 0;
+}
+
+/* Quelques réglages spécifiques pour le print */
+@media print {
+  .recommandation:after,
+  .conseil:after,
+  .remarque:after,
+  .specificite:after,
+  .auteurs:after {
+    left: -40px;
+    top: -6px;
+  }
 }
 
 .recommandation:after {
