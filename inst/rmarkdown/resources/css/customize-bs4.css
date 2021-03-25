@@ -25,7 +25,7 @@
   color: #cf581b;
 }
 
-/* Ecraser les réglages de bs4 */
+/* Tweak Bootstrap 4 theme */
 @media print {
   @page {
     size: 210mm 297mm;
@@ -40,7 +40,7 @@
     border: none;
   }
   /* Masquer des choses */
-  button[id="print"],
+  #print,
   div[data-id="main-nav"],
   button[aria-label="Copy to clipboard"] {
     display: none !important;

@@ -8,16 +8,10 @@ utilitr::html_document:
         <li class="toc-logo"><a href="./"><img src="images/Rlogo.png"></a></li>
       after: |
         <li><a href="https://github.com/InseeFrLab/utilitr-template.git" target="blank">Code source</a></li>
-#  download: [["README.md", "PDF"]]
 # includes:
 #   in_header: assets/header.html
 utilitr::html_paged:
   new_session: yes
   self_contained: false
-# Test absurde
-#  front_cover: "resources/logo-utilitR.svg"
-#  knit:
-#    pagedown::chrome_print
 utilitr::bs4_utilitr:
-  new_session: yes
   repo: https://github.com/InseeFrLab/utilitr-template

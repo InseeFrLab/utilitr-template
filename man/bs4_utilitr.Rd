@@ -9,7 +9,7 @@ bs4_utilitr(extra_dependencies = list(), ...)
 \arguments{
 \item{extra_dependencies}{Additional HTML dependencies}
 
-\item{...}{Additional arguments passed to \code{bookdown::\link{gitbook}()}.}
+\item{...}{Additional arguments passed to \code{bookdown::\link{bs4_book}()}.}
 }
 \value{
 An R Markdown output format object to be passed to
