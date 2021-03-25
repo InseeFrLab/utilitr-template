@@ -91,7 +91,7 @@
   h1 {
     counter-reset: page 1;
   }
-  /* Enlever les deux premières pages */
+  /* Remove the first two pages */
   .pagedjs_page[data-page-number="1"],
   .pagedjs_page[data-page-number="2"],
   nav,
