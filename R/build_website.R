@@ -3,8 +3,6 @@
 #' @importFrom htmltools htmlDependency
 #' @param type Which output format should we handle ?
 #' @param model What is the output format model? Choice between "gitbook" and "bs4"
-#' @param to_list Logical indicating whether we want to return result as
-#' htmltools dependency or simple filepaths list
 
 utilitr_dependencies <- function(
   type = c("html","pdf"),
@@ -87,6 +85,8 @@ html_document <- function(extra_dependencies = list(),
 #' @param theme Bookdown theme. Default uses \code{bookdown::\link{bs4_book_theme}}
 #' @param pandoc_args Additional pandoc arguments passed to \code{rmarkdown::\link{render}()}.
 #' @param primary,secondary Colors for the theme
+#' @param new_session Logical indicating whether each Rmd should be compiled in a
+#'  brand-new directory
 #' @param  ... Additional arguments passed to \code{bookdown::\link{bs4_book}}
 #'
 #' @return An R Markdown output format object to be passed to

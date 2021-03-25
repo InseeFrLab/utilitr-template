@@ -29,6 +29,9 @@ a few default formatting properties are applied}
 
 \item{primary, secondary}{Colors for the theme}
 
+\item{new_session}{Logical indicating whether each Rmd should be compiled in a
+brand-new directory}
+
 \item{...}{Additional arguments passed to \code{bookdown::\link{bs4_book}}}
 }
 \value{
