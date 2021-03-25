@@ -8,10 +8,6 @@
   --pagedjs-margin-bottom: 4cm;
   --pagedjs-margin-top: 4cm;
   --date-header: "Test date fiche";
-  /*
-  --background-color-chunk: #EAEAEA;
-  --background-color-chunk-output: #F0FFE3;
-  */
 }
 
 html {
@@ -109,18 +105,7 @@ img {
 /* Layout of chunks */
 pre {
   padding: 0 1em;
-  /* La couleur de la bordure à gauche des outputs de chunks */
-  /*
-   background-color:   var(--background-color-chunk-output);
- border-left: 2rem solid var(--background-color-chunk-output);
-  var(--background-color-chunk-output);
-  */
 }
-/*
-pre[class] {
-  background: var(--background-color-chunk) !important;
-}
-*/
 abbr {
   text-decoration: none;
   font-style: italic;
@@ -236,11 +221,7 @@ pre.sourceCode > code {
   break-inside: avoid;
   padding: 0;
 }
-/*
-pre > code {
-  border-left:   5px solid green;
-}
-*/
+
 table code {
   background-color:   transparent;
 }
