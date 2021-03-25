@@ -63,9 +63,11 @@ html_document <- function(extra_dependencies = list(),
 
   bookdown::gitbook(extra_dependencies = extra_dependencies,
                     new_session = TRUE,
-                    template = pkg_resource("templates/gitbook.html"),
+                    includes = rmarkdown::includes(
+                      in_header = pkg_resource("rmarkdown/resources/html/header_polyfill.html"),
+                      before_body = pkg_resource("rmarkdown/resources/html/print_button.html"),
+                    ),
                     anchor_sections = FALSE,
-                    # css = pkg_resource('rmarkdown/templates/utilitr/skeleton/style.css'),
                     in_header = pkg_resource("rmarkdown/resources/header.html"),
                     pandoc_args = c("--lua-filter",
                                     pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
@@ -73,31 +75,53 @@ html_document <- function(extra_dependencies = list(),
 
 }
 
-#' The bs4 Book output format
+#' UtilitR bs4 format
 #'
-#' @param ... Additional arguments passed to \code{bookdown::\link{bs4_book}()}.
-#' @param extra_dependencies Additional HTML dependencies
+#' An output format customizing bs4 format
+#'
+#' @inheritParams rmarkdown::render
+#' @inheritParams bookdown::bs4_book
+#' @param extra_dependencies Additional HTML dependencies. When left empty,
+#'  a few default formatting properties are applied
+#' @param includes Specify additional content to be included within an output document.
+#' @param theme Bookdown theme. Default uses \code{bookdown::\link{bs4_book_theme}}
+#' @param pandoc_args Additional pandoc arguments passed to \code{rmarkdown::\link{render}()}.
+#' @param primary,secondary Colors for the theme
+#' @param  ... Additional arguments passed to \code{bookdown::\link{bs4_book}}
+#'
 #' @return An R Markdown output format object to be passed to
 #'   \code{rmarkdown::\link{render}()}.
 #' @export
 bs4_utilitr <- function(extra_dependencies = list(),
+                        includes = rmarkdown::includes(
+                          in_header = pkg_resource("rmarkdown/resources/html/header_polyfill.html"),
+                          before_body = pkg_resource("rmarkdown/resources/html/print_button.html"),
+                        ),
+                        theme = bookdown::bs4_book_theme,
+                        pandoc_args = c("--lua-filter",
+                                        pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
+                        primary = "#93bcbc",
+                        secondary = "#cf581b",
+                        new_session = TRUE,
                         ...) {
+
   extra_dependencies <- c(
     utilitr_dependencies(model = "bs4"),
     extra_dependencies
   )
 
+
+
+
   bookdown::bs4_book(
+    new_session = new_session,
     extra_dependencies = extra_dependencies,
-    includes = rmarkdown::includes(
-      in_header = pkg_resource("rmarkdown/resources/html/header_polyfill.html"),
-      before_body = pkg_resource("rmarkdown/resources/html/print_button.html"),
+    includes = includes,
+    theme = theme(primary = primary,
+                  secondary = secondary
     ),
-    new_session = TRUE,
-    theme = bookdown::bs4_book_theme(primary = "#93bcbc",
-                                     secondary = "#cf581b"),
-    pandoc_args = c("--lua-filter",
-                    pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
+    pandoc_args = pandoc_args,
+    new_session = new_session,
     ...)
 
 }

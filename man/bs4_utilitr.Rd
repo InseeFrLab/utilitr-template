@@ -2,19 +2,39 @@
 % Please edit documentation in R/build_website.R
 \name{bs4_utilitr}
 \alias{bs4_utilitr}
-\title{The bs4 Book output format}
+\title{UtilitR bs4 format}
 \usage{
-bs4_utilitr(extra_dependencies = list(), ...)
+bs4_utilitr(
+  extra_dependencies = list(),
+  includes = rmarkdown::includes(in_header =
+    pkg_resource("rmarkdown/resources/html/header_polyfill.html"), before_body =
+    pkg_resource("rmarkdown/resources/html/print_button.html"), ),
+  theme = bookdown::bs4_book_theme,
+  pandoc_args = c("--lua-filter", pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
+  primary = "#93bcbc",
+  secondary = "#cf581b",
+  new_session = TRUE,
+  ...
+)
 }
 \arguments{
-\item{extra_dependencies}{Additional HTML dependencies}
+\item{extra_dependencies}{Additional HTML dependencies. When left empty,
+a few default formatting properties are applied}
 
-\item{...}{Additional arguments passed to \code{bookdown::\link{bs4_book}()}.}
+\item{includes}{Specify additional content to be included within an output document.}
+
+\item{theme}{Bookdown theme. Default uses \code{bookdown::\link{bs4_book_theme}}}
+
+\item{pandoc_args}{Additional pandoc arguments passed to \code{rmarkdown::\link{render}()}.}
+
+\item{primary, secondary}{Colors for the theme}
+
+\item{...}{Additional arguments passed to \code{bookdown::\link{bs4_book}}}
 }
 \value{
 An R Markdown output format object to be passed to
   \code{rmarkdown::\link{render}()}.
 }
 \description{
-The bs4 Book output format
+An output format customizing bs4 format
 }

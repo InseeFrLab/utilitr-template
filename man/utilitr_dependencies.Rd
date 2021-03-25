@@ -4,11 +4,7 @@
 \alias{utilitr_dependencies}
 \title{Import dependencies for utilitR template}
 \usage{
-utilitr_dependencies(
-  type = c("html", "pdf"),
-  model = c("gitbook", "bs4"),
-  to_list = FALSE
-)
+utilitr_dependencies(type = c("html", "pdf"), model = c("gitbook", "bs4"))
 }
 \arguments{
 \item{type}{Which output format should we handle ?}
