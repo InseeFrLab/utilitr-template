@@ -30,7 +30,7 @@ testthat::test_that(
   "HTML version is fine", {
     testthat::skip_on_ci()
     bookdown::render_book(sprintf("%s/test-utilitr/index.Rmd", destdir),
-                          output_dir = sprintf("%s/test-utilitr/_public", destdir),
+                          output_dir = sprintf("%s/test-utilitr/_public_bs4", destdir),
                           output_format = 'utilitr::bs4_utilitr')
     rstudioapi::viewer("_public/index.html")
   }
@@ -47,4 +47,4 @@ testthat::test_that(
   }
 )
 
-
+servr::httd()

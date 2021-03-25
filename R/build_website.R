@@ -42,8 +42,6 @@ utilitr_dependencies <- function(type = c("html","pdf"), model = c("gitbook","bs
     stylesheet = paste0("css/", files),
     script = script
   ))
-  print(paste0("default_dep: ", default_dep))
-
   return(default_dep)
 }
 
