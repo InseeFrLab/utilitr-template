@@ -82,7 +82,7 @@ html_document <- function(extra_dependencies = list(),
 
 #' The bs4 Book output format
 #'
-#' @param ... Additional arguments passed to \code{bookdown::\link{gitbook}()}.
+#' @param ... Additional arguments passed to \code{bookdown::\link{bs4_book}()}.
 #' @param extra_dependencies Additional HTML dependencies
 #' @return An R Markdown output format object to be passed to
 #'   \code{rmarkdown::\link{render}()}.
@@ -138,7 +138,6 @@ check_structure <- function(){
   })
 
 }
-
 
 
 
