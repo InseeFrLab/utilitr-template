@@ -80,7 +80,7 @@
     padding-left: none;
     padding-right: none;
   }
-  /* Enlever la couleur de fond du code */
+  /* Remove code background color */
   pre, code {
     background-color: white !important;
     border-color: white !important;
