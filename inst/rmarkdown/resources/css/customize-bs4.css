@@ -50,7 +50,7 @@
   @page:nth(3) {
     @top-left{
       visibility: visible !important;
-      background-image: url(https://www.utilitr.org/images/logo-utilitr.png);
+      background-image: var(--logo-path);
       background-size: 2.5cm;
       background-position: 0cm 1cm;
       background-repeat: no-repeat;
