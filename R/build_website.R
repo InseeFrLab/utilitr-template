@@ -13,8 +13,7 @@ utilitr_dependencies <- function(
   model <- match.arg(model)
 
   files <- c("default.css", "style-utilitr.css", "icones-fa.css",
-             "default-fonts.css", "default-page.css",
-             "logo-path.css")
+             "default-fonts.css", "default-page.css")
 
   if (type == "html") {
     files <-
