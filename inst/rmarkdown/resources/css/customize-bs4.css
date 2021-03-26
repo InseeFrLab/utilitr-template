@@ -71,6 +71,7 @@
     display: none !important;
   }
 
+/* Layout of the print button */
 .col-md-9 {
   flex: 0 0 100%;
   -webkit-flex: 0 0 100%;
