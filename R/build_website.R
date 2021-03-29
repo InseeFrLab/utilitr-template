@@ -6,7 +6,8 @@
 
 utilitr_dependencies <- function(
   type = c("html","pdf"),
-  model = c("gitbook","bs4")
+  model = c("gitbook","bs4"),
+  to_list = FALSE
 ){
 
   type <- match.arg(type)
@@ -27,6 +28,8 @@ utilitr_dependencies <- function(
     files <- c("reset.css", files)
     script <- "book.js"
   }
+
+  if (to_list) return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
 
   default_dep <- list(htmltools::htmlDependency(
     'utilitr-default', utils::packageVersion('utilitr'),
