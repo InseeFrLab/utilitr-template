@@ -114,7 +114,6 @@ bs4_utilitr <- function(extra_dependencies = list(),
 
 
   bookdown::bs4_book(
-    new_session = new_session,
     extra_dependencies = extra_dependencies,
     includes = includes,
     theme = theme(primary = primary,
