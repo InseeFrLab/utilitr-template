@@ -4,12 +4,18 @@
 \alias{utilitr_dependencies}
 \title{Import dependencies for utilitR template}
 \usage{
-utilitr_dependencies(type = c("html", "pdf"), model = c("gitbook", "bs4"))
+utilitr_dependencies(
+  type = c("html", "pdf"),
+  model = c("gitbook", "bs4"),
+  to_list = FALSE
+)
 }
 \arguments{
 \item{type}{Which output format should we handle ?}
 
 \item{model}{What is the output format model? Choice between "gitbook" and "bs4"}
+
+\item{to_list}{Return only the CSS as a list}
 }
 \description{
 Import dependencies for utilitR template

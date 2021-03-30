@@ -3,6 +3,7 @@
 #' @importFrom htmltools htmlDependency
 #' @param type Which output format should we handle ?
 #' @param model What is the output format model? Choice between "gitbook" and "bs4"
+#' @param to_list Return only the CSS as a list
 
 utilitr_dependencies <- function(
   type = c("html","pdf"),
