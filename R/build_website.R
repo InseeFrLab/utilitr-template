@@ -95,29 +95,27 @@ html_document <- function(extra_dependencies = list(),
 #' @return An R Markdown output format object to be passed to
 #'   \code{rmarkdown::\link{render}()}.
 #' @export
-bs4_utilitr <- function(extra_dependencies = list(),
-                        includes = rmarkdown::includes(
-                          in_header = pkg_resource("rmarkdown/resources/html/header_polyfill.html"),
-                          before_body = pkg_resource("rmarkdown/resources/html/print_button.html"),
-                        ),
-                        theme = bookdown::bs4_book_theme,
-                        pandoc_args = c("--lua-filter",
-                                        pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
-                        primary = "#93bcbc",
-                        secondary = "#cf581b",
-                        new_session = TRUE,
-                        ...) {
+bs4_utilitr <-
+  function(
+    extra_dependencies = list(),
+    includes = rmarkdown::includes(
+      in_header = pkg_resource("rmarkdown/resources/html/header_polyfill.html"),
+      before_body = pkg_resource("rmarkdown/resources/html/print_button.html"),
+    ),
+    theme = bookdown::bs4_book_theme,
+    pandoc_args = c("--lua-filter",
+                    pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
+    primary = "#93bcbc",
+    secondary = "#cf581b",
+    new_session = TRUE,
+    ...) {
 
-  extra_dependencies <- c(
-    utilitr_dependencies(model = "bs4"),
-    extra_dependencies
-  )
-
-
-
+    extra_dependencies <- c(
+      utilitr_dependencies(model = "bs4"),
+      extra_dependencies
+    )
 
   bookdown::bs4_book(
-    new_session = new_session,
     extra_dependencies = extra_dependencies,
     includes = includes,
     theme = theme(primary = primary,
