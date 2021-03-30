@@ -30,7 +30,10 @@ utilitr_dependencies <- function(
     script <- "book.js"
   }
 
-  if (to_list) return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
+  if (to_list) {
+    print(paste0("files: ", files))
+    return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
+  }
 
   default_dep <- list(htmltools::htmlDependency(
     'utilitr-default', utils::packageVersion('utilitr'),
