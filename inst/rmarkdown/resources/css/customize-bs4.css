@@ -3,6 +3,12 @@
   font-size: 16px;
 }
 
+@media (min-width: 1200px) {
+  /* Imposer une taille de 16 px pou la typo */
+  body {
+    font-size: 16px
+  }
+}
 @media screen {
   .container-fluid {
     padding-right: 0;
