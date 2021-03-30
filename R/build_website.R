@@ -1,28 +1,23 @@
 #' Import dependencies for utilitR template
 #'
 #' @importFrom htmltools htmlDependency
-#' @param type Which output format should we handle ?
-#' @param model What is the output format model? Choice between "gitbook" and "bs4"
+#' @param output What is the output format? Choice between "gitbook", "bs4" and "pagedown"
 #' @param to_list Return only the CSS as a list
 
 utilitr_dependencies <- function(
-  type = c("html","pdf"),
-  model = c("gitbook","bs4"),
-  to_list = FALSE
+  output = c("gitbook","bs4", "pagedown")
 ){
 
-  type <- match.arg(type)
-  model <- match.arg(model)
+  output <- match.arg(output)
 
   files <- c("default.css", "style-utilitr.css", "icones-fa.css",
              "default-fonts.css", "default-page.css")
 
-  if (type == "html") {
+  if (output %in% c("gitbook", "bs4")) {
     files <-
       c(files, "customize.css")
   }
-
-  if (model == "bs4"){
+  if (output == "bs4"){
     files <- c(files, "customize-bs4.css")
     script <- "date-header.js"
   } else{
@@ -30,8 +25,7 @@ utilitr_dependencies <- function(
     script <- "book.js"
   }
 
-  if (to_list) {
-    print(paste0("files: ", files))
+  if (output == "pagedown") {
     return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
   }
 
@@ -115,7 +109,7 @@ bs4_utilitr <-
     ...) {
 
     extra_dependencies <- c(
-      utilitr_dependencies(model = "bs4"),
+      utilitr_dependencies(output = "bs4"),
       extra_dependencies
     )
 
