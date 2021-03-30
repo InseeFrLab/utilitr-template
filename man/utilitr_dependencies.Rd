@@ -8,8 +8,6 @@ utilitr_dependencies(output = c("gitbook", "bs4", "pagedown"))
 }
 \arguments{
 \item{output}{What is the output format? Choice between "gitbook", "bs4" and "pagedown"}
-
-\item{to_list}{Return only the CSS as a list}
 }
 \description{
 Import dependencies for utilitR template
