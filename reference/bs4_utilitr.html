@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • utilitr</title>
+<title>UtilitR bs4 format — bs4_utilitr • utilitr</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="UtilitR bs4 format — bs4_utilitr" />
+<meta property="og:description" content="An output format customizing bs4 format" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -100,84 +101,71 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>UtilitR bs4 format</h1>
+    
+    <div class="hidden name"><code>bs4_utilitr.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>An output format customizing bs4 format</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>bs4_utilitr</span><span class='op'>(</span>
+  extra_dependencies <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='op'>)</span>,
+  includes <span class='op'>=</span> <span class='fu'>rmarkdown</span><span class='fu'>::</span><span class='fu'><a href='https://pkgs.rstudio.com/rmarkdown/reference/includes.html'>includes</a></span><span class='op'>(</span>in_header <span class='op'>=</span>
+    <span class='fu'>pkg_resource</span><span class='op'>(</span><span class='st'>"rmarkdown/resources/html/header_polyfill.html"</span><span class='op'>)</span>, before_body <span class='op'>=</span>
+    <span class='fu'>pkg_resource</span><span class='op'>(</span><span class='st'>"rmarkdown/resources/html/print_button.html"</span><span class='op'>)</span>, <span class='op'>)</span>,
+  theme <span class='op'>=</span> <span class='fu'>bookdown</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/bookdown/man/bs4_book.html'>bs4_book_theme</a></span>,
+  pandoc_args <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"--lua-filter"</span>, <span class='fu'>pkg_resource</span><span class='op'>(</span><span class='st'>"rmarkdown/resources/scripts/nbsp.lua"</span><span class='op'>)</span><span class='op'>)</span>,
+  primary <span class='op'>=</span> <span class='st'>"#93bcbc"</span>,
+  secondary <span class='op'>=</span> <span class='st'>"#cf581b"</span>,
+  new_session <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="bs4_utilitr.html">bs4_utilitr()</a></code> </p>
-        </td>
-        <td><p>UtilitR bs4 format</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="html_document.html">html_document()</a></code> </p>
-        </td>
-        <td><p>The utilitR GitBook output format</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="html_paged.html">html_paged()</a></code> </p>
-        </td>
-        <td><p>HTML paged version for utilitR document</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="include_image.html">include_image()</a></code> </p>
-        </td>
-        <td><p>Include a compressed image from filepath</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="pdf_document.html">pdf_document()</a></code> </p>
-        </td>
-        <td><p>Front-user function to build PDF</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="render_rmd.html">render_rmd()</a></code> </p>
-        </td>
-        <td><p>Render an Rmd file asis</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="utilitr.html">utilitr</a></code> </p>
-        </td>
-        <td><p>utilitr: A package to build our documentation locally</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="utilitr_dependencies.html">utilitr_dependencies()</a></code> </p>
-        </td>
-        <td><p>Import dependencies for utilitR template</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>extra_dependencies</th>
+      <td><p>Additional HTML dependencies. When left empty,
+a few default formatting properties are applied</p></td>
+    </tr>
+    <tr>
+      <th>includes</th>
+      <td><p>Specify additional content to be included within an output document.</p></td>
+    </tr>
+    <tr>
+      <th>theme</th>
+      <td><p>Bookdown theme. Default uses <code><a href='https://rdrr.io/pkg/bookdown/man/bs4_book.html'>bookdown::bs4_book_theme</a></code></p></td>
+    </tr>
+    <tr>
+      <th>pandoc_args</th>
+      <td><p>Additional pandoc arguments passed to <code><a href='https://pkgs.rstudio.com/rmarkdown/reference/render.html'>rmarkdown::render()</a></code>.</p></td>
+    </tr>
+    <tr>
+      <th>primary, secondary</th>
+      <td><p>Colors for the theme</p></td>
+    </tr>
+    <tr>
+      <th>new_session</th>
+      <td><p>Logical indicating whether each Rmd should be compiled in a
+brand-new directory</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Additional arguments passed to <code><a href='https://rdrr.io/pkg/bookdown/man/bs4_book.html'>bookdown::bs4_book</a></code></p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>An R Markdown output format object to be passed to
+  <code><a href='https://pkgs.rstudio.com/rmarkdown/reference/render.html'>rmarkdown::render()</a></code>.</p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
