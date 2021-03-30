@@ -2,7 +2,6 @@
 #'
 #' @importFrom htmltools htmlDependency
 #' @param output What is the output format? Choice between "gitbook", "bs4" and "pagedown"
-#' @param to_list Return only the CSS as a list
 
 utilitr_dependencies <- function(
   output = c("gitbook","bs4", "pagedown")
