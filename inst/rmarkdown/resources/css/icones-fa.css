@@ -2,38 +2,27 @@
 CSS minimal qui définit les icônes Font Awesome
 */
 
+.glyphicon-print:before {
+  position: relative;
+  top: 2px;
+}
+
 .auteurs:after {
   content: "\f007";
-  font-family: "FontAwesome", "Font Awesome 5 Free", "Font Awesome 5 Brands";
-  font-weight: 400;
-  font-size: 200%;
 }
 
 .recommandation:after {
   content: "\f0a4";
-  font-family: "FontAwesome", "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 200%;
 }
 
 .conseil:after {
   content: "\f0eb";
-  font-family: "FontAwesome", "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 200%;
-
 }
 
 .remarque:after {
   content: "\f05a";
-  font-family: "FontAwesome", "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 200%;
 }
 
 .specificite:after {
   content: "\f015";
-  font-family: "FontAwesome", "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 200%;
 }

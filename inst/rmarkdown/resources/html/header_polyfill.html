@@ -1,0 +1,20 @@
+<style>
+  @media print {
+    .btn-print {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  window.PagedConfig = {auto: false};
+
+  window.printWithPagedJS = () => {
+    window.PagedPolyfill.preview().then(() => {
+      document.body.style.cssText = 'min-width: unset !important';
+      window.print();
+    });
+  };
+</script>
+
+<script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>

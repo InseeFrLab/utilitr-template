@@ -15,11 +15,23 @@ rmarkdown::draft("index.Rmd", template='utilitr', package='utilitr', edit = FALS
 # TEST HTML --------------------
 
 testthat::test_that(
-  "HTML version is fine", {
+  "Gitbook version is fine", {
     testthat::skip_on_ci()
     bookdown::render_book(sprintf("%s/test-utilitr/index.Rmd", destdir),
                           output_dir = sprintf("%s/test-utilitr/_public", destdir),
                           output_format = 'utilitr::html_document')
+    rstudioapi::viewer("_public/index.html")
+  }
+)
+
+# TEST BS4 --------------------------------
+
+testthat::test_that(
+  "bs4 version is fine", {
+    testthat::skip_on_ci()
+    bookdown::render_book(sprintf("%s/test-utilitr/index.Rmd", destdir),
+                          output_dir = sprintf("%s/test-utilitr/_public_bs4", destdir),
+                          output_format = 'utilitr::bs4_utilitr')
     rstudioapi::viewer("_public/index.html")
   }
 )
@@ -35,4 +47,4 @@ testthat::test_that(
   }
 )
 
-
+# servr::httd()

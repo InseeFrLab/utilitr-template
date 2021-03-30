@@ -3,11 +3,11 @@
   --pagedjs-height: 29.7cm;
   --color-paper: white;
   --color-mbox: rgba(0, 0, 0, 0.2);
-  --running-title-width: 12cm;
+  --running-title-width: 10cm;
   --screen-pages-spacing: 5mm;
-  --background-color-chunk: #EAEAEA;
-  --background-color-chunk-output: #F0FFE3;
-  --background-color-inline: #E2E2E2;
+  --pagedjs-margin-bottom: 4cm;
+  --pagedjs-margin-top: 4cm;
+  --date-header: "Test date fiche";
 }
 
 html {
@@ -23,7 +23,7 @@ ul {
 @media print{
   a[href^="http"]:not([class="uri"])::after {
     content: " (" attr(href) ")";
-    font-size: 90%;
+    font-size: 100%;
     hyphens: none;
     word-break: break-all;
     }
@@ -104,16 +104,7 @@ img {
 }
 /* Layout of chunks */
 pre {
-  padding: 1em;
-  background-color:   var(--background-color-chunk-output);
-  /* La couleur de la bordure à gauche des outputs de chunks */
-  /*
-  border-left: 2rem solid var(--background-color-chunk-output);
-  var(--background-color-chunk-output);
-  */
-}
-pre[class] {
-  background: var(--background-color-chunk) !important;
+  padding: 0 1em;
 }
 abbr {
   text-decoration: none;
@@ -136,11 +127,14 @@ pre.numberSource a.sourceLine {
 }
 pre.numberSource {
   margin-left: 0 !important;
+  margin: 1em 0;
 }
+
 pre.sourceCode{
-  background-color: var(--background-color-chunk);
+  background-color: none;
   border-style: none;
 }
+
 table {
   margin: auto;
   text-align: left;
@@ -212,8 +206,6 @@ body {
 code {
   hyphens: none;
   text-align: left;
-  background-color: var(--background-color-inline);
-  padding: 0.1em 0.1em 0em 0.1em
 }
 code:after {
   content: none !important;
@@ -223,15 +215,11 @@ code:before {
 }
 
 pre.sourceCode > code {
-  background-color: var(--background-color-chunk);
   /* Cette option évite la coupure des chunks sur deux tables
   Attention: elle fait planter la compilation si un chunk est très long
   */
   break-inside: avoid;
   padding: 0;
-}
-pre > code {
-  background-color:   var(--background-color-chunk-output);
 }
 
 table code {

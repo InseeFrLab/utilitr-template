@@ -1,3 +1,14 @@
+/*------------ Bouton pdf --------------*/
+
+i[class="fa fa-print"]:before {
+  color: #ccc;
+  content:"\f1c1";
+}
+
+i[class="fa fa-print"] {
+  border: 2px solid red;
+}
+
 /*------------ TOC --------------*/
 
 .book .book-summary {
@@ -34,4 +45,67 @@ li.appendix span, li.part span { /* for TOC part names */
   color: color: #1c3046 !important;
   opacity: 1 !important;
   text-transform: uppercase;
+}
+
+/* ---- test print button -----*/
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+ -webkit-appearance:button
+}
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+ border-style:none;
+ padding:0
+}
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+ outline:1px dotted ButtonText
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+#print {
+--color-body: #d86018;
+position: fixed;
+z-index: 20000;
+background: 0 0;
+padding: .7em;
+left: 480px;
+top: 8px;
+border: none;
+z-index: 90000000;
+display: flex;
+transition: 2s;
+}
+
+#print svg {
+    width: 20px;
+}
+
+#print span {
+    font-family: var(--font-sans);
+    font-size: .9em;
+    margin-left: .5em;
+    color: var(--color-body);
+    line-height: .7;
 }

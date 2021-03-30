@@ -87,38 +87,50 @@ div.front-page h2.date {
     font-size: 25pt;
     font-weight: bold;
     color: rgba(255, 0, 0, 0.8);
-    min-width: 14cm; 
+    min-width: 14cm;
     text-align-last: center;
      /* Rotate the text */
     transform: rotate(-90deg);
     /* Disable the selection */
-    user-select: none;  
-  } 
-  @bottom-center {
-    content: "Draft - Ne pas diffuser";
-    font-family: sans-serif;
-    font-size: 25pt;
-    font-weight: bold;
-    min-width: 14cm; 
-    color: rgba(255, 0, 0, 0.8);
-    width: 80%;
-    text-align-last: left;
-    /* Disable the selection */
-    user-select: none;  
-  }    
+    user-select: none;
+  }
 }
+
 @page :blank {
 
 }
 /* Define the margins of both pages */
 @page:left {
-    margin-left: 2cm;
-    margin-right: 3cm;
+    margin-left: 4cm;
+    margin-right: 5cm;
 }
 @page:right {
-    margin-left: 3cm;
-    margin-right: 2cm;
+    margin-left: 5cm;
+    margin-right: 4cm;
 }
+
+/* Titre de partie en pleine page */
+div[id^="part-"] {
+  margin-top: 6cm;
+  font-size: 2em;
+  text-align: center;
+  text-align-last: center;
+  font-weight: 500;
+}
+div[id^="part-"] span[class="header-section-number"]:before {
+  content: "Partie ";
+}
+div[id^="part-"] span[class="header-section-number"]:after {
+  content:"\a\a";
+  white-space: pre;
+}
+
+h2, h3, h4 {
+  margin-top: 1.3em,
+  margin-bottom: .8em,
+  break-after: avoid;
+}
+
 
 /* store some string variables */
 .shorttitle1 {
@@ -141,13 +153,17 @@ div.front-page h2.date {
 }
 
 @page chapter:left {
-  @top-left {
+  @bottom-left {
     content: counter(page);
+    vertical-align: top;
+    padding-top: 10px;
   }
-  @top-right {
+  @bottom-right {
     content: element(runningH1Title);
     white-space: nowrap !important;
     text-align-last: right;
+    vertical-align: top;
+    padding-top: 10px;
   }
 }
 
@@ -165,26 +181,37 @@ div.front-page h2.date {
   content: string(h2-text);
 }
 @page chapter:right {
-  @top-right {
+  @bottom-right {
     content: counter(page);
     text-align-last: right;
+    vertical-align: top;
+    padding-top: 10px;
  }
-  @top-left {
+  @bottom-left {
     content: element(runningH2Title);
     white-space: nowrap !important;
+    vertical-align: top;
+    padding-top: 10px;
   }
 }
 
 /* New chapter page */
 @page chapter:first {
-  @top-left {
+  @bottom-left {
     content: none;
-  }
-  @top-right {
-    content: none;
+    vertical-align: top;
+    padding-top: 10px;
   }
   @bottom-right {
     content: counter(page);
+    vertical-align: top;
+    padding-top: 10px;
+ }
+  @bottom-center {
+    content: none;
+    text-align-last: right;
+    vertical-align: top;
+    padding-top: 10px;
   }
 }
 /*
@@ -267,12 +294,18 @@ div.front-page h2.date {
 .section > h1, .section > h2, .section > h3, .section > h4, .section > h5, .section > h6 {
   break-after: avoid;
 }
-.footenotes {
+.footnotes {
   break-before: always;
   break-after: always;
+  color: red;
 }
 .figure {
   break-inside: avoid;
+}
+
+.footnote-ref {
+  line-height: 1;
+  font-size: 85%;
 }
 
 /* reset page numbering for main content */
@@ -285,22 +318,3 @@ caption {
   break-inside: avoid;
   break-after: avoid;
 }
-/* Filigrane draft */
-/*
-.pagedjs_sheet:after {
-  position: absolute;
-  content: "Version provisoire - Ne pas diffuser";
-  top: 50%;
-  left: 50%;
-  margin-left: -40%;
-  margin-top: -50%;
-  font-family: sans-serif;
-  font-size: 80pt;
-  font-weight: bold;
-  color: rgba(255, 0, 0, 0.2);
-  width: 80%;
-  text-align: center;
-  transform: rotate(-45deg);
-  user-select: none;
-}
-*/

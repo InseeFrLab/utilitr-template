@@ -28,12 +28,14 @@ Imports:
     magick,
     pagedown (>= 0.13.11),
     rmarkdown,
-    xfun
+    xfun (>= 0.19),
+    R.utils
 Suggests: 
     kableExtra,
     testthat,
     rstudioapi
 Remotes:
+    rstudio/bookdown#1027,
     rstudio/fontawesome@2b64e3148c9c5c70e415cdeb3e33ac3200edadbf,
     rstudio/pagedown
 Encoding: UTF-8

@@ -62,177 +62,93 @@ kbd {
 }
 */
 
-.auteurs {
-  margin:30px 0 30px 30px ;
-  padding: 0 10px 0 10px;
-  position: relative;
-  page-break-inside:avoid;
-  box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
-  border-left:.25rem solid rgba(82, 190, 128, 1);
-}
-
-.auteurs:before {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  background-color:   rgba(82, 190, 128, 0.2);
-  border-left: 30px   rgba(82, 190, 128, 0.2);
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-/*font-size: large;
-  font-family: sans-serif;
-  font-weight: bold;*/
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 100%;
-  content: "Contributeurs du projet";
-}
-
-.auteurs:after {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  color: rgb(82, 190, 128, 1);
-  align-items: center;
-  left: -50px;
-  height: 40px;
-  width: 40px;
-  top: 0;
-}
-
 .recommandation,
 .conseil,
 .remarque,
-.specificite {
-  margin:30px 0 30px 30px ;
-  padding: 0 10px 0 10px;
+.specificite,
+.auteurs {
+  margin: 20px 0 20px 30px ;
+  padding: 0 0 3px 9px;
   position: relative;
   page-break-inside:avoid;
-  box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.25);
+  border-left:   3px solid;
+/*
+  border-bottom: 0.25em solid;
+*/
 }
-
-
 .recommandation {
-  border-left:.25rem solid rgba(220, 53, 69, 1);
+  border-color: rgba(220, 53, 69, 1);
 }
 .conseil {
-  border-left:.25rem solid rgba(255, 193, 7, 1);
+  border-color: rgba(255, 193, 7, 1);
 }
 .remarque {
-  border-left:.25rem solid rgba(0, 123, 255, 1);
+  border-color: rgba(0, 123, 255, 1);
 }
 .specificite {
-  border-left:.25rem solid rgba(81, 81, 81, 1);
+  border-color: rgba(81, 81, 81, 1);
+}
+.auteurs {
+  border-color: rgba(82, 190, 128, 1);
 }
 
+.recommandation:before,
+.conseil:before,
+.remarque:before,
+.specificite:before,
+.auteurs:before {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 6px 0 6px 10px;
+  margin-left: -10px;
+  margin-bottom: 0.4em;
+  font-weight: 700;
+  font-size: 120%;
+  border-left: 30px;
+}
 
 .recommandation:before {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  background-color:   rgba(220, 53, 69, 0.2);
-  border-left: 30px   rgba(220, 53, 69, 0.2);
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 100%;
   content: "Recommandation";
-}
-
-.recommandation:after {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  color: rgba(220, 53, 69, 1);
-  align-items: center;
-  left: -50px;
-  height: 40px;
-  width: 40px;
-  top: 0;
+  background-color:   rgba(220, 53, 69, 0.2);
+  border-color: rgba(220, 53, 69, 0.2);
 }
 
 .conseil:before {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  background-color:  rgba(255, 193, 7, 0.2);
-  border-left:30px   rgba(255, 193, 7, 0.2);
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 100%;
   content: "Conseil";
-}
-
-.conseil:after {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  color: rgba(255, 193, 7, 1);
-  align-items: center;
-  left: -50px;
-  height: 40px;
-  width: 40px;
-  top: 0;
+  background-color:  rgba(255, 193, 7, 0.2);
+  border-color: rgba(255, 193, 7, 0.2);
 }
 
 .remarque:before {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  background-color:  rgba(0, 123, 255, 0.2);
-  border-left:30px   rgba(0, 123, 255, 0.2);
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 100%;
   content: "Remarque";
-}
-
-.remarque:after {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  color: rgba(0, 123, 255, 1);
-  align-items: center;
-  left: -50px;
-  height: 40px;
-  width: 40px;
-  top: 0;
+  background-color:  rgba(0, 123, 255, 0.2);
+  border-color: rgba(0, 123, 255, 0.2);
 }
 
 .specificite:before {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  background-color:  rgba(81, 81, 81, 0.2);
-  border-left:30px   rgba(81, 81, 81, 0.2);
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 100%;
   content: "Spécificité de l'Insee";
+  background-color:  rgba(81, 81, 81, 0.2);
+  border-color: rgba(81, 81, 81, 0.2);
 }
 
-.specificite:after {
+.auteurs:before {
+  content: "Contributeurs du projet";
+  background-color:   rgba(82, 190, 128, 0.2);
+  border-color:   rgba(82, 190, 128, 0.2);
+}
+
+.recommandation:after,
+.conseil:after,
+.remarque:after,
+.specificite:after,
+.auteurs:after {
+  font-family: "FontAwesome", "Font Awesome 5 Free" ;
+  font-weight: 400;
+  font-size: 200%;
   display: flex;
   position: absolute;
   justify-content: center;
-  color: rgba(81, 81, 81, 1);
   align-items: center;
   left: -50px;
   height: 40px;
@@ -240,32 +156,37 @@ kbd {
   top: 0;
 }
 
-
-/* .auteurs::after {
- content: url(var(--giturl));
-}
- */
-
-/*.conseil {
-  background: #a3dfff;
-  padding: 12pt;
-  border-radius: 15px;
-  border: 5px solid #00a6ff;
-}
-.conseil::before {
-  font-size: large;
-  font-family: sans-serif;
-  font-weight: bold;
-  content: "Conseil";
+/* Quelques réglages spécifiques pour le print */
+@media print {
+  .recommandation:after,
+  .conseil:after,
+  .remarque:after,
+  .specificite:after,
+  .auteurs:after {
+    left: -40px;
+    top: -6px;
+  }
 }
 
-.remarque {
-  background: #fffcad;
-  padding: 12pt;
-  border-radius: 15px;
-  border: 5px solid #ffe136;
+.recommandation:after {
+  color: rgba(220, 53, 69, 1);
 }
-*/
+
+.conseil:after {
+  color: rgba(255, 193, 7, 1);
+}
+
+.remarque:after {
+  color: rgba(0, 123, 255, 1);
+}
+
+.specificite:after {
+  color: rgba(81, 81, 81, 1);
+}
+
+.auteurs:after {
+  color: rgb(82, 190, 128, 1);
+}
 
 
 .exercice {

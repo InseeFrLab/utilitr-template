@@ -4,13 +4,10 @@
 \alias{utilitr_dependencies}
 \title{Import dependencies for utilitR template}
 \usage{
-utilitr_dependencies(type = c("html", "pdf"), to_list = FALSE)
+utilitr_dependencies(output = c("gitbook", "bs4", "pagedown"))
 }
 \arguments{
-\item{type}{Which output format should we handle ?}
-
-\item{to_list}{Logical indicating whether we want to return result as
-htmltools dependency or simple filepaths list}
+\item{output}{What is the output format? Choice between "gitbook", "bs4" and "pagedown"}
 }
 \description{
 Import dependencies for utilitR template
