@@ -102,7 +102,7 @@ bs4_utilitr <-
     theme = bookdown::bs4_book_theme,
     pandoc_args = c("--lua-filter",
                     pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
-    primary = "#93bcbc",
+    primary = "#507b7b",
     secondary = "#cf581b",
     new_session = TRUE,
     ...) {
