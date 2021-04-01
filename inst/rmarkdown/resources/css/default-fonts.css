@@ -24,7 +24,7 @@
   /* Définir les polices */
   body {
     font-family: Newsreader, Monospace;
-    font-size: 12px;
+    font-size: 12px !important;
     font-weight: 400;
     font-style: normal ;
     font-variation-settings: 'opsz' 20;
