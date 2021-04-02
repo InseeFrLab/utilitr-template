@@ -43,6 +43,12 @@ h1 > a[href = "index.html"]:before {
     display: none;
   }
 }
+
+/* Mettre des marges horizontales pour les chunks */
+pre {
+  margin: 1rem -0.5rem 1rem -0.5rem;
+}
+
 .recommandation:before,
 .conseil:before,
 .remarque:before,
