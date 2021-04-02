@@ -79,6 +79,8 @@ pre {
   }
   pre {
     background-image: none;
+  }
+  pre, blockquote {
     border: none;
   }
   /* Hide some elements */
