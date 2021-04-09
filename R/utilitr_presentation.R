@@ -24,5 +24,10 @@ utilitr_presentation <- function(extra_dependencies = list(),
     extra_dependencies
   )
 
+  xaringan::moon_reader(
+    extra_dependencies = extra_dependencies,
+    ...
+  )
+
 
 }
