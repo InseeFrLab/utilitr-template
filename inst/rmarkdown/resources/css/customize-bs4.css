@@ -6,8 +6,6 @@ div[class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter"] {
 .sidebar h1 {
   margin-top: 3.5cm;
 }
-
-
 h1 > a[href = "index.html"]:before {
   content: "";
   background-image: var(--logo-path);
@@ -46,7 +44,12 @@ h1 > a[href = "index.html"]:before {
     display: none;
   }
 }
-
+/* Décommenter pour enlever le footer du site bs4 */
+/*
+footer {
+  display: none !important;
+}
+*/
 /* Mettre des marges horizontales pour les chunks */
 pre {
   margin: 10px 0 0 0;
