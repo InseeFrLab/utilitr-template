@@ -56,7 +56,7 @@ pre {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.table th, .table td {
+.table thead th, .table td {
   vertical-align: middle;
 }
 
