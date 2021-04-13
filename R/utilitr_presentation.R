@@ -1,21 +1,10 @@
-utilitr_dependencies_presentation <- function(){
-
-  files <- c("default.css", "default-fonts",
-             "metropolis.css",
-             "custom.css")
-
-
-  default_dep <- list(htmltools::htmlDependency(
-    'utilitr-default', utils::packageVersion('utilitr'),
-    src = pkg_resource('rmarkdown/resources'),
-    stylesheet = paste0("css/", files)#,
-#    script = paste0("js/", script)
-  ))
-
-  return(default_dep)
-}
-
+#' A xaringan template for presentations
+#'
+#' An opinionated template
+#' @inheritParams xaringan::moon_reader
+#'
 #' @export
+
 utilitr_presentation <- function(css = NULL,
                                  nature = list(highlightStyle = "github",
                                                highlightLines = TRUE,
