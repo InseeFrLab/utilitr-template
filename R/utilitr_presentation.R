@@ -13,11 +13,18 @@ utilitr_presentation <- function(css = NULL,
                                  lib_dir = "libs",
                           ...) {
 
-  css <- c(list.files(pkg_resource('rmarkdown/resources/slides'),
-                    recursive = TRUE,
-                    pattern = "*.css", full.names = TRUE),
-           css
-  )
+  css <-
+    c(
+      list.files(
+        pkg_resource('rmarkdown/resources/css'),
+        recursive = FALSE,
+        pattern = "(default|default-fonts|style-utilitr|icones-fa).css", full.names = TRUE),
+      list.files(
+        pkg_resource('rmarkdown/resources/css/slides'),
+        recursive = FALSE,
+        pattern = "(custom|metropolis).css", full.names = TRUE),
+      css
+    )
 
   xaringan::moon_reader(
     css = css,
