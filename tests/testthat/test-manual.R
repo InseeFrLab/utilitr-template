@@ -60,7 +60,7 @@ dir.create(sprintf("%s/test-utilitr", destdir))
 
 setwd(sprintf("%s/test-utilitr", destdir))
 
-rmarkdown::draft("index.Rmd", template='utilitr_presentation', package='utilitr', edit = FALSE)
+rmarkdown::draft("slides.Rmd", template='utilitr_presentation', package='utilitr', edit = FALSE)
 
-rmarkdown::render(sprintf("%s/test-utilitr/index.Rmd", destdir),
+rmarkdown::render(sprintf("%s/test-utilitr/slides.Rmd", destdir),
                       output_format = 'utilitr::utilitr_presentation')
