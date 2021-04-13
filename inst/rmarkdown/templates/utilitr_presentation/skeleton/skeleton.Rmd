@@ -4,12 +4,8 @@ subtitle : "Une documentation sur `R` à l’usage des statisticiens publics"
 author : "Lino Galiana, Olivier Meslin"
 institute : "Insee"
 date : "`r Sys.Date()`"
-output :
-  utilitr::utilitr_presentation :
-    lib_dir : libs
-    self_contained : true
-#    chakra : 
-#      - ./libs/remark-latest.min.js
+output :   utilitr::utilitr_presentation
+#  utilitr::utilitr_presentation:
 #    includes :
 #      after_body : insert-logo.html    
 ---
