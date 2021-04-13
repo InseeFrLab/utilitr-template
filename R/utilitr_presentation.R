@@ -9,7 +9,7 @@ utilitr_presentation <- function(css = NULL,
                                  nature = list(highlightStyle = "github",
                                                highlightLines = TRUE,
                                                countIncrementalSlides = TRUE),
-                                 self_contained = FALSE,
+                                 self_contained = TRUE,
                                  lib_dir = "libs",
                           ...) {
 
