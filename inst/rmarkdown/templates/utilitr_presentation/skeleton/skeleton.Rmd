@@ -64,4 +64,26 @@ You can also embed some remarks here
 Work at Insee is awesome
 :::
 
+---
+# Test des boîtes colorées 2
+
+::: auteurs
+`utilitr` package has been created by Lino Galiana and Olivier Meslin
+:::
+
+::: recommandation
+This box recommands a few things
+:::
+
+::: conseil
+This box gives some advices
+:::
+
+::: remarque
+You can also embed some remarks here
+:::
+
+::: specificite
+Work at Insee is awesome
+:::
 
