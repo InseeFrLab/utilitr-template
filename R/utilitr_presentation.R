@@ -38,7 +38,7 @@ utilitr_presentation <- function(css = NULL,
       list.files(
         pkg_resource('rmarkdown/resources/css/slides'),
         recursive = FALSE,
-        pattern = "custom.css", full.names = TRUE)
+        pattern = "customize-slides.css", full.names = TRUE)
     )
 
   css <- c(css_modele, css)
