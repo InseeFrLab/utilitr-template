@@ -12,27 +12,6 @@
 
 }
 
-h1 {
-  color: red;
-}
-
-h1:after {
-  content: "\f007";
-  color: green !important;
-  font-family: "FontAwesome", "Font Awesome 5 Free" ;
-  font-weight: 400;
-  font-size: 200%;
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  left: -50px;
-  height: 40px;
-  width: 40px;
-  top: 0;
-}
-
-
 h1 .remark-inline-code {
   /* background: #F5F5F5; /* lighter */
   background: #23373B; /* darker */
