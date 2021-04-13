@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • utilitr</title>
+<title>A xaringan template for presentations — utilitr_presentation • utilitr</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="A xaringan template for presentations — utilitr_presentation" />
+<meta property="og:description" content="An opinionated template" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -100,90 +101,79 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>A xaringan template for presentations</h1>
+    
+    <div class="hidden name"><code>utilitr_presentation.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>An opinionated template</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>utilitr_presentation</span><span class='op'>(</span>
+  css <span class='op'>=</span> <span class='cn'>NULL</span>,
+  nature <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>highlightStyle <span class='op'>=</span> <span class='st'>"github"</span>, highlightLines <span class='op'>=</span> <span class='cn'>TRUE</span>,
+    countIncrementalSlides <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,
+  self_contained <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  lib_dir <span class='op'>=</span> <span class='st'>"libs"</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="bs4_utilitr.html">bs4_utilitr()</a></code> </p>
-        </td>
-        <td><p>UtilitR bs4 format</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="html_document.html">html_document()</a></code> </p>
-        </td>
-        <td><p>The utilitR GitBook output format</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="html_paged.html">html_paged()</a></code> </p>
-        </td>
-        <td><p>HTML paged version for utilitR document</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="include_image.html">include_image()</a></code> </p>
-        </td>
-        <td><p>Include a compressed image from filepath</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="pdf_document.html">pdf_document()</a></code> </p>
-        </td>
-        <td><p>Front-user function to build PDF</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="render_rmd.html">render_rmd()</a></code> </p>
-        </td>
-        <td><p>Render an Rmd file asis</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="utilitr.html">utilitr</a></code> </p>
-        </td>
-        <td><p>utilitr: A package to build our documentation locally</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="utilitr_dependencies.html">utilitr_dependencies()</a></code> </p>
-        </td>
-        <td><p>Import dependencies for utilitR template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="utilitr_presentation.html">utilitr_presentation()</a></code> </p>
-        </td>
-        <td><p>A xaringan template for presentations</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>css</th>
+      <td><p>A vector of CSS file paths. Two default CSS files
+(<code class="file">default.css</code> and <code class="file">default-fonts.css</code>) are provided in this
+package, which was borrowed from <a href='https://remarkjs.com'>https://remarkjs.com</a>. If the
+character vector <code>css</code> contains a value that does not end with
+<code>.css</code>, it is supposed to be a built-in CSS file in this package,
+e.g., for <code>css = c('default', 'extra.css')</code>), it means
+<code>default.css</code> in this package and a user-provided <code>extra.css</code>. To
+find out all built-in CSS files, use <code>xaringan:::list_css()</code>.</p></td>
+    </tr>
+    <tr>
+      <th>nature</th>
+      <td><p>(Nature transformation) A list of configurations to be passed
+to <code>remark.create()</code>, e.g. <code><a href='https://rdrr.io/r/base/list.html'>list(ratio = '16:9', navigation =
+list(click = TRUE))</a></code>; see
+<a href='https://github.com/gnab/remark/wiki/Configuration'>https://github.com/gnab/remark/wiki/Configuration</a>. Besides the
+options provided by remark.js, you can also set <code>autoplay</code> to a number
+(the number of milliseconds) so the slides will be played every
+<code>autoplay</code> milliseconds; alternatively, <code>autoplay</code> can be a list
+of the form <code><a href='https://rdrr.io/r/base/list.html'>list(interval = N, loop = TRUE)</a></code>, so the slides will go
+to the next page every <code>N</code> milliseconds, and optionally go back to the
+first page to restart the play when <code>loop = TRUE</code>. You can also set
+<code>countdown</code> to a number (the number of milliseconds) to include a
+countdown timer on each slide. If using <code>autoplay</code>, you can optionally
+set <code>countdown</code> to <code>TRUE</code> to include a countdown equal to
+<code>autoplay</code>. To alter the set of classes applied to the title slide,
+you can optionally set <code>titleSlideClass</code> to a vector of classes; the
+default is <code><a href='https://rdrr.io/r/base/c.html'>c("center", "middle", "inverse")</a></code>.</p></td>
+    </tr>
+    <tr>
+      <th>self_contained</th>
+      <td><p>Whether to produce a self-contained HTML file by
+embedding all external resources into the HTML file. See the &#8216;Note&#8217;
+section below.</p></td>
+    </tr>
+    <tr>
+      <th>lib_dir</th>
+      <td><p>JS dependencies librairies location</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>For <code>tsukuyomi()</code>, arguments passed to
+<code>moon_reader()</code>; for <code>moon_reader()</code>, arguments passed to
+<code>rmarkdown::<a href='html_document.html'>html_document</a>()</code>.</p></td>
+    </tr>
     </table>
-  </div>
 
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
