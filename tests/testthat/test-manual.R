@@ -48,3 +48,19 @@ testthat::test_that(
 )
 
 # servr::httd()
+
+
+# TEST PREZ ------
+
+
+destdir <- tempdir()
+
+unlink(sprintf("%s/test-utilitr", destdir))
+dir.create(sprintf("%s/test-utilitr", destdir))
+
+setwd(sprintf("%s/test-utilitr", destdir))
+
+rmarkdown::draft("slides.Rmd", template='utilitr_presentation', package='utilitr', edit = FALSE)
+
+rmarkdown::render(sprintf("%s/test-utilitr/slides.Rmd", destdir),
+                      output_format = 'utilitr::utilitr_presentation')

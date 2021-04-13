@@ -1,0 +1,44 @@
+---
+title : "__`utilitR`__"
+subtitle : "Une documentation sur `R` à l’usage des statisticiens publics"
+author : "Lino Galiana, Olivier Meslin"
+institute : "Insee"
+date : "`r Sys.Date()`"
+output :   utilitr::utilitr_presentation
+#  utilitr::utilitr_presentation:
+#    includes :
+#      after_body : insert-logo.html    
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+# Genèse du projet
+
+Le projet `utilitR` est parti de deux constats : 
+
+1. **La transition des agents vers `R` est freinée par une multiplicité d’obstacles** :
+    + Diversité des environnements informatiques à l’Insee (poste local, AUS, plateforme innovation puis SSP-Cloud…) ;
+    + Difficultés à s’approprier les outils et à en utiliser tout le potentiel :
+    + Eclatement de la documentation de l'écosystème `R` ;
+    + Multiplicité de *packages*, de qualité variable et parfois redondants ;
+    + Barrière linguistique.
+2. **Il n'existe pas de documentation de référence sur l'usage de `R` pour le statisticien** :
+    +  La documentation de référence sur `SAS` en français, rédigée par
+Axelle Chauvet et largement diffusée à l’Insee et dans le SSP, n'a pas d'équivalent en `R` ;
+    + La documentation sur `R` est foisonnante mais propose peu d'exemples sur données réelles.
+
+---
+# Objectif du projet
+
+Produire une documentation collaborative sur `R`, destinée principalement
+aux agents du Service statistique public (mais pas seulement).
+
+La documentation vise à répondre à deux questions :
+- Comment (bien) travailler avec `R` pour profiter de la richesse de son 
+écosystème ;
+- Comment réaliser efficacement des tâches élémentaires avec `R`.
+
+--
