@@ -1,5 +1,4 @@
-utilitr_dependencies <- function(
-){
+utilitr_dependencies_presentation <- function(){
 
   files <- c("default.css", "default-fonts",
              "metropolis.css",
@@ -19,13 +18,17 @@ utilitr_dependencies <- function(
 #' @export
 utilitr_presentation <- function(extra_dependencies = list(),
                           ...) {
-  extra_dependencies <- c(
-    utilitr_dependencies_presentation(),
-    extra_dependencies
-  )
+
+  # extra_dependencies <- c(
+  #   utilitr_dependencies_presentation(),
+  #   extra_dependencies
+  # )
+  css <- list.files(pkg_resource('rmarkdown/resources/slides'),
+                    recursive = TRUE,
+                    pattern = "*.css", full.names = TRUE)
 
   xaringan::moon_reader(
-    extra_dependencies = extra_dependencies,
+    css = css,
     ...
   )
 

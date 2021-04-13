@@ -5,7 +5,7 @@ author : "Lino Galiana, Olivier Meslin"
 institute : "Insee"
 date : "`r Sys.Date()`"
 output :
-  xaringan::moon_reader :
+  utilitr::utilitr_presentation :
     lib_dir : libs
     nature :
       highlightStyle : github
