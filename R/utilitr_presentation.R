@@ -11,7 +11,6 @@ utilitr_presentation <- function(css = NULL,
                                                countIncrementalSlides = TRUE),
                                  self_contained = TRUE,
                                  lib_dir = "libs",
-                                 extra_dependencies = NULL,
                           ...) {
 
   css_modele <-
@@ -44,15 +43,11 @@ utilitr_presentation <- function(css = NULL,
 
   css <- c(css_modele, css)
 
-  extra_dependencies <- c(extra_dependencies,
-                          rmarkdown::html_dependency_font_awesome())
-
   xaringan::moon_reader(
     css = css,
     nature = nature,
     self_contained = self_contained,
     lib_dir = lib_dir,
-    extra_dependencies = extra_dependencies,
     ...
   )
 
