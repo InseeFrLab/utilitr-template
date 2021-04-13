@@ -16,19 +16,25 @@ utilitr_dependencies_presentation <- function(){
 }
 
 #' @export
-utilitr_presentation <- function(extra_dependencies = list(),
+utilitr_presentation <- function(css = NULL,
+                                 nature = list(highlightStyle = "github",
+                                               highlightLines = TRUE,
+                                               countIncrementalSlides = TRUE),
+                                 self_contained = TRUE,
+                                 lib_dir = "libs",
                           ...) {
 
-  # extra_dependencies <- c(
-  #   utilitr_dependencies_presentation(),
-  #   extra_dependencies
-  # )
-  css <- list.files(pkg_resource('rmarkdown/resources/slides'),
+  css <- c(css,
+           list.files(pkg_resource('rmarkdown/resources/slides'),
                     recursive = TRUE,
                     pattern = "*.css", full.names = TRUE)
+  )
 
   xaringan::moon_reader(
     css = css,
+    nature = nature,
+    self_contained = self_contained,
+    lib_dir = lib_dir,
     ...
   )
 

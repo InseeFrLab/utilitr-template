@@ -7,10 +7,6 @@ date : "`r Sys.Date()`"
 output :
   utilitr::utilitr_presentation :
     lib_dir : libs
-    nature :
-      highlightStyle : github
-      highlightLines : true
-      countIncrementalSlides : false
     self_contained : true
 #    chakra : 
 #      - ./libs/remark-latest.min.js
