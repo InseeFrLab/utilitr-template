@@ -13,10 +13,10 @@ utilitr_presentation <- function(css = NULL,
                                  lib_dir = "libs",
                           ...) {
 
-  css <- c(css,
-           list.files(pkg_resource('rmarkdown/resources/slides'),
+  css <- c(list.files(pkg_resource('rmarkdown/resources/slides'),
                     recursive = TRUE,
-                    pattern = "*.css", full.names = TRUE)
+                    pattern = "*.css", full.names = TRUE),
+           css
   )
 
   xaringan::moon_reader(
