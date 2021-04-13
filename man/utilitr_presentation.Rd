@@ -44,6 +44,8 @@ default is \code{c("center", "middle", "inverse")}.}
 embedding all external resources into the HTML file. See the \sQuote{Note}
 section below.}
 
+\item{lib_dir}{JS dependencies librairies location}
+
 \item{...}{For \code{tsukuyomi()}, arguments passed to
 \code{moon_reader()}; for \code{moon_reader()}, arguments passed to
 \code{rmarkdown::\link{html_document}()}.}
