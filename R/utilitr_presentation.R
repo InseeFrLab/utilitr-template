@@ -23,10 +23,10 @@ utilitr_presentation <- function(css = NULL,
         pkg_resource('rmarkdown/resources/css'),
         recursive = FALSE,
         pattern = "style-utilitr.css", full.names = TRUE),
-      list.files(
-        pkg_resource('rmarkdown/resources/css'),
-        recursive = FALSE,
-        pattern = "icones-fa.css", full.names = TRUE),
+      # list.files(
+      #   pkg_resource('rmarkdown/resources/css'),
+      #   recursive = FALSE,
+      #   pattern = "icones-fa.css", full.names = TRUE),
       list.files(
         pkg_resource('rmarkdown/resources/css'),
         recursive = FALSE,
