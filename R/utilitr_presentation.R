@@ -2,7 +2,7 @@
 #'
 #' An opinionated template
 #' @inheritParams xaringan::moon_reader
-#'
+#' @param lib_dir JS dependencies librairies location
 #' @export
 
 utilitr_presentation <- function(css = NULL,
