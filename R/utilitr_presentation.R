@@ -48,6 +48,8 @@ utilitr_presentation <- function(css = NULL,
     nature = nature,
     self_contained = self_contained,
     lib_dir = lib_dir,
+    pandoc_args = c("--lua-filter",
+                    pkg_resource("rmarkdown/resources/scripts/nbsp.lua")),
     ...
   )
 
