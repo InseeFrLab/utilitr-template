@@ -8,7 +8,7 @@ table caption {
 }
 
 /* Eviter un conflit entre le logo et le premier paragraphe */
-.remark-slide-content:first-child {
+h1, h1 + * {
   margin-right: 3cm;
 }
 
