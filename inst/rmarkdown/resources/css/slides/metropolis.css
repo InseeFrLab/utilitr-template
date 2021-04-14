@@ -11,7 +11,7 @@ table caption {
 }
 
 /* Eviter un conflit entre le logo et le premier paragraphe */
-.remark-slide-content > p:first-of-type {
+.remark-slide-content:first-child {
   margin-right: 3cm;
 }
 
