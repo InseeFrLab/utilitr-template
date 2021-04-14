@@ -11,6 +11,9 @@ table caption {
 h1, h1 + * {
   margin-right: 3cm;
 }
+.title-slide h1, .title-slide h1 + * {
+  margin-right: 0cm;
+}
 
 /* Taille des codes inline dans le texte  */
 li code.remark-inline-code, p code.remark-inline-code {
