@@ -36,7 +36,7 @@ Suggests:
     testthat,
     rstudioapi
 Remotes:
-    rstudio/bookdown#1027,
+    rstudio/bookdown,
     rstudio/fontawesome@2b64e3148c9c5c70e415cdeb3e33ac3200edadbf,
     rstudio/pagedown
 Encoding: UTF-8
