@@ -11,7 +11,6 @@ utilitr_presentation <- function(css = NULL,
                                                countIncrementalSlides = TRUE),
                                  self_contained = TRUE,
                                  lib_dir = "libs",
-                                 keep_md = TRUE,
                           ...) {
 
   css_modele <-
@@ -49,7 +48,6 @@ utilitr_presentation <- function(css = NULL,
     nature = nature,
     self_contained = self_contained,
     lib_dir = lib_dir,
-    keep_md = keep_md,
     ...
   )
 
