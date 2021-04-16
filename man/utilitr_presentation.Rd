@@ -10,6 +10,7 @@ utilitr_presentation(
     countIncrementalSlides = TRUE),
   self_contained = TRUE,
   lib_dir = "libs",
+  keep_md = TRUE,
   ...
 )
 }
