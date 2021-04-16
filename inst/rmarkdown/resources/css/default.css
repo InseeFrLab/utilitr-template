@@ -32,6 +32,10 @@ ul {
     text-decoration: underline dotted;
     content: "";
   }
+  /* Do not display hyperlinks induced by downlit syntax highlighting */
+  code > span > a[href^="http"]:not([class="uri"])::after, code > a[href^="http"]:not([class="uri"])::after{
+    content: none ;
+  }
 }
 .references a[href^=http]:not([class=uri])::after {
   content: none;

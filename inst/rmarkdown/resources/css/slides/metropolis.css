@@ -1,28 +1,3 @@
-/* Ajouts OM */
-
-
-table::first-line {
-  font-weight: 900 ;
-}
-
-table caption {
-  font-weight: 900 ;
-  margin-top: 15px;
-}
-
-/* Eviter un conflit entre le logo et le premier paragraphe */
-.remark-slide-content > p:first-of-type {
-  margin-right: 3cm;
-}
-
-/* Taille des codes inline dans le texte  */
-li code.remark-inline-code, p code.remark-inline-code {
-  font-size: 18px;
-}
-
-/* Fin ajouts OM */
-
-
 .remark-slide-content {
   background-color: #FAFAFA;
   border-top: 80px solid #23373B;
