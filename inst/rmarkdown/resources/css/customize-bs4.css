@@ -21,6 +21,11 @@ h1 > a[href = "index.html"]:before {
   text-align: center;
 }
 
+/* Choose a lighter color for in-text hyperlinks */
+:not(nav) > ul > li > a[href] {
+  color:#48a3a3;
+}
+
 /* Imposer une taille de 16 px pou la typo */
 :root{
   font-size: 16px;
