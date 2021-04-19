@@ -63,8 +63,14 @@ pre {
 }
 .table thead th, .table td {
   vertical-align: middle;
+  padding: 0.25rem;
 }
-
+/* Les marges des chunks dans les tableaux */
+table pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.5rem;
+}
 
 .recommandation:before,
 .conseil:before,
@@ -96,6 +102,12 @@ pre {
   }
   pre {
     background-image: none;
+  }
+  /* Les marges des chunks dans les tableaux */
+  table pre {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.25rem;
   }
   pre, blockquote {
     border: none;
