@@ -7,6 +7,7 @@ rmd_files:
   - chapter1/Intro_partie_utiliser_R_Insee.Rmd
   - chapter1/Fiche_utiliser_utilitR.Rmd
   - chapter1/Fiche_configurer_git.Rmd
+  - chapter1/Fiche_datatable.Rmd
   - chapter1/Intro_partie_importer_donnees.Rmd
   - chapter1/Fiche_import_fichiers_plats.Rmd
   - chapter1/Fiche_donnees_textuelles.Rmd
