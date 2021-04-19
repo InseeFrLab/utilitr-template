@@ -107,7 +107,7 @@ jobs:
       - name: Render Book
         run: |
           Rscript -e "rmarkdown::draft('index.Rmd', template='utilitr', package='utilitr', edit = FALSE)"
-          Rscript -e "bookdown::render_book('index.Rmd', output_dir = '_public', output_format = 'utilitr::html_document')"
+          Rscript -e "bookdown::render_book('index.Rmd', output_dir = '_public', output_format = 'utilitr::bs4_utilitr')"
       - name: Install npm
         uses: actions/setup-node@v1
       - name: Deploy to Netlify
@@ -140,7 +140,7 @@ jobs:
       - name: Render Book
         run: |
           Rscript -e "rmarkdown::draft('index.Rmd', template='utilitr', package='utilitr', edit = FALSE)"
-          Rscript -e "bookdown::render_book('index.Rmd', output_dir = '_public', output_format = 'utilitr::html_document')"
+          Rscript -e "bookdown::render_book('index.Rmd', output_dir = '_public', output_format = 'utilitr::bs4_utilitr')"
       - name: Install npm
         uses: actions/setup-node@v1
       - name: Deploy to Netlify
