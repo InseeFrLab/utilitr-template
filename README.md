@@ -7,7 +7,8 @@
 
 This package aims to simplify the formatting of [utilitR](www.book.utilitr.org)
 documentation. A series of function to customize `rmarkdown` output is proposed
-in this package. 
+in this package. An example website built using this package
+can be found [here](https://awesome-volhard-d6d842.netlify.app)
 
 You can use 
 
