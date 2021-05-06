@@ -9,6 +9,7 @@
 img[src*="inline"] {
    display: inline ;
    vertical-align: middle;
+   padding: 0;
 }
 p {
   /* Pas de marge entre les paragraphes du texte */
