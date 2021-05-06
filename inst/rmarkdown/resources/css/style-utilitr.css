@@ -5,7 +5,11 @@
   text-align-last: center;
   font-weight: 900;
 }
-
+/* Mise en forme des images inline */
+img[src*="inline"] {
+   display: inline ;
+   vertical-align: middle;
+}
 p {
   /* Pas de marge entre les paragraphes du texte */
   margin-top: 0;
