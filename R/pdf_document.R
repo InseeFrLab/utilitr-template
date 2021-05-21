@@ -28,7 +28,7 @@ html_paged <- function(..., extra_dependencies = NULL){
     css = utilitr_dependencies(output = "pagedown"),
     toc = TRUE,
     toc_depth = 2,
-    copy_resources = TRUE,
+    copy_resources = FALSE,
     # self_contained = FALSE,
     pandoc_args = c("--lua-filter",
                     pkg_resource("rmarkdown/resources/scripts/nbsp.lua")))
