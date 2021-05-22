@@ -23,8 +23,10 @@ html_paged <- function(..., extra_dependencies = NULL){
   extra_dependencies <- c(extra_dependencies,
                           rmarkdown::html_dependency_font_awesome())
 
+  print(paste0("Here are the extra_dependencies: ", extra_dependencies))
   of <- pagedown::html_paged(
-    ..., #extra_dependencies = extra_dependencies,
+    ...,
+    extra_dependencies = extra_dependencies,
     css = utilitr_dependencies(output = "pagedown"),
     toc = TRUE,
     toc_depth = 2,
