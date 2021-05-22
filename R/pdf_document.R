@@ -14,54 +14,17 @@
 
 html_paged <- function(..., extra_dependencies = NULL){
 
-  print("Kikou")
-  # locations of resource files in the package
-  pkg_resource <- function(...) {
-    system.file(..., package = "utilitr")
-  }
-
-  # Create the htmlDependency object for the CSS files of utilitR pdf output
-  utilitr_css_dependency = function(css = NULL) {
-    htmltools::htmlDependency(
-      'css_utilitr',
-      packageVersion('utilitr'),
-      src = pkg_resource(),
-      stylesheet = file.path('css', css),
-      all_files = FALSE
-    )
-  }
-
-  # Create the htmlDependency object for the JS files of the pdf output (from pagedown package)
-  pagedown_dependency = function(css = NULL, js = FALSE) {
-    paged = c('js/config.js', 'js/paged.js', 'js/hooks.js')
-    htmltools::htmlDependency(
-      'paged', packageVersion('pagedown'), src = pkg_resource(),
-      script = paged,
-      all_files = FALSE
-    )
-  }
-
-  files <- c("reset.css", "default.css", "style-utilitr.css", "icones-fa.css",
-             "default-fonts.css", "default-page.css")
-
-  # Combine all extra dependencies
-  extra_dependencies <- list(
-    pagedown_dependency(js = TRUE),
-    utilitr_css_dependency(css = files),
+  extra_dependencies <- c(
+    utilitr_dependencies(output = "pagedown"),
     # rmarkdown::html_dependency_font_awesome(),
     extra_dependencies
   )
-  print(str(extra_dependencies))
-  test <<- extra_dependencies
 
   extra_dependencies <- c(extra_dependencies,
                           rmarkdown::html_dependency_font_awesome())
-  test2 <<- extra_dependencies
 
-  # print(paste0("Here are the extra_dependencies: ", extra_dependencies))
   of <- pagedown::html_paged(
-    ...,
-    extra_dependencies = extra_dependencies,
+    ..., #extra_dependencies = extra_dependencies,
     css = utilitr_dependencies(output = "pagedown"),
     toc = TRUE,
     toc_depth = 2,
@@ -98,18 +61,43 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
                          asHTML = FALSE){
 
 
-  # css_default <- c(
-  #   pkg_resource("/rmarkdown/resources/css/default.css"),
-  #   pkg_resource("/rmarkdown/resources/css/style.css"),
-  #   pkg_resource("/rmarkdown/resources/css/default-fonts.css"),
-  #   pkg_resource("/rmarkdown/resources/css/default-page.css")
-  # )
-  #
-  # css <- c(css_default, css)
-  #
-  # bookdown::render_book("index.Rmd", ..., css = css,
-  #                       output_format = 'pagedown::html_paged',
-  #                       output_file = '_pagedown_output/index.html')
+  # Create the htmlDependency object for the CSS files of utilitR pdf output
+  utilitr_css_dependency = function(css = NULL) {
+    htmltools::htmlDependency(
+      'css_utilitr',
+      packageVersion('utilitr'),
+      src = pkg_resource(),
+      stylesheet = file.path('css', css),
+      all_files = FALSE
+    )
+  }
+
+  # Create the htmlDependency object for the JS files of the pdf output (from pagedown package)
+  pagedown_dependency = function(css = NULL, js = FALSE) {
+    paged = c('js/config.js', 'js/paged.js', 'js/hooks.js')
+    htmltools::htmlDependency(
+      'paged', packageVersion('pagedown'), src = pkg_resource(),
+      script = paged,
+      all_files = FALSE
+    )
+  }
+
+  files <- c("reset.css", "default.css", "style-utilitr.css", "icones-fa.css",
+             "default-fonts.css", "default-page.css")
+
+  # Combine all extra dependencies
+  extra_dependencies <- list(
+    pagedown_dependency(js = TRUE),
+    utilitr_css_dependency(css = files),
+    rmarkdown::html_dependency_font_awesome(),
+    extra_dependencies
+  )
+  print(str(extra_dependencies))
+  test <<- extra_dependencies
+
+  # extra_dependencies <- c(extra_dependencies,
+  #                         rmarkdown::html_dependency_font_awesome())
+  # test2 <<- extra_dependencies
 
   if (!dir.exists("_pagedown_output")) dir.create("_pagedown_output")
   if (!file.exists("index.Rmd") && (file.exists("skeleton.Rmd"))){
