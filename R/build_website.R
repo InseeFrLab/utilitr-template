@@ -28,12 +28,15 @@ utilitr_dependencies <- function(
     return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
   }
 
-  default_dep <- list(htmltools::htmlDependency(
-    'utilitr-default', utils::packageVersion('utilitr'),
-    src = pkg_resource('rmarkdown/resources'),
-    stylesheet = paste0("css/", files),
-    script = paste0("js/", script)
-  ))
+  default_dep <-
+    list(
+      htmltools::htmlDependency(
+        'utilitr-default', utils::packageVersion('utilitr'),
+        src = pkg_resource('rmarkdown/resources'),
+        stylesheet = paste0("css/", files),
+        script = paste0("js/", script)
+      )
+    )
 
   return(default_dep)
 }
