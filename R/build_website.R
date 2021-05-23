@@ -29,10 +29,10 @@ utilitr_dependencies <- function(
   }
 
   default_dep <- list(htmltools::htmlDependency(
-      'utilitr-default', utils::packageVersion('utilitr'),
-      src = pkg_resource('rmarkdown/resources'),
-      stylesheet = paste0("css/", files),
-      script = paste0("js/", script)
+    'utilitr-default', utils::packageVersion('utilitr'),
+    src = pkg_resource('rmarkdown/resources'),
+    stylesheet = paste0("css/", files),
+    script = paste0("js/", script)
   ))
 
   return(default_dep)
