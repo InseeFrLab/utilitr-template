@@ -2,10 +2,7 @@
 #'
 #' @importFrom htmltools htmlDependency
 #' @param output What is the output format? Choice between "gitbook", "bs4" and "pagedown"
-
-utilitr_dependencies <- function(
-  output = c("gitbook","bs4", "pagedown")
-){
+utilitr_dependencies <- function(output = c("gitbook","bs4", "pagedown")) {
   output <- match.arg(output)
 
   css_files <- c(
