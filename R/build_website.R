@@ -9,17 +9,24 @@ utilitr_dependencies <- function(
 
   output <- match.arg(output)
 
-  css_files <- c("default.css", "style-utilitr.css", "icones-fa.css",
-                 "default-fonts.css", "default-page.css")
+  css_files <- c(
+    "default.css",
+    "style-utilitr.css",
+    "icones-fa.css",
+    "default-fonts.css",
+    "default-page.css"
+  )
 
-  if (output %in% c("gitbook", "bs4")) {
-    css_files <- c(css_files, "customize.css")
-  }
+  css_files <- switch(
+    output,
+    gitbook = c(css_files, "customize.css", "customize-bs4.css"),
+    bs4 = c("reset.css", css_files, "customize.css"),
+    pagedown = c("reset.css", css_files)
+  )
+
   if (output == "bs4"){
-    css_files <- c(css_files, "customize-bs4.css")
     script <- "date-header.js"
   } else{
-    css_files <- c("reset.css", css_files)
     script <- "book.js"
   }
 
