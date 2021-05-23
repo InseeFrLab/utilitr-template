@@ -92,8 +92,6 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
     rmarkdown::html_dependency_font_awesome(),
     extra_dependencies
   )
-  print(str(extra_dependencies))
-  test <<- extra_dependencies
 
   # extra_dependencies <- c(extra_dependencies,
   #                         rmarkdown::html_dependency_font_awesome())
@@ -141,6 +139,5 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
 
 
 }
-
 
 
