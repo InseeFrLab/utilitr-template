@@ -77,7 +77,7 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
              "default-fonts.css", "default-page.css")
 
   # Combine all extra dependencies
-  extra_dependencies <- list(
+  extra_dependencies <- c(
     pagedown_dependency(js = TRUE),
     utilitr_css_dependency(css = files),
     rmarkdown::html_dependency_font_awesome(),
