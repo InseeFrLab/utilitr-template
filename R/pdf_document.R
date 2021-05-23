@@ -72,14 +72,6 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
   }
 
   # Create the htmlDependency object for the JS files of the pdf output (from pagedown package)
-  pagedown_dependency = function(css = NULL, js = FALSE) {
-    paged = c('js/config.js', 'js/paged.js', 'js/hooks.js')
-    htmltools::htmlDependency(
-      'paged', packageVersion('pagedown'), src = pkg_resource(),
-      script = paged,
-      all_files = FALSE
-    )
-  }
 
   files <- c("reset.css", "default.css", "style-utilitr.css", "icones-fa.css",
              "default-fonts.css", "default-page.css")
@@ -138,4 +130,3 @@ pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
 
 
 }
-
