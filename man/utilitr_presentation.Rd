@@ -21,7 +21,10 @@ character vector \code{css} contains a value that does not end with
 \code{.css}, it is supposed to be a built-in CSS file in this package,
 e.g., for \code{css = c('default', 'extra.css')}), it means
 \code{default.css} in this package and a user-provided \code{extra.css}. To
-find out all built-in CSS files, use \code{xaringan:::list_css()}.}
+find out all built-in CSS files, use \code{xaringan:::list_css()}. With
+\pkg{rmarkdown} >= 2.8, Sass files (filenames ending with \file{.scss} or
+\file{.sass}) can also be used, and they will be processed by the
+\pkg{sass} package, which needs to be installed.}
 
 \item{nature}{(Nature transformation) A list of configurations to be passed
 to \code{remark.create()}, e.g. \code{list(ratio = '16:9', navigation =

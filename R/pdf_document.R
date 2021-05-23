@@ -8,34 +8,34 @@
 #' @seealso [html_paged](pagedown::html_paged)
 #'  which is used as a customizable
 #'  basis to render R Markdown documents
-#' @param extra_dependencies Additional HTML dependencies
-#' @inheritParams pagedown::html_paged
+#' @param ... Additional arguments passed to [pagedown::html_paged()].
+#' @inheritParams rmarkdown::html_document
 #' @export
-
-html_paged <- function(..., extra_dependencies = NULL){
-
+html_paged <- function(
+  ..., toc = TRUE, toc_depth = 2, extra_dependencies = NULL, pandoc_args = NULL
+){
   extra_dependencies <- c(
     utilitr_dependencies(output = "pagedown"),
     # rmarkdown::html_dependency_font_awesome(),
     extra_dependencies
   )
 
-  extra_dependencies <- c(extra_dependencies,
-                          rmarkdown::html_dependency_font_awesome())
+  pandoc_args <- c(
+    "--lua-filter",
+    pkg_resource("rmarkdown/resources/scripts/nbsp.lua"),
+    pandoc_args
+  )
 
   of <- pagedown::html_paged(
-    ..., #extra_dependencies = extra_dependencies,
-    css = utilitr_dependencies(output = "pagedown"),
-    toc = TRUE,
-    toc_depth = 2,
-    # self_contained = FALSE,
-    pandoc_args = c("--lua-filter",
-                    pkg_resource("rmarkdown/resources/scripts/nbsp.lua")))
+    ...,
+    extra_dependencies = extra_dependencies,
+    toc = toc,
+    toc_depth = toc_depth,
+    pandoc_args = pandoc_args
+  )
 
-
-  # do not show code
-  of$knitr$opts_chunk <- list(out.width='75%', fig.align='center')
-
+  # tweak figures
+  of$knitr$opts_chunk <- list(out.width = '75%', fig.align = 'center')
 
   of
 }
@@ -53,40 +53,10 @@ html_paged <- function(..., extra_dependencies = NULL){
 #' @importFrom pagedown chrome_print html_paged
 #' @import callr
 #' @export
-
 pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
                          timeout = 660,
                          verbose = 1,
                          asHTML = FALSE){
-
-
-  # Create the htmlDependency object for the CSS files of utilitR pdf output
-  utilitr_css_dependency = function(css = NULL) {
-    htmltools::htmlDependency(
-      'css_utilitr',
-      packageVersion('utilitr'),
-      src = pkg_resource(),
-      stylesheet = file.path('css', css),
-      all_files = FALSE
-    )
-  }
-
-  # Create the htmlDependency object for the JS files of the pdf output (from pagedown package)
-
-  files <- c("reset.css", "default.css", "style-utilitr.css", "icones-fa.css",
-             "default-fonts.css", "default-page.css")
-
-  # Combine all extra dependencies
-  extra_dependencies <- c(
-    pagedown_dependency(js = TRUE),
-    utilitr_css_dependency(css = files),
-    rmarkdown::html_dependency_font_awesome(),
-    extra_dependencies
-  )
-
-  # extra_dependencies <- c(extra_dependencies,
-  #                         rmarkdown::html_dependency_font_awesome())
-  # test2 <<- extra_dependencies
 
   if (!dir.exists("_pagedown_output")) dir.create("_pagedown_output")
   if (!file.exists("index.Rmd") && (file.exists("skeleton.Rmd"))){
