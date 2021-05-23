@@ -40,7 +40,7 @@ utilitr_dependencies <- function(
 
 # locations of resource files in the package
 pkg_resource <- function(...) {
-  system.file(..., package = "utilitr")
+  system.file(..., package = "utilitr", mustWork = TRUE)
 }
 
 
