@@ -9,29 +9,28 @@ utilitr_dependencies <- function(
 
   output <- match.arg(output)
 
-  files <- c("default.css", "style-utilitr.css", "icones-fa.css",
-             "default-fonts.css", "default-page.css")
+  css_files <- c("default.css", "style-utilitr.css", "icones-fa.css",
+                 "default-fonts.css", "default-page.css")
 
   if (output %in% c("gitbook", "bs4")) {
-    files <-
-      c(files, "customize.css")
+    css_files <- c(css_files, "customize.css")
   }
   if (output == "bs4"){
-    files <- c(files, "customize-bs4.css")
+    css_files <- c(css_files, "customize-bs4.css")
     script <- "date-header.js"
   } else{
-    files <- c("reset.css", files)
+    css_files <- c("reset.css", css_files)
     script <- "book.js"
   }
 
   if (output == "pagedown") {
-    return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
+    return(paste0(pkg_resource('rmarkdown/resources/css/'), css_files))
   }
 
   default_dep <- list(htmltools::htmlDependency(
     'utilitr-default', utils::packageVersion('utilitr'),
     src = pkg_resource('rmarkdown/resources'),
-    stylesheet = paste0("css/", files),
+    stylesheet = paste0("css/", css_files),
     script = paste0("js/", script)
   ))
 
