@@ -2,40 +2,37 @@
 #'
 #' @importFrom htmltools htmlDependency
 #' @param output What is the output format? Choice between "gitbook", "bs4" and "pagedown"
-
-utilitr_dependencies <- function(
-  output = c("gitbook","bs4", "pagedown")
-){
-
+utilitr_dependencies <- function(output = c("gitbook","bs4", "pagedown")) {
   output <- match.arg(output)
 
-  files <- c("default.css", "style-utilitr.css", "icones-fa.css",
-             "default-fonts.css", "default-page.css")
+  css_files <- c(
+    "default.css",
+    "style-utilitr.css",
+    "icones-fa.css",
+    "default-fonts.css",
+    "default-page.css"
+  )
 
-  if (output %in% c("gitbook", "bs4")) {
-    files <-
-      c(files, "customize.css")
-  }
-  if (output == "bs4"){
-    files <- c(files, "customize-bs4.css")
-    script <- "date-header.js"
-  } else{
-    files <- c("reset.css", files)
-    script <- "book.js"
-  }
+  css_files <- switch(
+    output,
+    gitbook = c(css_files, "customize.css", "customize-bs4.css"),
+    bs4 = c("reset.css", css_files, "customize.css"),
+    pagedown = c("reset.css", css_files)
+  )
 
-  if (output == "pagedown") {
-    return(paste0(pkg_resource('rmarkdown/resources/css/'), files))
-  }
+  js_scripts <- switch(
+    output,
+    gitbook = "book.js",
+    bs4 = "date-header.js",
+    pagedown = NULL
+  )
 
-  default_dep <- list(htmltools::htmlDependency(
+  list(htmltools::htmlDependency(
     'utilitr-default', utils::packageVersion('utilitr'),
     src = pkg_resource('rmarkdown/resources'),
-    stylesheet = paste0("css/", files),
-    script = paste0("js/", script)
+    stylesheet = paste0("css/", css_files),
+    script = if(!is.null(js_scripts)) paste0("js/", js_scripts)
   ))
-
-  return(default_dep)
 }
 
 # locations of resource files in the package
