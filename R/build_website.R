@@ -24,11 +24,12 @@ utilitr_dependencies <- function(
     pagedown = c("reset.css", css_files)
   )
 
-  if (output == "bs4"){
-    script <- "date-header.js"
-  } else{
-    script <- "book.js"
-  }
+  js_scripts <- switch(
+    output,
+    gitbook = "book.js",
+    bs4 = "date-header.js",
+    pagedown = NULL
+  )
 
   if (output == "pagedown") {
     return(paste0(pkg_resource('rmarkdown/resources/css/'), css_files))
@@ -38,7 +39,7 @@ utilitr_dependencies <- function(
     'utilitr-default', utils::packageVersion('utilitr'),
     src = pkg_resource('rmarkdown/resources'),
     stylesheet = paste0("css/", css_files),
-    script = paste0("js/", script)
+    script = paste0("js/", js_scripts)
   ))
 
   return(default_dep)
