@@ -6,7 +6,6 @@
 utilitr_dependencies <- function(
   output = c("gitbook","bs4", "pagedown")
 ){
-
   output <- match.arg(output)
 
   css_files <- c(
@@ -31,18 +30,12 @@ utilitr_dependencies <- function(
     pagedown = NULL
   )
 
-  if (output == "pagedown") {
-    return(paste0(pkg_resource('rmarkdown/resources/css/'), css_files))
-  }
-
-  default_dep <- list(htmltools::htmlDependency(
+  list(htmltools::htmlDependency(
     'utilitr-default', utils::packageVersion('utilitr'),
     src = pkg_resource('rmarkdown/resources'),
     stylesheet = paste0("css/", css_files),
-    script = paste0("js/", js_scripts)
+    script = if(!is.null(js_scripts)) paste0("js/", js_scripts)
   ))
-
-  return(default_dep)
 }
 
 # locations of resource files in the package
