@@ -1,4 +1,33 @@
-<button id="print" style="left:36%;position:relative;background-color: #92bcbc94;">
+<button id="print" style="
+/* button child */
+
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 8px 24px 8px 16px;
+
+position: relative;
+left: 25%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #93BCBC;
+// hover color : background: #CF581B;
+border-radius: 20px;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+
+/* button parent */
+
+width: 218px;
+height: 36px;
+">
   <i class="glyphicon glyphicon-print" type="submit" onclick="printWithPagedJS()" style= "padding-left: 5px; color: #cf581b;">
   <b style = "color: #cf581b; padding-left: 5px;">Imprimer en A4</b>
   </i>
