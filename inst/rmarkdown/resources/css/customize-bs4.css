@@ -21,6 +21,17 @@ h1 > a[href = "index.html"]:before {
   text-align: center;
 }
 
+
+/* Customize print button */
+button:hover {
+  background-color: #CF581B !important;
+}
+
+button > i:hover, button > b:hover {
+  color: white !important;
+}
+
+
 /* Choose a lighter color for in-text hyperlinks */
 a[ref] {
   color: #48a3a3;
