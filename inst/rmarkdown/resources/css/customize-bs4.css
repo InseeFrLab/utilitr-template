@@ -27,18 +27,22 @@ button:hover {
   background-color: #CF581B !important;
 }
 
-button > i:hover, button > b:hover {
+button:hover > i, button:hover > b {
   color: white !important;
 }
 
 
 /* Choose a lighter color for in-text hyperlinks */
-a[ref] {
-  color: #48a3a3 !important;
+a {
+  color: #239f9f;
 }
 /* Choose a darker color for navigation panels */
-nav a[href] {
-  color:#5b9595 !important;
+nav a, h1 > a[href="index.html"] {
+  color:#5b9595;
+}
+/* Add a stylish hover color for hyperlinks */
+a:hover {
+  color: #cf581b;
 }
 
 /* Imposer une taille de 16 px pou la typo */
