@@ -34,11 +34,11 @@ button > i:hover, button > b:hover {
 
 /* Choose a lighter color for in-text hyperlinks */
 a[ref] {
-  color: #48a3a3;
+  color: #48a3a3 !important;
 }
 /* Choose a darker color for navigation panels */
 nav a[href] {
-  color:#5b9595;
+  color:#5b9595 !important;
 }
 
 /* Imposer une taille de 16 px pou la typo */
