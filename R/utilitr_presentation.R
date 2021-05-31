@@ -48,6 +48,7 @@ utilitr_presentation <- function(css = NULL,
     nature = nature,
     self_contained = self_contained,
     lib_dir = lib_dir,
+    extra_dependencies = rmarkdown::html_dependency_font_awesome(),
     ...
   )
 
