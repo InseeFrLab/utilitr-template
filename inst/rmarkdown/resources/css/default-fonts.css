@@ -1,3 +1,7 @@
+/* Télécharger les typographies Fontawesome */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/regular.min.css);
+
 @media print{
 
   /* Télécharger les typographies pour le corps de texte */
