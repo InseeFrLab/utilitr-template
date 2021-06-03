@@ -10,7 +10,7 @@ utilitr_presentation <-
            nature = list(highlightStyle = "github",
                          highlightLines = TRUE,
                          countIncrementalSlides = TRUE),
-           self_contained = TRUE,
+           self_contained = FALSE,
            lib_dir = "libs",
            # extra_dependencies = NULL,
            ...
