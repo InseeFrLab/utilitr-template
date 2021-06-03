@@ -60,7 +60,7 @@
     margin-left: 6cm;
     min-width: 10cm;
     font-size:200%;
-    content: "Version 1 - Mai 2021";
+    content: "Version 0 - Septembre 2021";
     display: none;
   }
 }
@@ -81,7 +81,9 @@ div.front-page h2.date {
   size: 21cm 29.7cm; /* var(--pagedjs-width) doesn't work in browser when printing */
   /* Filigrane draft */
   @left-middle {
+    /*
     content: "Draft - Ne pas diffuser";
+    */
     font-family: sans-serif;
     margin-left: -6cm;
     font-size: 25pt;
