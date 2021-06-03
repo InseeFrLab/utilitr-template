@@ -149,7 +149,6 @@ kbd {
 .specificite:after,
 .auteurs:after {
   font-family: "FontAwesome", "Font Awesome 5 Free" ;
-  font-weight: 400;
   font-size: 200%;
   display: flex;
   position: absolute;
