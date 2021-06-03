@@ -56,7 +56,7 @@ html_paged <- function(..., extra_dependencies = NULL){
 #' @export
 
 pdf_document <- function(extra_args = c('--disable-gpu', '--no-sandbox'),
-                         timeout = 660,
+                         timeout = 1000,
                          verbose = 1,
                          asHTML = FALSE){
 
