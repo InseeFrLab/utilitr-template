@@ -1,3 +1,7 @@
+/* Télécharger les typographies Fontawesome */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/regular.min.css);
+
 @media print{
 
   /* Télécharger les typographies pour le corps de texte */
@@ -6,10 +10,19 @@
   /* Télécharger les polices pour le code */
   @import 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono';
 
-  /* Télécharger les typographies Fontawesome */
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/regular.min.css);
-
+  /* Télécharger les typographies pour le corps de texte */
+  @font-face {
+      font-family: 'FontAwesome';
+      font-style: normal;
+      font-weight: 900;
+      src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff');
+  }
+  @font-face {
+      font-family: 'Font Awesome 5 Free';
+      font-style: normal;
+      font-weight: 900;
+      src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff') format('woff');
+  }
 
 
   /* Définir les polices */
