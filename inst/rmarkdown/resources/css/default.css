@@ -36,6 +36,10 @@ ul {
   code > span > a[href^="http"]:not([class="uri"])::after, code > a[href^="http"]:not([class="uri"])::after{
     content: none ;
   }
+  /*Reduce padding of code*/
+  code {
+    padding: 0.125rem 0;
+  }
 }
 .references a[href^=http]:not([class=uri])::after {
   content: none;
