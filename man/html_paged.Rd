@@ -4,13 +4,25 @@
 \alias{html_paged}
 \title{HTML paged version for utilitR document}
 \usage{
-html_paged(..., extra_dependencies = NULL)
+html_paged(
+  ...,
+  toc = TRUE,
+  toc_depth = 2,
+  extra_dependencies = NULL,
+  pandoc_args = NULL
+)
 }
 \arguments{
-\item{...}{Arguments passed to
-\code{bookdown::\link[bookdown]{html_document2}}.}
+\item{...}{Additional arguments passed to [pagedown::html_paged()].}
 
-\item{extra_dependencies}{Additional HTML dependencies}
+\item{toc}{\code{TRUE} to include a table of contents in the output}
+
+\item{toc_depth}{Depth of headers to include in table of contents}
+
+\item{extra_dependencies}{Additional function arguments to pass to the
+base R Markdown HTML output formatter \code{\link[rmarkdown]{html_document_base}}}
+
+\item{pandoc_args}{Additional command line options to pass to pandoc}
 }
 \description{
 This function presents an output format necessary
