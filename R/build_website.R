@@ -113,7 +113,11 @@ bs4_utilitr <-
     )
 
   bookdown::bs4_book(
-    extra_dependencies = extra_dependencies,
+    if (dev.size("cm")[[1]]<10) {
+      extra_dependencies = list()
+    } else {
+      extra_dependencies = extra_dependencies
+    },
     includes = includes,
     theme = theme(primary = primary,
                   secondary = secondary
