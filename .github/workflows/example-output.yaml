@@ -10,11 +10,11 @@ jobs:
     steps:
       - name: Checkout Repository
         env:
-          GITHUB_PAT: ${{ secrets.PAT }}
+          GITHUB_PAT: ${{ secrets.PAT_TOKEN }}
         uses: actions/checkout@master
       - name: Install Dependencies
         env:
-          GITHUB_PAT: ${{ secrets.PAT }}
+          GITHUB_PAT: ${{ secrets.PAT_TOKEN }}
         run: |
           Rscript -e "install.packages('xfun')"
           Rscript -e "install.packages(c('remotes'))"
@@ -41,7 +41,7 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         env:
-          GITHUB_PAT: ${{ secrets.PAT }}
+          GITHUB_PAT: ${{ secrets.PAT_TOKEN }}
         run: |
           Rscript -e "install.packages(c('remotes'))"
           Rscript -e "remotes::install_github('rstudio/pagedown')"
@@ -69,7 +69,7 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         env:
-          GITHUB_PAT: ${{ secrets.PAT }}
+          GITHUB_PAT: ${{ secrets.PAT_TOKEN }}
         run: |
           Rscript -e "install.packages(c('remotes'))"
           Rscript -e "remotes::install_github('rstudio/pagedown')"
@@ -96,9 +96,11 @@ jobs:
     steps:
       - name: Checkout Repository
         env:
-          GITHUB_PAT: ${{ secrets.PAT }}
+          GITHUB_PAT: ${{ secrets.PAT_TOKEN }}
         uses: actions/checkout@master
       - name: Install Dependencies
+        env:
+          GITHUB_PAT: ${{ secrets.PAT_TOKEN }}
         run: |
           Rscript -e "install.packages(c('remotes'))"
           Rscript -e "remotes::install_deps(dependencies = TRUE)"
@@ -129,9 +131,11 @@ jobs:
     steps:
       - name: Checkout Repository
         env:
-          GITHUB_PAT: ${{ secrets.PAT }}
+          GITHUB_PAT: ${{ secrets.PAT_TOKEN }}
         uses: actions/checkout@master
       - name: Install Dependencies
+        env:
+          GITHUB_PAT: ${{ secrets.PAT_TOKEN }}
         run: |
           Rscript -e "install.packages(c('remotes'))"
           Rscript -e "remotes::install_deps(dependencies = TRUE)"
