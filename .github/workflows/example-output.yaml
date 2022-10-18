@@ -13,6 +13,8 @@ jobs:
           GITHUB_PAT: ${{ secrets.PAT }}
         uses: actions/checkout@master
       - name: Install Dependencies
+        env:
+          GITHUB_PAT: ${{ secrets.PAT }}
         run: |
           Rscript -e "install.packages('xfun')"
           Rscript -e "install.packages(c('remotes'))"
