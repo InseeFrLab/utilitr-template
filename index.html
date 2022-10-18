@@ -20,6 +20,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -32,18 +34,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">utilitr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -60,66 +56,73 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="modèle-de-documents-pour-le-projet-utilitr" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#mod%C3%A8le-de-documents-pour-le-projet-utilitr" class="anchor"></a>Modèle de documents pour le projet <code>utilitR</code>
+<div class="section level1">
+<div class="page-header"><h1 id="modèle-de-documents-pour-le-projet-utilitr">Modèle de documents pour le projet <code>utilitR</code>
+<a class="anchor" aria-label="anchor" href="#mod%C3%A8le-de-documents-pour-le-projet-utilitr"></a>
 </h1></div>
 <!-- badges: start -->
-
 <p>This package aims to simplify the formatting of <a href="www.book.utilitr.org">utilitR</a> documentation. A series of function to customize <code>rmarkdown</code> output is proposed in this package.</p>
-<p>An example website built using this package can be found <a href="https://awesome-volhard-d6d842.netlify.app">here</a></p>
+<p>An example website built using this package can be found <a href="https://awesome-volhard-d6d842.netlify.app" class="external-link">here</a></p>
 <p>You can use</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/draft.html">draft</a></span><span class="op">(</span><span class="st">'index.Rmd'</span>, template<span class="op">=</span><span class="st">"utilitr"</span>, package<span class="op">=</span><span class="st">"utilitr"</span>, edit <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/draft.html" class="external-link">draft</a></span><span class="op">(</span><span class="st">'index.Rmd'</span>, template<span class="op">=</span><span class="st">"utilitr"</span>, package<span class="op">=</span><span class="st">"utilitr"</span>, edit <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>or <code>File &gt; new File &gt; R Markdown &gt; FromTemplate &gt; Modèle documentation utilitR</code> (in that case make sure to change the <code>.Rmd</code> filename into <code>index.Rmd</code>) to create a MWE of the output format.</p>
 <p>You can either generate a static website or a PDF book using our package:</p>
-<ul>
-<li>Static website can be generated using <code>bookdown</code> with the following command:</li>
-</ul>
+<ul><li>Static website can be generated using <code>bookdown</code> with the following command:</li></ul>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/bookdown/reference/render_book.html">render_book</a></span><span class="op">(</span><span class="st">"index.Rmd"</span>, output_dir <span class="op">=</span> <span class="st">"_public"</span>, output_format <span class="op">=</span> <span class="st">"utilitr::html_document"</span><span class="op">)</span></code></pre></div>
-<ul>
-<li>PDF book can be generated using our <code>pdf_document</code> function that uses <code>pagedown</code> package under the hood:</li>
-</ul>
+<code class="sourceCode R"><span><span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/bookdown/reference/render_book.html" class="external-link">render_book</a></span><span class="op">(</span><span class="st">"index.Rmd"</span>, output_dir <span class="op">=</span> <span class="st">"_public"</span>, output_format <span class="op">=</span> <span class="st">"utilitr::html_document"</span><span class="op">)</span></span></code></pre></div>
+<ul><li>PDF book can be generated using our <code>pdf_document</code> function that uses <code>pagedown</code> package under the hood:</li></ul>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">utilitr</span><span class="fu">::</span><span class="fu"><a href="reference/pdf_document.html">pdf_document</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">utilitr</span><span class="fu">::</span><span class="fu"><a href="reference/pdf_document.html">pdf_document</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li>file <a href="LICENSE-text.html">LICENCE</a>
 </li>
 </ul>
 </div>
-<div class="developers">
-<h2>Developers</h2>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li>Lino Galiana <br><small class="roles"> Author, maintainer </small>  </li>
-<li>Olivier Meslin <br><small class="roles"> Author </small>  </li>
-<li>Romain Lesur <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-0721-5595" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html#citation">Citing utilitr</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/InseeFrLab/utilitr-template/actions"><img src="https://github.com/InseeFrLab/utilitr-template/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://github.com/InseeFrLab/utilitr-template/actions"><img src="https://github.com/InseeFrLab/utilitr-template/workflows/Example%20output/badge.svg" alt="Exemple output"></a></li>
+<li>Lino Galiana <br><small class="roles"> Author, maintainer </small>  </li>
+<li>Olivier Meslin <br><small class="roles"> Author </small>  </li>
+<li>Romain Lesur <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-0721-5595" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/InseeFrLab/utilitr-template/actions" class="external-link"><img src="https://github.com/InseeFrLab/utilitr-template/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://github.com/InseeFrLab/utilitr-template/actions" class="external-link"><img src="https://github.com/InseeFrLab/utilitr-template/workflows/Example%20output/badge.svg" alt="Exemple output"></a></li>
+</ul>
 </div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Lino Galiana, Olivier Meslin, Romain Lesur.</p>
+  <p></p>
+<p>Developed by Lino Galiana, Olivier Meslin, Romain Lesur.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
@@ -127,6 +130,8 @@
 
   
 
+
+  
 
   </body>
 </html>
